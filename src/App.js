@@ -26,7 +26,7 @@ function App() {
         setWallet(walletResponse.address)
         setNetworkId(networkResponse.networkID)
         setNetwork(networkResponse.network)
-        setNetStatus(networkResponse.status)
+        setNetStatus(networkResponse.netStatus)
     }
 
     // Event Listener for Metamask Account Change
@@ -53,7 +53,7 @@ function App() {
                 const networkResponseOnLoad = await getCurrentNetwork(1)
                 setNetworkId(networkResponseOnLoad.networkID)
                 setNetwork(networkResponseOnLoad.network)
-                setNetStatus(networkResponseOnLoad.status)
+                setNetStatus(networkResponseOnLoad.netStatus)
             });
         }
     }
