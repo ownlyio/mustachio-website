@@ -1,6 +1,6 @@
 import Web3 from "web3"
 
-const getCurrentNetwork = async () => {
+const getCurrentNetwork = async (onChange = 0) => {
     if (window.ethereum) {
         try {
             let network = ""
@@ -33,12 +33,10 @@ const getCurrentNetwork = async () => {
                     break
             }
 
-            console.log("Network on util: " + network)
-            
             return {
                 networkID,
                 network,
-                status: "🦊 Please connect to Metamask."
+                status: (onChange === 0) ? "🦊 Network good!" : "🦊 Network changed/detected!"
             }
         } catch (err) {
             return {

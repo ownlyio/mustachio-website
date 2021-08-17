@@ -50,7 +50,7 @@ function App() {
     const addNetworkListener = () => {
         if (window.ethereum) {
             window.ethereum.on('chainChanged', async function(networkIdMM){
-                const networkResponseOnLoad = await getCurrentNetwork()
+                const networkResponseOnLoad = await getCurrentNetwork(1)
                 setNetworkId(networkResponseOnLoad.networkID)
                 setNetwork(networkResponseOnLoad.network)
                 setNetStatus(networkResponseOnLoad.status)
@@ -89,7 +89,8 @@ function App() {
                 )}
             </button>
             <p>{status}</p>
-            <p>{"Network: " + network}</p>
+            <p>{network !== "" && networkId !== 0 && `Network: ${network} (ID#: ${networkId})`}</p>
+            <p>{netStatus}</p>
         </div>
     )
 }
