@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
-// import Web3 from "web3"
+import { Button } from 'react-bootstrap'
+import Web3 from "web3"
 import './App.css'
+
+import mustachioAbi from './utils/abi'
 import connectWallet  from './utils/connectWallet'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
@@ -14,9 +17,10 @@ function App() {
     const [netStatus, setNetStatus] = useState("")
 
     // State variables for contract
-    // const [name, setName] = useState("")
-    // const [description, setDescription] = useState("")
-    // const [url, setURL] = useState("")
+    const web3 = new Web3()
+    const contractAbi = mustachioAbi()
+    const contractAddress = "0xD559385dD16Da10e6f52Ad236074E7e5ef08fb2e"
+    const contract = new web3.eth.Contract(contractAbi, contractAddress)
 
     // Initialize wallet address and network upon button click
     const initUtils = async () => {
@@ -78,7 +82,7 @@ function App() {
 
     return (
         <div className="app text-center mt-2">
-            <button className="btn btn-primary" onClick={initUtils}>
+            <Button variant="primary" onClick={initUtils}>
                 {walletAddress.length > 0 ? (
                     "Connected: " +
                     String(walletAddress).substring(0, 6) +
@@ -87,10 +91,12 @@ function App() {
                     ) : (
                     <span>Connect Wallet</span>
                 )}
-            </button>
+            </Button>
             <p>{status}</p>
             <p>{network !== "" && networkId !== 0 && `Network: ${network} (ID#: ${networkId})`}</p>
             <p>{netStatus}</p>
+
+            <Button variant="primary" className="text-center mt-4">GET MY MUSTACHIO</Button>
         </div>
     )
 }
