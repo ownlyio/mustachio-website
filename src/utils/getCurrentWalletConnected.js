@@ -1,9 +1,8 @@
-import Web3 from "web3"
+import web3 from './web3'
 
 const getCurrentWalletConnected = async () => {
     if (window.ethereum) {
         try {
-            const web3 = new Web3(Web3.givenProvider)
             const addressArray = await web3.eth.getAccounts()
             if (addressArray.length > 0) {
                 return {
