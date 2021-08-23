@@ -87,8 +87,13 @@ function App() {
             setIsSuccess(true)
             setTxHash(receipt.transactionHash)
             setTxData(receipt)
+            console.log(receipt)
         })
     }
+
+    // const getTokenUri = async (id) => {
+    //     const mintPrice = await contract.methods.getMintPrice().call()
+    // }
 
     // Initialize wallet address and network if Metamask is already connected
     // Watches for the listeners' update

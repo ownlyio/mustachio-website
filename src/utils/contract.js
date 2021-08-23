@@ -3,7 +3,7 @@ import web3 from "./web3"
 // bsctestnet
 // const address = '0x9359dd95E2B229B5bAaE702e31e75ebbEd5DB9e0' 
 // rinkeby
-const address = '0xA20394c5b32F6eF11E6e3a016fC2D8e8D700a0aA' 
+const address = '0x6fA54Cf01AE1dc3cAd9A95E31af8d4187541aC67' 
 
 const mustachioAbi = [
     {
