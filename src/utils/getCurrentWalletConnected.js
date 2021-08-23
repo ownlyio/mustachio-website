@@ -7,26 +7,37 @@ const getCurrentWalletConnected = async () => {
             if (addressArray.length > 0) {
                 return {
                     address: addressArray[0],
-                    status: "🦊 Connected!",
+                    status: 1,
                 }
             } else {
-                return {
-                    address: "",
-                    status: "🦊 Please connect to Metamask.",
+                try {
+                    await window.ethereum.enable();
+                    const addressArray = await web3.eth.getAccounts()
+                    console.log(addressArray)
+
+                    return {
+                        address: addressArray[0],
+                        status: 1,
+                    };
+                } catch (error) {
+                    return {
+                        address: "",
+                        status: 2
+                    }
                 }
             }
         } catch (err) {
             return {
                 connectedStatus: false,
                 address: "",
-                status: "🦊 Please connect to Metamask."
+                status: 3
             }
         }
     } else {
         return {
             connectedStatus: false,
             address: "",
-            status: "🦊 You must install Metamask into your browser: https://metamask.io/download.html"
+            status: 0
         }
     }
 };

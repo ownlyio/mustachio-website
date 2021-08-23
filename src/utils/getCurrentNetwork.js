@@ -35,20 +35,20 @@ const getCurrentNetwork = async (onChange = 0) => {
             return {
                 networkID,
                 network,
-                netStatus: (onChange === 0) ? "🦊 Network loaded!" : "🦊 Network changed/detected!"
+                netStatus: (onChange === 0) ? 1 : 3
             }
         } catch (err) {
             return {
                 networkID: 0,
                 network: "",
-                netStatus: "🦊 Please connect to Metamask."
+                netStatus: 2
             }
         }
     } else {
         return {
             networkID: 0,
             network: "",
-            netStatus: "🦊 You must install Metamask into your browser: https://metamask.io/download.html"
+            netStatus: 0
         }
     }
 };
