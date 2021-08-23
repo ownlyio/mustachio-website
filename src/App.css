@@ -1,0 +1,119 @@
+.app {
+    height: 100%;
+    width: 100%;
+    background-color: #120833;
+}
+
+.app-border {
+    height: 100%;
+    width: 100%;
+    border: 4px solid #818181;
+    border-radius: 5px;
+}
+
+.app-logo-wrap {
+    width: 60px;
+}
+
+.app-logo {
+    width: 100%;
+}
+
+.app-title {
+    font-family: 'W Hermann';
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.75rem;
+    color: white;
+}
+
+.app-assets-left-sword{
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.app-assets-right-sword{
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.app-assets-mustachio {
+    width: 350px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    text-align: center;
+}
+
+.app-icons {
+    margin-top: 5px;
+}
+
+.app-content-main {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.app-content-main p {
+    color: white;
+    font-family: 'W Hermann';
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+}
+
+.app-content-main span {
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+.app-content-main a {
+    color: white;
+}
+
+.app-btn button {
+    background-color: white;
+    color: #120833;
+    font-family: 'W Hermann';
+    font-size: 1.75rem;
+    line-height: 1.5rem;
+    width: 25%;
+    border-radius: 10px;
+}
+
+.app-btn :hover {
+    background-color: #efefef;
+}
+
+.app-video {
+    width: 55%;
+    margin: 0 auto;
+}
+
+.app-video video {
+    width: 100%;
+}
+
+.app-metamask-modal-img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.app-metamask-modal-img img {
+    width: 100%;
+}
+
+.app-metamask-modal-content, 
+.app-network-modal-content,
+.app-pending-modal-content,
+.app-error-modal-content,
+.app-success-modal-content {
+    font-family: 'W Hermann';
+    font-weight: 600;
+    font-size: 1rem;
+}
