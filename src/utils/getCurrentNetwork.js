@@ -1,10 +1,9 @@
-import Web3 from "web3"
+import web3 from './web3'
 
 const getCurrentNetwork = async (onChange = 0) => {
     if (window.ethereum) {
         try {
             let network = ""
-            const web3 = new Web3(Web3.givenProvider)
             const networkID = await web3.eth.net.getId()
 
             switch (networkID) {
