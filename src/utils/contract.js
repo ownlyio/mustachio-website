@@ -3,7 +3,7 @@ import web3 from "./web3"
 // bsctestnet
 // const address = '0x9359dd95E2B229B5bAaE702e31e75ebbEd5DB9e0' 
 // rinkeby
-const address = '0x6fA54Cf01AE1dc3cAd9A95E31af8d4187541aC67' 
+const address = '0xAc196044b9387bd14706a62ecd03c3FbBc1C0ab7' 
 
 const mustachioAbi = [
     {
@@ -109,6 +109,21 @@ const mustachioAbi = [
     },
     {
         "inputs":[
+            
+        ],
+        "name":"PROVENANCE_HASH",
+        "outputs":[
+            {
+                "internalType":"string",
+                "name":"",
+                "type":"string"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
             {
                 "internalType":"address",
                 "name":"to",
@@ -150,11 +165,11 @@ const mustachioAbi = [
         "inputs":[
             
         ],
-        "name":"createToken",
+        "name":"flipSaleState",
         "outputs":[
             
         ],
-        "stateMutability":"payable",
+        "stateMutability":"nonpayable",
         "type":"function"
     },
     {
@@ -171,6 +186,21 @@ const mustachioAbi = [
                 "internalType":"address",
                 "name":"",
                 "type":"address"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            
+        ],
+        "name":"getLastMintedTokenId",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
             }
         ],
         "stateMutability":"view",
@@ -213,6 +243,17 @@ const mustachioAbi = [
             }
         ],
         "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            
+        ],
+        "name":"mintMustachio",
+        "outputs":[
+            
+        ],
+        "stateMutability":"payable",
         "type":"function"
     },
     {
@@ -332,6 +373,21 @@ const mustachioAbi = [
     },
     {
         "inputs":[
+            
+        ],
+        "name":"saleIsActive",
+        "outputs":[
+            {
+                "internalType":"bool",
+                "name":"",
+                "type":"bool"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
             {
                 "internalType":"address",
                 "name":"operator",
@@ -383,6 +439,21 @@ const mustachioAbi = [
     {
         "inputs":[
             {
+                "internalType":"string",
+                "name":"_provenanceHash",
+                "type":"string"
+            }
+        ],
+        "name":"setProvenanceHash",
+        "outputs":[
+            
+        ],
+        "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
                 "internalType":"bytes4",
                 "name":"interfaceId",
                 "type":"bytes4"
@@ -418,6 +489,49 @@ const mustachioAbi = [
         "inputs":[
             {
                 "internalType":"uint256",
+                "name":"index",
+                "type":"uint256"
+            }
+        ],
+        "name":"tokenByIndex",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"address",
+                "name":"owner",
+                "type":"address"
+            },
+            {
+                "internalType":"uint256",
+                "name":"index",
+                "type":"uint256"
+            }
+        ],
+        "name":"tokenOfOwnerByIndex",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
                 "name":"tokenId",
                 "type":"uint256"
             }
@@ -428,6 +542,21 @@ const mustachioAbi = [
                 "internalType":"string",
                 "name":"",
                 "type":"string"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            
+        ],
+        "name":"totalSupply",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
             }
         ],
         "stateMutability":"view",
