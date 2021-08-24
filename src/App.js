@@ -67,6 +67,9 @@ function App() {
     const [showOnSuccess, setShowOnSuccess] = useState(false);
     const handleCloseOnSuccess = () => setShowOnSuccess(false);
     const handleShowOnSuccess = () => setShowOnSuccess(true);
+    const [showSoldOut, setShowSoldOut] = useState(false);
+    const handleCloseSoldOut = () => setShowSoldOut(false);
+    const handleShowSoldOut = () => setShowSoldOut(true);
 
     let now = new Date().getTime();
     let countDownDate = new Date("Aug 24, 2021 19:00:00").getTime()
@@ -170,31 +173,37 @@ function App() {
 
     // Mint
     const mintMustachio = async () => {
-        const mintPrice = await contract.methods.getMintPrice().call()
-        await contract.methods.mintMustachio().send({
-            from: walletAddress,
-            value: mintPrice,
-            type: '0x2',
-        })
-        .on('transactionHash', function(hash){
-            handleShowOnProcess()
-        })
-        .on('error', function(error) {
-            handleCloseOnProcess()
-            handleShowOnError()
-            setTxError(error.message)
-        })
-        .then(async function(receipt) {
-            handleCloseOnProcess()
-            handleShowOnSuccess()
-            setTxHash(receipt.transactionHash)
-            setTxData(receipt)
+        const lastId = await contract.methods.getLastMintedTokenId().call()
 
-            // Get TokenID
-            const lastTokenId = await contract.methods.getLastMintedTokenId().call()
-            setTokenId(lastTokenId)
-        })
-    }
+        if (lastId <= 100) {
+            const mintPrice = await contract.methods.getMintPrice().call()
+            await contract.methods.mintMustachio().send({
+                from: walletAddress,
+                value: mintPrice,
+                type: '0x2',
+            })
+            .on('transactionHash', function(hash){
+                handleShowOnProcess()
+            })
+            .on('error', function(error) {
+                handleCloseOnProcess()
+                handleShowOnError()
+                setTxError(error.message)
+            })
+            .then(async function(receipt) {
+                handleCloseOnProcess()
+                handleShowOnSuccess()
+                setTxHash(receipt.transactionHash)
+                setTxData(receipt)
+
+                // Get TokenID
+                const lastTokenId = await contract.methods.getLastMintedTokenId().call()
+                setTokenId(lastTokenId)
+            })
+        } else {
+            handleShowSoldOut()
+        }
+    } 
 
     // Initialize wallet address and network if Metamask is already connected
     // Watches for the listeners' update
@@ -316,6 +325,21 @@ function App() {
                     </div>
                 </Modal.Body>
             </Modal>    
+
+            {/* Modal for soldout */}
+            <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <FontAwesomeIcon color="yellow" size="6x" icon={faExclamationCircle} />
+                    </div>
+                    <p className="app-soldout-modal-content text-center"><b style={{fontSize: "1.5rem"}}>SOLD OUT!</b><br />All 100 Mustachios have gone through The Portal. Watch out for the next generation of mustached beings.</p>
+                </Modal.Body>
+                <Modal.Footer className="justify-content-center">
+                    <Button variant="secondary" onClick={handleCloseSoldOut}>
+                        Close
+                    </Button>
+                </Modal.Footer>
+            </Modal> 
 
             {/* Modal for No Metamask */}
             <Modal show={showMetamaskInstall} onHide={handleCloseMetamaskInstall} backdrop="static" keyboard={false} size="sm" centered>
