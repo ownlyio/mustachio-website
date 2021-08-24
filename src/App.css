@@ -1,11 +1,10 @@
 .app {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
     background-color: #120833;
 }
 
 .app-border {
-    height: 100%;
     width: 100%;
     border: 4px solid #818181;
     border-radius: 5px;
@@ -28,35 +27,28 @@
     color: white;
 }
 
-.app-assets-left-sword{
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-}
-
-.app-assets-right-sword{
-    position: absolute;
-    bottom: 1.5rem;
-    right: 1.5rem;
-}
-
 .app-assets-mustachio {
     width: 350px;
     position: absolute;
-    margin-left: auto;
-    margin-right: auto;
     left: 0;
     right: 0;
-    bottom: 5px;
     text-align: center;
+}
+
+.app-assets-mustachio img {
+    width: 100%;
 }
 
 .app-icons {
     margin-top: 5px;
 }
 
+.app-content {
+    height: auto;
+}
+
 .app-content-main {
-    width: 65%;
+    width: 550px;
     margin: 0 auto;
 }
 
@@ -72,17 +64,13 @@
     font-size: 3.5rem;
 }
 
-.app-content-main a {
-    color: white;
-}
-
 .app-btn button {
     background-color: white;
     color: #120833;
     font-family: 'W Hermann';
     font-size: 1.75rem;
     line-height: 1.5rem;
-    width: 25%;
+    width: 175px;
     border-radius: 10px;
 }
 
@@ -91,7 +79,7 @@
 }
 
 .app-video {
-    width: 55%;
+    width: 325px;
     margin: 0 auto;
 }
 
@@ -116,4 +104,121 @@
     font-family: 'W Hermann';
     font-weight: 600;
     font-size: 1rem;
+}
+
+.app-loading-big-letter {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.app-countdown-text {
+    font-family: 'W Hermann';
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.app-countdown-timer {
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 0.5rem;
+}
+
+.app-countdown,
+.app-countdown-colon {
+    font-family: 'W Hermann';
+    font-weight: bold;
+    font-size: 4rem;
+}
+
+.app-countdown {
+    background-color: #ddddee;
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    line-height: 3rem;
+}
+
+@media (max-width: 1080px) {
+    .app-content-main {
+        width: 500px;
+    }
+}
+
+@media (max-width: 991px) {
+    .app-content-main {
+        width: 80%;
+    }
+
+    .app-video {
+        width: 80%;
+        margin-bottom: 1.5rem;
+    }
+
+    .app-assets-wrap {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .lg-screen {
+        display: none !important;
+    }
+
+    .md-screen {
+        display: block !important;
+        margin-top: 1.5rem;
+        font-size: 2.5rem;
+    }
+
+    .main-content {
+        margin-top: 1.5rem !important;
+    }
+
+    .top-header > .col-3 {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .app-assets-mustachio {
+        width: 40%;
+        margin-top: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .app-content {
+        padding: 0.5rem !important;
+        margin-top: 1.25rem;
+    }
+
+    .md-screen {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-content-main {
+        width: 100%;
+    }
+
+    .app-video {
+        width: 100%;
+    }
+
+    .app-assets-mustachio {
+        margin-top: 30px;
+    }
+
+    .app-assets-left-sword,
+    .app-assets-right-sword {
+        width: 60px;
+    }
+
+    .top-header > div:nth-child(1) {
+        width: 30% !important;
+    }
+
+    .top-header > div:nth-child(3) {
+        width: 70% !important;
+    }
 }
