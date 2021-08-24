@@ -3,7 +3,9 @@ import web3 from "./web3"
 // bsctestnet
 // const address = '0x9359dd95E2B229B5bAaE702e31e75ebbEd5DB9e0' 
 // rinkeby
-const address = '0xAc196044b9387bd14706a62ecd03c3FbBc1C0ab7' 
+// const address = '0x7F453b39Fefe22C546c5367Ec6ceD09f5ec235dD' 
+// mainnet
+const address = '0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5' 
 
 const mustachioAbi = [
     {
@@ -249,6 +251,21 @@ const mustachioAbi = [
         "inputs":[
             
         ],
+        "name":"max_mustachios",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            
+        ],
         "name":"mintMustachio",
         "outputs":[
             
@@ -310,6 +327,17 @@ const mustachioAbi = [
             
         ],
         "name":"renounceOwnership",
+        "outputs":[
+            
+        ],
+        "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            
+        ],
+        "name":"reserveMustachios",
         "outputs":[
             
         ],
