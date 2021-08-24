@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDiscord, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { Button, Modal } from 'react-bootstrap'
+import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 
-// import web3 from './utils/web3'
 import contract from './utils/contract'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
@@ -15,8 +16,7 @@ import swordLeft from './images/sword2.png'
 import mustachioLogo from './images/mustachio_logo_2.png'
 import metamask from './images/metamask.png'
 import videoTeaser from './videos/teaser.mp4'
-import { Button, Modal } from 'react-bootstrap'
-import { faCheckCircle, faExclamationCircle, faSpinner } from '@fortawesome/free-solid-svg-icons'
+import loading from './images/loading-mustachio.gif'
  
 function App() {
     // State variables for initialization
@@ -24,6 +24,7 @@ function App() {
     const [status, setStatus] = useState(0)
     const [network, setNetwork] = useState("")
     const [netStatus, setNetStatus] = useState(0)
+    const [tokenId, setTokenId] = useState(0)
 
     // State variables for minting
     const [txHash, setTxHash] = useState("")
@@ -31,14 +32,24 @@ function App() {
     const [txData, setTxData] = useState([])
 
     // Other Variables
-    const rinkebyUrl = "https://rinkeby.etherscan.io/tx/"
-    const bscScanUrl = "https://testnet.bscscan.com/tx/"
+    // const explorerUrl = "https://rinkeby.etherscan.io/tx/"
+    const explorerUrl = "https://etherscan.io/tx/"
+    // change contract address before deployment
+    // const contractAddress = "0x7F453b39Fefe22C546c5367Ec6ceD09f5ec235dD" // Rinkeby
+    const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
+    // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
+    const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
     const socMedHandles = {
         fb: "https://facebook.com/mustachioverse",
         ig: "https://instagram.com/mustachioverse",
         discord: "https://discord.gg/CYq9tmUV",
         twitter: "https://twitter.com/mustachioverse",
     }
+
+    // Countdown states
+    const [hours, setHours] = useState("00")
+    const [minutes, setMinutes] = useState("00")
+    const [seconds, setSeconds] = useState("00")
 
     // Modals
     const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);
@@ -57,6 +68,12 @@ function App() {
     const handleCloseOnSuccess = () => setShowOnSuccess(false);
     const handleShowOnSuccess = () => setShowOnSuccess(true);
 
+    let now = new Date().getTime();
+    let countDownDate = new Date("Aug 24, 2021 19:00:00").getTime()
+    let diff = countDownDate-now
+    const [showCountdown, setShowCountdown] = useState(diff > 0);
+    const handleCloseCountdown = () => setShowCountdown(false);
+
     // Initialize wallet address and network upon button click
     // Then mint afterwards
     const initUtilsAndMint = async () => {
@@ -68,8 +85,8 @@ function App() {
         setNetStatus(networkResponse.netStatus)
 
         if (status === 1) {
-            if (network === "rinkeby") {
-            // if (network === "main") {
+            // if (network === "rinkeby") {
+            if (network === "main") {
                 mintMustachio()
             } else {
                 handleShowWrongNetwork()
@@ -104,13 +121,52 @@ function App() {
                 setNetwork(networkResponseOnLoad.network)
                 setNetStatus(networkResponseOnLoad.netStatus)
 
-                if (network !== "rinkeby") {
-                // if (network !== "main") {
+                // if (network !== "rinkeby") {
+                if (network !== "main") {
                     handleShowWrongNetwork()
                 }
             });            
         }
     }
+
+    // Countdown Timer
+    const startCountdown = () => {
+        let countDownDate = new Date("Aug 24, 2021 19:00:00").getTime();
+        let x = setInterval(function() {
+            let now = new Date().getTime();
+            let distance = countDownDate - now;
+    
+            let hours = pad_zeroes(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+            let minutes = pad_zeroes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+            let seconds = pad_zeroes(Math.floor((distance % (1000 * 60)) / 1000));
+    
+            setHours(hours);
+            setMinutes(minutes);
+            setSeconds(seconds);
+    
+            if (distance < 0) {
+                handleCloseCountdown()
+            }
+        }, 1000);
+    };
+
+    const pad_zeroes = (number) => {
+        number = number.toString();
+    
+        while(number.length < 2) {
+            number = "0" + number;
+        }
+    
+        return number;
+    };
+
+    // shorten addresses and/or txHashes
+    // const shortenAddress = (address, prefixCount, postfixCount) => {
+    //     let prefix = address.substr(0, prefixCount);
+    //     let postfix = address.substr(address.length - postfixCount, address.length);
+    
+    //     return prefix + "..." + postfix;
+    // };
 
     // Mint
     const mintMustachio = async () => {
@@ -128,11 +184,15 @@ function App() {
             handleShowOnError()
             setTxError(error.message)
         })
-        .then(function(receipt) {
+        .then(async function(receipt) {
             handleCloseOnProcess()
             handleShowOnSuccess()
             setTxHash(receipt.transactionHash)
             setTxData(receipt)
+
+            // Get TokenID
+            const lastTokenId = await contract.methods.getLastMintedTokenId().call()
+            setTokenId(lastTokenId)
         })
     }
 
@@ -160,19 +220,15 @@ function App() {
     return (
         <div className="app px-4 py-4">
             <div className="app-border">
-                <img className="app-assets-left-sword" src={swordLeft} alt="Left Sword" />
-                <img className="app-assets-right-sword" src={swordRight} alt="Right Sword" />
-                <img className="app-assets-mustachio" src={mustachioLogo} alt="Mustachio Logo" />
-
                 <div className="app-content px-4 py-4">
                     <div className="container-fluid">
-                        <div className="row">
+                        <div className="row top-header">
                             <div className="col-3">
                                 <div className="app-logo-wrap">
                                     <img className="app-logo" src={logo} alt="Mustachio Logo" />
                                 </div>
                             </div>
-                            <div className="col-6 app-title">Official launch this 09.09.21</div>
+                            <div className="col-6 app-title lg-screen">Official launch this 09.09.21</div>
                             <div className="col-3">
                                 <div className="row">
                                     <div className="col-3 text-center">
@@ -199,9 +255,12 @@ function App() {
                             </div>
                         </div>
 
-                        <div className="row align-items-center mt-5">
+                        <div className="app-title md-screen d-none">Official launch this 09.09.21</div>
+
+                        <div className="row align-items-center mt-5 main-content">
                             <div className="col-lg-5 col-md-12">
                                 <div className="app-video">
+                                    {/* <video controls autoPlay controlsList="nodownload"> */}
                                     <video controls controlsList="nodownload">
                                         <source src={videoTeaser} type="video/mp4" />
                                         Video tag is not supported in this browser.
@@ -210,13 +269,13 @@ function App() {
                             </div>
                             <div className="col-lg-7 col-md-12">
                                 <div className="app-content-main text-center">
-                                    <p><span className="app-big-letter">O</span>, when the Mustachios dwell in the MustachioVerse, there is but one Mustachio who stood out among the rest.</p>
-                                    <p>The Prospector, supreme beyond all Mustachiokind, who bore in his mighty hands all 9 artifacts from the fabled Grooming Kit.</p>
-                                    <p>He who dared seek success and happiness through audacious exploits that moved mountains and changed the courses of the rivers.</p>
-                                    <p>The Prospector.</p>
-                                    <p>You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
-                                    <p>08.24.21. Shave the date.</p>
-                                    <p>Join the MustachioVerse Discord community here: <a href={socMedHandles.discord} target="_blank">{socMedHandles.discord}</a></p>
+                                    <p><span className="app-big-letter">T</span>hus did you stand and ponder, poising static on your toes, as the wind so solemnly whispers… THE PORTAL EMERGES.</p>
+                                    <p>Be ready, for the time has come.</p>
+                                    <p>The Mustachios Pre-Sale unlocks at this very moment, during which we chew over the reason why we’re here.</p>
+                                    <p>You, nobleman, laying low by the hands of fate, are to enter the land of mustached beings as a random Mustachio.</p>
+                                    <p>As we have yet find the answers to the quest of the Golden Mustache, for you are destined to solve the mystery.</p>
+                                    <p>Drag your horses and satchel and enter MustachioVerse. O, the tale lives in you.</p>
+                                    <p>Unravel your story.</p>
                                 </div>
                                 <div className="app-btn text-center">
                                     <button className="btn px-4" onClick={initUtilsAndMint}>MINT</button>
@@ -225,7 +284,38 @@ function App() {
                         </div>
                     </div>
                 </div>
+
+                <div className="app-assets-wrap d-flex justify-content-between">
+                    <img className="app-assets-left-sword" src={swordLeft} alt="Left Sword" />
+                    <div className="app-assets-mustachio mx-auto">
+                        <img src={mustachioLogo} alt="Mustachio Logo" />
+                    </div>
+                    <img className="app-assets-right-sword" src={swordRight} alt="Right Sword" />
+                </div>
             </div>   
+
+            {/* Modal for countdown */}
+            <Modal show={showCountdown} onShow={startCountdown} onHide={handleCloseCountdown} backdrop="static" keyboard={false} size="md" centered>
+                <Modal.Body>
+                    <p className="app-countdown-text text-center mb-3">THE MUSTACHIOVERSE PORTAL<br />WILL EMERGE IN...</p>
+                    <div className="app-countdown-timer d-flex">
+                        <div className="app-countdown hours">
+                            <p className="mb-0">{hours}</p>
+                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>HOURS</p>
+                        </div>
+                        <div className="app-countdown-colon">:</div>
+                        <div className="app-countdown minutes">
+                            <p className="mb-0">{minutes}</p>
+                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>MINUTES</p>
+                        </div>
+                        <div className="app-countdown-colon">:</div>
+                        <div className="app-countdown seconds">
+                            <p className="mb-0">{seconds}</p>
+                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>SECONDS</p>
+                        </div>
+                    </div>
+                </Modal.Body>
+            </Modal>    
 
             {/* Modal for No Metamask */}
             <Modal show={showMetamaskInstall} onHide={handleCloseMetamaskInstall} backdrop="static" keyboard={false} size="sm" centered>
@@ -251,8 +341,8 @@ function App() {
                     <div className="text-center mb-3">
                         <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
                     </div>
-                    <p className="app-network-modal-content text-center">Please connect to Rinkeby network</p>
-                    {/* <p className="app-network-modal-content text-center">Please connect to Ethereum Mainnet</p> */}
+                    {/* <p className="app-network-modal-content text-center">Please connect to Rinkeby network</p> */}
+                    <p className="app-network-modal-content text-center">Please connect to Ethereum Mainnet</p>
                 </Modal.Body>
                 <Modal.Footer className="justify-content-center">
                     <Button variant="secondary" onClick={handleCloseWrongNetwork}>
@@ -265,15 +355,10 @@ function App() {
             <Modal show={showOnProcess} onHide={handleCloseOnProcess} backdrop="static" keyboard={false} size="sm" centered>
                 <Modal.Body>
                     <div className="text-center mb-3">
-                        <FontAwesomeIcon color="gray" size="6x" icon={faSpinner} spin />
+                        <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
                     </div>
-                    <p className="app-pending-modal-content text-center">Minting your Mustachio. Please wait...</p>
+                    <p className="app-pending-modal-content text-center"><span className="app-loading-big-letter">O</span>, what great honour. Put on your armor and hold your fire, dear friend, for we are minting your Mustachio.</p>
                 </Modal.Body>
-                <Modal.Footer className="justify-content-center">
-                    <Button variant="secondary" onClick={handleCloseOnProcess}>
-                        Close
-                    </Button>
-                </Modal.Footer>
             </Modal>    
 
             {/* Modal for error transaction */}
@@ -292,20 +377,22 @@ function App() {
             </Modal>    
 
             {/* Modal for successful transaction */}
-            <Modal show={showOnSuccess} onHide={handleCloseOnSuccess} backdrop="static" keyboard={false} size="lg" centered>
+            <Modal show={showOnSuccess} onHide={handleCloseOnSuccess} backdrop="static" keyboard={false} size="md" centered>
                 <Modal.Body>
                     <div className="text-center mb-3">
                         <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
                     </div>
-                    <p className="app-success-modal-content text-center">Successfully minted your Mustachio!</p>
-                    <p className="app-success-modal-content text-center">Transaction Hash: {txHash}</p>
+                    <p className="app-success-modal-content text-center">Your Mustachio has been successfully minted! You're ready to join the quest to find the Golden Mustache.</p>
                 </Modal.Body>
                 <Modal.Footer className="justify-content-center">
                     <Button variant="secondary" onClick={handleCloseOnSuccess}>
                         Close
                     </Button>
-                    <Button variant="primary" onClick={() => window.open(rinkebyUrl + txHash, '_blank').focus()}>
+                    <Button variant="primary" onClick={() => window.open(explorerUrl + txHash, '_blank').focus()}>
                         View on EtherScan
+                    </Button>
+                    <Button variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
+                        View on OpenSea
                     </Button>
                 </Modal.Footer>
             </Modal>    
