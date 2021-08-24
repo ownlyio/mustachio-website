@@ -46,11 +46,6 @@ function App() {
         twitter: "https://twitter.com/mustachioverse",
     }
 
-    // Countdown states
-    const [hours, setHours] = useState("00")
-    const [minutes, setMinutes] = useState("00")
-    const [seconds, setSeconds] = useState("00")
-
     // Modals
     const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);
     const handleCloseMetamaskInstall = () => setShowMetamaskInstall(false);
@@ -70,12 +65,6 @@ function App() {
     const [showSoldOut, setShowSoldOut] = useState(false);
     const handleCloseSoldOut = () => setShowSoldOut(false);
     const handleShowSoldOut = () => setShowSoldOut(true);
-
-    let now = new Date().getTime();
-    let countDownDate = new Date("Aug 24, 2021 19:00:00").getTime()
-    let diff = countDownDate-now
-    const [showCountdown, setShowCountdown] = useState(diff > 0);
-    const handleCloseCountdown = () => setShowCountdown(false);
 
     // Initialize wallet address and network upon button click
     // Then mint afterwards
@@ -131,37 +120,6 @@ function App() {
             });            
         }
     }
-
-    // Countdown Timer
-    const startCountdown = () => {
-        let countDownDate = new Date("Aug 24, 2021 19:00:00").getTime();
-        let x = setInterval(function() {
-            let now = new Date().getTime();
-            let distance = countDownDate - now;
-    
-            let hours = pad_zeroes(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-            let minutes = pad_zeroes(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
-            let seconds = pad_zeroes(Math.floor((distance % (1000 * 60)) / 1000));
-    
-            setHours(hours);
-            setMinutes(minutes);
-            setSeconds(seconds);
-    
-            if (distance < 0) {
-                handleCloseCountdown()
-            }
-        }, 1000);
-    };
-
-    const pad_zeroes = (number) => {
-        number = number.toString();
-    
-        while(number.length < 2) {
-            number = "0" + number;
-        }
-    
-        return number;
-    };
 
     // shorten addresses and/or txHashes
     // const shortenAddress = (address, prefixCount, postfixCount) => {
@@ -302,29 +260,6 @@ function App() {
                     <img className="app-assets-right-sword" src={swordRight} alt="Right Sword" />
                 </div>
             </div>   
-
-            {/* Modal for countdown */}
-            <Modal show={showCountdown} onShow={startCountdown} onHide={handleCloseCountdown} backdrop="static" keyboard={false} size="md" centered>
-                <Modal.Body>
-                    <p className="app-countdown-text text-center mb-3">THE MUSTACHIOVERSE PORTAL<br />WILL EMERGE IN...</p>
-                    <div className="app-countdown-timer d-flex">
-                        <div className="app-countdown hours">
-                            <p className="mb-0">{hours}</p>
-                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>HOURS</p>
-                        </div>
-                        <div className="app-countdown-colon">:</div>
-                        <div className="app-countdown minutes">
-                            <p className="mb-0">{minutes}</p>
-                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>MINUTES</p>
-                        </div>
-                        <div className="app-countdown-colon">:</div>
-                        <div className="app-countdown seconds">
-                            <p className="mb-0">{seconds}</p>
-                            <p className="mb-0 text-center" style={{lineHeight: "2rem", fontSize: "1rem"}}>SECONDS</p>
-                        </div>
-                    </div>
-                </Modal.Body>
-            </Modal>    
 
             {/* Modal for soldout */}
             <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>

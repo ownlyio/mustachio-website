@@ -112,32 +112,6 @@
     font-size: 2rem;
 }
 
-.app-countdown-text {
-    font-family: 'W Hermann';
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
-.app-countdown-timer {
-    align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 0.5rem;
-}
-
-.app-countdown,
-.app-countdown-colon {
-    font-family: 'W Hermann';
-    font-weight: bold;
-    font-size: 4rem;
-}
-
-.app-countdown {
-    background-color: #ddddee;
-    padding: 1rem 1.5rem;
-    border-radius: 15px;
-    line-height: 3rem;
-}
-
 @media (max-width: 1080px) {
     .app-content-main {
         width: 500px;
