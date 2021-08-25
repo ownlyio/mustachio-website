@@ -242,6 +242,7 @@ function App() {
                                 <div className="app-btn text-center">
                                     <button className="btn px-4" onClick={initUtilsAndMint}>MINT</button>
                                 </div>
+                                <p className="app-note">0.3 ETH + Gas fee for each Mustachio</p>
                             </div>
                         </div>
                     </div>

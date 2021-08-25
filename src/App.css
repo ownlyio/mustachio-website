@@ -112,6 +112,13 @@
     font-size: 2rem;
 }
 
+.app-note {
+    font-family: 'W Hermann';
+    color: white;
+    text-align: center;
+    font-style: italic;
+}
+
 @media (max-width: 1080px) {
     .app-content-main {
         width: 500px;
