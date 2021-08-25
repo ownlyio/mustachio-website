@@ -112,11 +112,6 @@ function App() {
                 const networkResponseOnLoad = await getCurrentNetwork(1)
                 setNetwork(networkResponseOnLoad.network)
                 setNetStatus(networkResponseOnLoad.netStatus)
-
-                // if (network !== "rinkeby") {
-                if (network !== "main") {
-                    handleShowWrongNetwork()
-                }
             });            
         }
     }
@@ -133,7 +128,7 @@ function App() {
     const mintMustachio = async () => {
         const lastId = await contract.methods.getLastMintedTokenId().call()
 
-        if (lastId <= 100) {
+        if (lastId < 100) {
             const mintPrice = await contract.methods.getMintPrice().call()
             await contract.methods.mintMustachio().send({
                 from: walletAddress,
