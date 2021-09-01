@@ -42,7 +42,7 @@ function App() {
     const socMedHandles = {
         fb: "https://facebook.com/mustachioverse",
         ig: "https://instagram.com/mustachioverse",
-        discord: "https://discord.gg/Ekvz9F8tSJ",
+        discord: "https://discord.gg/rfypRx4cjh",
         twitter: "https://twitter.com/mustachioverse",
     }
 
