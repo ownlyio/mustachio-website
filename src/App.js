@@ -1,10 +1,14 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
-
-import grid from './images/grid.jpg'
 import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
+
+import grid from './images/grid.jpg'
+import mustachioBanner from './images/mustachio_banner.jpeg'
+import prospector from './images/prospector.jpg'
+import cryptoback from './images/10_cryptoback.jpg'
+import story from './images/story.jpg'
  
 function App() {
     return (
@@ -18,12 +22,13 @@ function App() {
                         </section>
                         <section id="app-welcome" className="py-4">
                             <div className="row mb-4">
-                                <div className="col-lg-7 col-12">
+                                <div className="col-lg-6 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Welcome to The Mustachios!</h1>
-                                    <p className="text-white font-montreux-cs">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed pharetra eros, nec tempus neque. Etiam consequat nisi risus, a rhoncus magna gravida quis. Integer sit amet lorem neque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus dignissim a justo ac varius. Donec mauris urna, volutpat at lectus id, faucibus euismod felis. Sed placerat felis et luctus sodales.</p>
+                                    <p className="text-white font-montreux-cs">With his mighty pen and a slight quiver on his shoulders, Dan Barotillo have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
+                                    <p className="text-white font-montreux-cs">Together, let's open The Sages Rant and read our story  of how we triumphed over the 99 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
                                 </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
-                                    <img className="w-100" src="https://via.placeholder.com/768" alt="Mustachio Image #1" />
+                                <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
+                                    <img className="w-100" src={mustachioBanner} alt="Mustachio Banner" />
                                 </div>
                             </div>
                         </section>
@@ -34,7 +39,7 @@ function App() {
                                     <h3 className="font-montreux-csdmbditalic text-white text-center">MINT YOUR MUSTACHIO</h3>
                                 </div>
                                 <div className="m-auto col-lg-4 col-12 offset-lg-1">
-                                    <p className="text-justify font-montreux-cs text-white mb-lg-0">Curabitur magna velit, mattis ut maximus non, vehicula vitae elit. Integer non metus mauris.</p>
+                                    <p className="text-justify font-montreux-cs text-white mb-lg-0">You can mint your OWN mustachio, and let's unfold the story behind each mustache</p>
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button">MINT YOURS NOW!</button>
@@ -48,13 +53,15 @@ function App() {
                         <section id="app-desc" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
-                                    <h1 className="mb-4 text-white font-montreux-csdmbditalic">Description Here</h1>
-                                    <p className="text-white font-montreux-cs">Praesent porta quam id purus maximus lobortis id sit amet nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed erat nisl, vulputate sit amet eros eu, mollis ultricies quam.</p>
-                                    <p className="text-white font-montreux-cs">Sed laoreet elit eu sapien porttitor, hendrerit vulputate enim elementum. Vivamus maximus gravida augue, ac maximus libero viverra in. <Link to="#">Suspendisse potenti.</Link> Cras vehicula quam ut sagittis viverra.</p>
-                                    <p className="text-white font-montreux-cs">Duis diam odio, <Link to="#">luctus quis nisi ut,</Link> hendrerit lacinia elit. Integer non mi sed libero iaculis tempor vitae aliquam orci.</p>
+                                    <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Tale of the Prospector</h1>
+                                    <p className="text-white font-montreux-cs">O, when the Mustachios dwell in the MustachioVerse, there is but one Mustachio who stood out among the rest.</p>
+                                    <p className="text-white font-montreux-cs">The Prospector, supreme beyond all MustachioKind, who bore in his mighty hands all 9 artifacts from the fabled Grooming Kit.</p>
+                                    <p className="text-white font-montreux-cs">He who dared seek success and happiness through audacious exploits that moved mountains and changed the courses of the rivers.</p>
+                                    <p className="text-white font-montreux-cs">The Prospector.</p>
+                                    <p className="text-white font-montreux-cs">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
-                                    <img className="w-100" src="https://via.placeholder.com/768" alt="Mustachio Image #1" />
+                                    <img className="w-100" src={prospector} alt="Prospector" />
                                 </div>
                             </div>
                         </section>
@@ -63,26 +70,26 @@ function App() {
 
                         <section id="app-specs" className="mb-4">
                             <div className="row mb-4">
-                                <div className="col-lg-9 col-12">
+                                <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Why Mint our Mustachios?</h1>
-                                    <p className="text-white font-montreux-cs">When you mint a Mustachio, you’re not simply buying an avatar. Interdum et malesuada fames ac ante ipsum primis in faucibus. Aenean auctor turpis sed fringilla faucibus. Praesent scelerisque pharetra libero, ut commodo augue congue in. Cras sed dui lacus. </p>
+                                    <p className="text-white font-montreux-cs">When you mint a Mustachio, you’re not simply buying an avatar. The Mustachio will be your key to enter the journey in collecting artifacts that will increase your rarity and scout level in the MustachioVerse.</p>
                                 </div>
                             </div>
                             <div className="row mb-4">
                                 <div className="mx-auto col-md-2 col-12">
                                     <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src="https://via.placeholder.com/100x150" alt="Reason #1" />
+                                        <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
                                     </div>
                                     <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Quisque rutrum elit sit amet rhoncus rutrum</p>
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">10% Cryptoback in $OWN Tokens</p>
                                     </div>
                                 </div>
                                 <div className="mx-auto col-md-2 col-12">
                                     <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src="https://via.placeholder.com/100x150" alt="Reason #1" />
+                                        <img className="img-fluid m-auto" src={story} alt="Explore stories" />
                                     </div>
                                     <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Nam ipsum mi, blandit in nibh vel</p>
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Explore stories of each mustache you mint</p>
                                     </div>
                                 </div>
                                 <div className="mx-auto col-md-2 col-12">
@@ -120,31 +127,22 @@ function App() {
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Roadmap</h1>
                                     <ul className="app-roadmap-timeline">
                                         <li className="done">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
+                                            <span className="text-white font-montreux-cs"><b>August 2021:</b> Presale of 100 Genesis Set</span>
                                         </li>
                                         <li className="now">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
+                                            <span className="text-white font-montreux-cs"><b>September 2021:</b> Official Launch</span>
+                                        </li>
+                                        <li className="now">
+                                            <span className="text-white font-montreux-cs"><b>September 2021:</b> OWN Airdrop to Mustachio Holders</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
+                                            <span className="text-white font-montreux-cs"><b>October 2021:</b> Launch of Next Batch of Mustachios</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
+                                            <span className="text-white font-montreux-cs"><b>November 2021:</b> OWN Airdrop to Mustachio Holders</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white font-montreux-cs">Mauris pretium sagittis odio nec lacinia.</span>
+                                            <span className="text-white font-montreux-cs"><b>December 2021:</b> OWN Airdrop to Mustachio Holders</span>
                                         </li>
                                     </ul>
                                 </div>
@@ -156,10 +154,9 @@ function App() {
                         <section id="app-team" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
-                                    <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Team</h1>
-                                    <p className="text-white font-montreux-cs">Praesent porta quam id purus maximus lobortis id sit amet nisl. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed erat nisl, vulputate sit amet eros eu, mollis ultricies quam.</p>
-                                    <p className="text-white font-montreux-cs mb-4">Sed laoreet elit eu sapien porttitor, hendrerit vulputate enim elementum. Vivamus maximus gravida augue, ac maximus libero viverra in. Suspendisse potenti. Cras vehicula quam ut sagittis viverra.</p>
-                                    <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO TEAM</a>
+                                    <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Mustachio Team</h1>
+                                    <p className="text-white font-montreux-cs">The Mustachios are created by our local artist, Dan Barotilla. The MustachioVerse are so glad to have the Ownly Team for this project. You can check them out below.</p>
+                                    <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
                                     <img className="w-100" src="https://via.placeholder.com/768" alt="Mustachio Image #1" />
