@@ -1166,6 +1166,10 @@ body {
     text-align: center;
 }
 
+hr.gray-line {
+    border-bottom: 1px solid #eee;
+}
+
 a {
     color: var(--yellow);
 }
@@ -1173,4 +1177,22 @@ a {
 a:hover,
 a:focus {
     color: #fff;
+}
+
+/* Animation CSS */
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(162, 182, 52, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(162, 182, 52, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(162, 182, 52, 0);
+	}
 }
