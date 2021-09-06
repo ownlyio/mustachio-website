@@ -11,3 +11,76 @@
     background-color: #fff;
     color: #333;
 }
+
+#app-mint .how:hover {
+    text-decoration: underline;
+}
+
+.app-roadmap-timeline {
+    list-style-type: none;
+}
+
+.app-roadmap-timeline li {
+    position: relative;
+    padding: 10px;
+}
+
+.app-roadmap-timeline li:before {
+    content: '';
+    position: absolute;
+    left: -1.55rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.app-roadmap-timeline li:not(:last-child):after {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: -1.2rem;
+    top: 50%;
+}
+
+.app-roadmap-timeline li.done::before {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: var(--yellow);
+}
+
+.app-roadmap-timeline li.done:not(:last-child):after {
+    background-color: var(--yellow);
+}
+
+.app-roadmap-timeline li.now::before {
+    width: 1.25rem;
+    height: 1.25rem;
+    left: -1.8rem !important;
+    top: 30%;
+    background-color: var(--yellow);
+	animation: pulse 1.5s infinite;
+}
+
+.app-roadmap-timeline li.now:not(:last-child):after {
+    background-color: var(--yellow);
+}
+
+.app-roadmap-timeline li.now span {
+    color: var(--yellow) !important;
+    font-size: 1.2rem;
+}
+
+.app-roadmap-timeline li.soon::before {
+    width: 0.75rem;
+    height: 0.75rem;
+    background-color: white;
+}
+
+.app-roadmap-timeline li.soon:not(:last-child):after {
+    background-color: white;
+}
+
+.app-team-btn {
+    text-decoration: none;
+}
