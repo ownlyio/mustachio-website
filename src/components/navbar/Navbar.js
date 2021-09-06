@@ -11,11 +11,11 @@ function Navbar() {
                 </Link>
                 <div className="navbar-links">
                     <div className="navbar-nav" id="nav-bar">
-                        <Link to="#" title="Roadmap" className="text-white nav-link font-andes">ROADMAP</Link>
-                        <Link to="#" title="Team" className="text-white nav-link font-andes">TEAM</Link>
-                        <Link to="#" title="Roadmap" className="text-white nav-link font-andes">GALLERY</Link>
-                        <Link to="#" title="Roadmap" className="text-white nav-link font-andes">NFT TALES</Link>
-                        <Link to="#" title="Roadmap" className="text-white nav-link font-andes">FAQS</Link>
+                        <a href="#app-roadmap" title="Roadmap" className="text-white nav-link font-andes">ROADMAP</a>
+                        <a href="#app-team" title="Team" className="text-white nav-link font-andes">TEAM</a>
+                        <a href="#" title="Gallery" className="text-white nav-link font-andes">GALLERY</a>
+                        <a href="#" title="NFT Tales" className="text-white nav-link font-andes">NFT TALES</a>
+                        <a href="#" title="FAQs" className="text-white nav-link font-andes">FAQS</a>
                     </div>
                 </div>
             </div>
