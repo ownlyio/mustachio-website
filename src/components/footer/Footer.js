@@ -15,8 +15,8 @@ function Footer() {
         <footer className="footer">
             <div className="container">
                 <hr className="footer-line" />
-                <div className="row mx-0 py-5 align-items-center">
-                    <div className="col-12 col-lg-4 my-lg-auto">
+                <div className="row mx-0 py-5 align-items-center footer-content">
+                    <div className="col-12 col-lg-4">
                         <div className="email-container">
                             <p className="text-white font-montreux-csdmbditalic mb-3">GET ON THE LIST</p>
                             <form>
