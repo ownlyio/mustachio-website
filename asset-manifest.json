@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/mustachio-website/static/css/main.ea33bbfc.chunk.css",
+    "main.css": "/mustachio-website/static/css/main.35c00e53.chunk.css",
     "main.js": "/mustachio-website/static/js/main.167a8805.chunk.js",
     "main.js.map": "/mustachio-website/static/js/main.167a8805.chunk.js.map",
     "runtime-main.js": "/mustachio-website/static/js/runtime-main.752e70ba.js",
@@ -12,7 +12,7 @@
     "static/js/3.d83cecff.chunk.js.map": "/mustachio-website/static/js/3.d83cecff.chunk.js.map",
     "index.html": "/mustachio-website/index.html",
     "static/css/2.da1eef19.chunk.css.map": "/mustachio-website/static/css/2.da1eef19.chunk.css.map",
-    "static/css/main.ea33bbfc.chunk.css.map": "/mustachio-website/static/css/main.ea33bbfc.chunk.css.map",
+    "static/css/main.35c00e53.chunk.css.map": "/mustachio-website/static/css/main.35c00e53.chunk.css.map",
     "static/js/2.a0b5205b.chunk.js.LICENSE.txt": "/mustachio-website/static/js/2.a0b5205b.chunk.js.LICENSE.txt",
     "static/media/10_cryptoback.07fc6430.jpg": "/mustachio-website/static/media/10_cryptoback.07fc6430.jpg",
     "static/media/3_mustachios.c576bc13.png": "/mustachio-website/static/media/3_mustachios.c576bc13.png",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.752e70ba.js",
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.a0b5205b.chunk.js",
-    "static/css/main.ea33bbfc.chunk.css",
+    "static/css/main.35c00e53.chunk.css",
     "static/js/main.167a8805.chunk.js"
   ]
 }
