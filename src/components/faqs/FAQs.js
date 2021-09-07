@@ -27,31 +27,6 @@ function FAQs() {
             title: 'FAQ #5',
             text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
         },
-        {
-            id: 6,
-            title: 'FAQ #6',
-            text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
-        },
-        {
-            id: 7,
-            title: 'FAQ #7',
-            text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
-        },
-        {
-            id: 8,
-            title: 'FAQ #8',
-            text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
-        },
-        {
-            id: 9,
-            title: 'FAQ #9',
-            text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
-        },
-        {
-            id: 10,
-            title: 'FAQ #10',
-            text: 'Cras sollicitudin sit amet mauris vel tempus. In sed nisi consequat, ornare diam sed, fermentum nisi. Vestibulum imperdiet sit amet arcu sed efficitur.',
-        }
     ]
 
     return (
