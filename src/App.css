@@ -106,6 +106,16 @@
     }
 }
 
+@media (max-width: 768px) {
+    .xs-banner {
+        display: block !important;
+    }
+    
+    .lg-banner {
+        display: none !important;
+    }
+}
+
 @media (max-width: 576px) {
     .bm-burger-button {
         right: 15px !important;
