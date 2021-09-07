@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/mustachio-website/static/css/main.ea33bbfc.chunk.css",
-    "main.js": "/mustachio-website/static/js/main.f942c63e.chunk.js",
-    "main.js.map": "/mustachio-website/static/js/main.f942c63e.chunk.js.map",
+    "main.js": "/mustachio-website/static/js/main.167a8805.chunk.js",
+    "main.js.map": "/mustachio-website/static/js/main.167a8805.chunk.js.map",
     "runtime-main.js": "/mustachio-website/static/js/runtime-main.752e70ba.js",
     "runtime-main.js.map": "/mustachio-website/static/js/runtime-main.752e70ba.js.map",
     "static/css/2.da1eef19.chunk.css": "/mustachio-website/static/css/2.da1eef19.chunk.css",
@@ -31,6 +31,6 @@
     "static/css/2.da1eef19.chunk.css",
     "static/js/2.a0b5205b.chunk.js",
     "static/css/main.ea33bbfc.chunk.css",
-    "static/js/main.f942c63e.chunk.js"
+    "static/js/main.167a8805.chunk.js"
   ]
 }
