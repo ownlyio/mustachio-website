@@ -74,13 +74,45 @@
 .app-roadmap-timeline li.soon::before {
     width: 0.75rem;
     height: 0.75rem;
-    background-color: white;
+    background-color: #888;
 }
 
 .app-roadmap-timeline li.soon:not(:last-child):after {
-    background-color: white;
+    background-color: #888;
 }
 
-.app-team-btn {
+.app-roadmap-timeline li.soon span {
+    color: #888 !important;
+}
+
+.app-team-btn,
+.app-tales-btn {
     text-decoration: none;
+}
+
+@media (max-width: 992px) {
+    #app-mint h3 {
+        margin-bottom: 1.5rem;
+    }
+
+    #app-mint p {
+        margin-bottom: 1.25rem;
+    }
+
+    .app-tales-link-wrap,
+    .app-team-link-wrap {
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .bm-burger-button {
+        right: 15px !important;
+        top: 20px !important;
+    }
+
+    #mustachio-brand img {
+        height: 40px;
+    }
 }
