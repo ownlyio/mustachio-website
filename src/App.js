@@ -85,43 +85,53 @@ function App() {
                             </div>
                             <div className="row mb-4">
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
-                                        <img className="img-fluid m-auto" src={mustachioLogo} alt="Access to upcoming events" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center text-lg font-andes">Access to upcoming Mustachio Events - Mustachio serves as a ticket voucher for future events</p>
-                                    </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
-                                        <img className="img-fluid m-auto" src={mustachioGold} alt="The Grooming Kit" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center text-lg font-andes">Join the quest to find the 9 artifacts from The Grooming Kit</p>
+                                    <div className="d-flex flex-row flex-md-column">
+                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                            <img className="img-fluid m-auto" src={mustachioLogo} alt="Access to upcoming events" />
+                                        </div>
+                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Access to upcoming Mustachio Events - Mustachio serves as a ticket voucher for future events</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
-                                        <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center text-lg font-andes">10% Cryptoback in $OWN Tokens</p>
-                                    </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
-                                        <img className="img-fluid m-auto" src={story} alt="Unravel tales" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center text-lg font-andes">Unravel the unique tales behind each Mustachio</p>
+                                    <div className="d-flex flex-row flex-md-column">
+                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                            <img className="img-fluid m-auto" src={mustachioGold} alt="The Grooming Kit" />
+                                        </div>
+                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest to find the 9 artifacts from The Grooming Kit</p>
+                                        </div>
                                     </div>
                                 </div>
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
-                                        <img className="img-fluid m-auto" src={mustachios} alt="Max supply 999" />
+                                    <div className="d-flex flex-row flex-md-column">
+                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                            <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
+                                        </div>
+                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">10% Cryptoback in $OWN Tokens</p>
+                                        </div>
                                     </div>
-                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center text-lg font-andes">Max supply of 999 Mustachios</p>
+                                </div>
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex flex-row flex-md-column">
+                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                            <img className="img-fluid m-auto" src={story} alt="Unravel tales" />
+                                        </div>
+                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Unravel the unique tales behind each Mustachio</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex flex-row flex-md-column">
+                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                            <img className="img-fluid m-auto" src={mustachios} alt="Max supply 999" />
+                                        </div>
+                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Max supply of 999 Mustachios</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
