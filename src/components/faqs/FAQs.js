@@ -37,13 +37,13 @@ function FAQs() {
                     <div className="accordion accordion-flush" id="app-faqs-accordion">
                         {faqLists.map((x, k) => (
                             <div className="accordion-item" key={x.id}>
-                                <h2 className="accordion-header font-andes-med" id={`flush-header-${x.id}`}>
+                                <h2 className="accordion-header text-lg font-andes-med" id={`flush-header-${x.id}`}>
                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${x.id}`}>
                                         {x.title}
                                     </button>
                                 </h2>
                                 <div id={`flush-collapse-${x.id}`} className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
-                                    <div className="accordion-body font-andes">{x.text}</div>
+                                    <div className="accordion-body text-lg font-andes">{x.text}</div>
                                 </div>
                             </div>
                         ))}
