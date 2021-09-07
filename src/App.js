@@ -53,7 +53,7 @@ function App() {
                         
                         <hr className="gray-line my-5" />
 
-                        <section id="app-tales" className="mb-4">
+                        <section id="tales" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Tale of the Prospector</h1>
@@ -127,7 +127,7 @@ function App() {
 
                         <hr className="gray-line my-5" />
 
-                        <section id="app-roadmap" className="mb-4">
+                        <section id="roadmap" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Roadmap</h1>
@@ -157,7 +157,7 @@ function App() {
 
                         <hr className="gray-line my-5" />
 
-                        <section id="app-team" className="mb-4">
+                        <section id="team" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Mustachio Team</h1>
