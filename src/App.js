@@ -9,6 +9,9 @@ import mustachioBanner from './images/mustachio_banner.jpeg'
 import prospector from './images/prospector.jpg'
 import cryptoback from './images/10_cryptoback.jpg'
 import story from './images/story.jpg'
+import mustachioGold from './images/mustachio_gold.png'
+import mustachioLogo from './images/mustachio_logo_no_text.png'
+import mustachios from './images/3_mustachios.png'
  
 function App() {
     return (
@@ -24,7 +27,7 @@ function App() {
                             <div className="row mb-4">
                                 <div className="col-lg-6 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Welcome to The Mustachios!</h1>
-                                    <p className="text-white font-montreux-cs">With his mighty pen and a slight quiver on his shoulders, Dan Barotillo have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
+                                    <p className="text-white font-montreux-cs">With his mighty pen and a slight quiver on his shoulders, MustachioBoii have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
                                     <p className="text-white font-montreux-cs">Together, let's open The Sages Rant and read our story  of how we triumphed over the 99 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
                                 </div>
                                 <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
@@ -50,7 +53,7 @@ function App() {
                         
                         <hr className="gray-line my-5" />
 
-                        <section id="app-desc" className="mb-4">
+                        <section id="app-tales" className="mb-4">
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Tale of the Prospector</h1>
@@ -59,6 +62,9 @@ function App() {
                                     <p className="text-white font-montreux-cs">He who dared seek success and happiness through audacious exploits that moved mountains and changed the courses of the rivers.</p>
                                     <p className="text-white font-montreux-cs">The Prospector.</p>
                                     <p className="text-white font-montreux-cs">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
+                                    <div className="app-tales-link-wrap">
+                                        <a href="#" target="_blank" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
+                                    </div>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
                                     <img className="w-100" src={prospector} alt="Prospector" />
@@ -76,44 +82,44 @@ function App() {
                                 </div>
                             </div>
                             <div className="row mb-4">
-                                <div className="mx-auto col-md-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
+                                        <img className="img-fluid m-auto" src={mustachioLogo} alt="Access to upcoming events" />
+                                    </div>
+                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Access to upcoming Mustachio Events - Mustachio serves as a ticket voucher for future events</p>
+                                    </div>
+                                </div>
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
+                                        <img className="img-fluid m-auto" src={mustachioGold} alt="The Grooming Kit" />
+                                    </div>
+                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Join the quest to find the 9 artifacts from The Grooming Kit</p>
+                                    </div>
+                                </div>
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
                                         <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
                                     </div>
-                                    <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
+                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
                                         <p className="text-white mt-3 mb-0 text-center font-montreux-cs">10% Cryptoback in $OWN Tokens</p>
                                     </div>
                                 </div>
-                                <div className="mx-auto col-md-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src={story} alt="Explore stories" />
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
+                                        <img className="img-fluid m-auto" src={story} alt="Unravel tales" />
                                     </div>
-                                    <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Explore stories of each mustache you mint</p>
-                                    </div>
-                                </div>
-                                <div className="mx-auto col-md-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src="https://via.placeholder.com/100x150" alt="Reason #1" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Ut consectetur eleifend congue, quisque vel lorem quis metus eleifend faucibus.</p>
+                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Unravel the unique tales behind each Mustachio</p>
                                     </div>
                                 </div>
-                                <div className="mx-auto col-md-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src="https://via.placeholder.com/100x150" alt="Reason #1" />
+                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-sm-5 col-6">
+                                        <img className="img-fluid m-auto" src={mustachios} alt="Max supply 999" />
                                     </div>
-                                    <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Nulla egestas, felis sed imperdiet interdum ipsum felis curabitur</p>
-                                    </div>
-                                </div>
-                                <div className="mx-auto col-md-2 col-12">
-                                    <div className="d-flex m-auto align-items-md-center col-md-12 col-3">
-                                        <img className="img-fluid m-auto" src="https://via.placeholder.com/100x150" alt="Reason #1" />
-                                    </div>
-                                    <div className="m-auto col-md-12 col-8 offset-md-0 offset-1">
-                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Morbi vitae arcu a lectus rutrum consectetur sit amet eget felis curabitur vel iaculis nulla</p>
+                                    <div className="m-auto col-md-12 col-sm-6 col-5 offset-md-0 offset-sm-1 offset-1">
+                                        <p className="text-white mt-3 mb-0 text-center font-montreux-cs">Max supply of 999 Mustachios</p>
                                     </div>
                                 </div>
                             </div>
@@ -155,11 +161,10 @@ function App() {
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">The Mustachio Team</h1>
-                                    <p className="text-white font-montreux-cs">The Mustachios are created by our local artist, Dan Barotilla. The MustachioVerse are so glad to have the Ownly Team for this project. You can check them out below.</p>
-                                    <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
-                                </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
-                                    <img className="w-100" src="https://via.placeholder.com/768" alt="Mustachio Image #1" />
+                                    <p className="text-white font-montreux-cs">The Mustachios are created by our local artist, <Link to="https://twitter.com/BoiiMustache">Dan Barotilla</Link>. The MustachioVerse are so glad to have the Ownly Team for this project. You can check them out below.</p>
+                                    <div className="app-team-link-wrap">
+                                        <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
