@@ -33,17 +33,17 @@ function FAQs() {
         <section id="faqs" className="mb-4">
             <div className="row mb-4">
                 <div className="col-12">
-                    <h1 className="mb-4 text-white font-montreux-csdmbditalic">FAQs</h1>
+                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">FAQs</h1>
                     <div className="accordion accordion-flush" id="app-faqs-accordion">
                         {faqLists.map((x, k) => (
                             <div className="accordion-item" key={x.id}>
-                                <h2 className="accordion-header font-montreux-csdmbd" id={`flush-header-${x.id}`}>
+                                <h2 className="accordion-header font-andes-med" id={`flush-header-${x.id}`}>
                                     <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target={`#flush-collapse-${x.id}`}>
                                         {x.title}
                                     </button>
                                 </h2>
                                 <div id={`flush-collapse-${x.id}`} className="accordion-collapse collapse" data-bs-parent="#app-faqs-accordion">
-                                    <div className="accordion-body font-montreux-cs">{x.text}</div>
+                                    <div className="accordion-body font-andes">{x.text}</div>
                                 </div>
                             </div>
                         ))}

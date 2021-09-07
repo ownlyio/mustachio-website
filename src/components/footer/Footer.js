@@ -18,11 +18,11 @@ function Footer() {
                 <div className="row mx-0 py-5 align-items-center footer-content">
                     <div className="col-12 col-lg-4">
                         <div className="email-container">
-                            <p className="text-white font-montreux-csdmbditalic mb-3">GET ON THE LIST</p>
+                            <p className="text-white font-andes-med-italic mb-3">GET ON THE LIST</p>
                             <form>
                                 <div className="input-group">
-                                    <input type="text" className="form-control" placeholder="Email Address" aria-label="Email Address" />
-                                    <button className="btn btn-custom-2" type="button" id="footer-btn">Button</button>
+                                    <input type="text" className="form-control font-andes" placeholder="Email Address" aria-label="Email Address" />
+                                    <button className="btn btn-custom-2 font-w-hermann w-hermann-reg" type="button" id="footer-btn">SEND</button>
                                 </div>
                             </form>
                         </div>
