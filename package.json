@@ -1,7 +1,7 @@
 {
   "name": "mustachio",
   "version": "0.1.0",
-  "homepage": "https://mustachioverse.com/",
+  "homepage": "https://ownly.io/mustachio-website",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "1.2.36",
