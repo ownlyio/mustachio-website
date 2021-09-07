@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/mustachio-website/static/css/main.d12a356a.chunk.css",
-    "main.js": "/mustachio-website/static/js/main.228c22b5.chunk.js",
-    "main.js.map": "/mustachio-website/static/js/main.228c22b5.chunk.js.map",
+    "main.css": "/mustachio-website/static/css/main.ea33bbfc.chunk.css",
+    "main.js": "/mustachio-website/static/js/main.f942c63e.chunk.js",
+    "main.js.map": "/mustachio-website/static/js/main.f942c63e.chunk.js.map",
     "runtime-main.js": "/mustachio-website/static/js/runtime-main.752e70ba.js",
     "runtime-main.js.map": "/mustachio-website/static/js/runtime-main.752e70ba.js.map",
     "static/css/2.da1eef19.chunk.css": "/mustachio-website/static/css/2.da1eef19.chunk.css",
-    "static/js/2.d8b2bdb8.chunk.js": "/mustachio-website/static/js/2.d8b2bdb8.chunk.js",
-    "static/js/2.d8b2bdb8.chunk.js.map": "/mustachio-website/static/js/2.d8b2bdb8.chunk.js.map",
+    "static/js/2.a0b5205b.chunk.js": "/mustachio-website/static/js/2.a0b5205b.chunk.js",
+    "static/js/2.a0b5205b.chunk.js.map": "/mustachio-website/static/js/2.a0b5205b.chunk.js.map",
     "static/js/3.d83cecff.chunk.js": "/mustachio-website/static/js/3.d83cecff.chunk.js",
     "static/js/3.d83cecff.chunk.js.map": "/mustachio-website/static/js/3.d83cecff.chunk.js.map",
     "index.html": "/mustachio-website/index.html",
     "static/css/2.da1eef19.chunk.css.map": "/mustachio-website/static/css/2.da1eef19.chunk.css.map",
-    "static/css/main.d12a356a.chunk.css.map": "/mustachio-website/static/css/main.d12a356a.chunk.css.map",
-    "static/js/2.d8b2bdb8.chunk.js.LICENSE.txt": "/mustachio-website/static/js/2.d8b2bdb8.chunk.js.LICENSE.txt",
+    "static/css/main.ea33bbfc.chunk.css.map": "/mustachio-website/static/css/main.ea33bbfc.chunk.css.map",
+    "static/js/2.a0b5205b.chunk.js.LICENSE.txt": "/mustachio-website/static/js/2.a0b5205b.chunk.js.LICENSE.txt",
     "static/media/10_cryptoback.07fc6430.jpg": "/mustachio-website/static/media/10_cryptoback.07fc6430.jpg",
     "static/media/3_mustachios.c576bc13.png": "/mustachio-website/static/media/3_mustachios.c576bc13.png",
     "static/media/index.css": "/mustachio-website/static/media/WHermann-UltraBoldItalic.81fe754f.woff",
     "static/media/grid.61442fea.jpg": "/mustachio-website/static/media/grid.61442fea.jpg",
+    "static/media/grid2.0e333587.jpg": "/mustachio-website/static/media/grid2.0e333587.jpg",
     "static/media/mustachio_banner.ebc9ad0f.jpeg": "/mustachio-website/static/media/mustachio_banner.ebc9ad0f.jpeg",
     "static/media/mustachio_gold.1289a086.png": "/mustachio-website/static/media/mustachio_gold.1289a086.png",
     "static/media/mustachio_logo.81c24739.png": "/mustachio-website/static/media/mustachio_logo.81c24739.png",
@@ -28,8 +29,8 @@
   "entrypoints": [
     "static/js/runtime-main.752e70ba.js",
     "static/css/2.da1eef19.chunk.css",
-    "static/js/2.d8b2bdb8.chunk.js",
-    "static/css/main.d12a356a.chunk.css",
-    "static/js/main.228c22b5.chunk.js"
+    "static/js/2.a0b5205b.chunk.js",
+    "static/css/main.ea33bbfc.chunk.css",
+    "static/js/main.f942c63e.chunk.js"
   ]
 }
