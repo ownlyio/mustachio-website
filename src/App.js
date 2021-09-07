@@ -27,7 +27,7 @@ function App() {
                             <div className="row mb-4">
                                 <div className="col-lg-6 col-12">
                                     <h1 className="mb-4 text-white font-montreux-csdmbditalic">Welcome to The Mustachios!</h1>
-                                    <p className="text-white font-montreux-cs">With his mighty pen and a slight quiver on his shoulders, MustachioBoii have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
+                                    <p className="text-white font-montreux-cs">With his mighty pen and a slight quiver on his shoulders, Boii Mustache have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
                                     <p className="text-white font-montreux-cs">Together, let's open The Sages Rant and read our story  of how we triumphed over the 99 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
                                 </div>
                                 <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
