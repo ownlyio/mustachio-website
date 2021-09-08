@@ -86,7 +86,7 @@ function Navbar(props) {
                         </div>
                     </div>
                     <div style={{marginLeft: "1.5rem"}}>
-                        <button id="app-mint-button" className="btn btn-custom-2 text-lgfont-w-hermann w-hermann-semibold d-none d-lg-block" type="button" onClick={props.mintBtn}>MINT YOURS NOW!</button>
+                        <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-none d-lg-block" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
                     </div>
                 </div>
                 <div id="outer-container" className="d-md-none align-self-end">
@@ -100,6 +100,7 @@ function Navbar(props) {
                         <a href="https://ownly.io/marketplace/?collection=the-mustachios" onClick={() => closeMenu()} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</a>
                         <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Team" className="text-white d-block py-3 w-100 text-decoration-none font-andes">TEAM</HashLink>
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="FAQs" className="text-white d-block py-3 w-100 text-decoration-none font-andes">FAQS</HashLink>
+                        <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-block mt-3" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
                     </Menu>
                 </div>
             </div>
