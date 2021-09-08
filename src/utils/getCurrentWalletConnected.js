@@ -13,7 +13,6 @@ const getCurrentWalletConnected = async () => {
                 try {
                     await window.ethereum.enable();
                     const addressArray = await web3.eth.getAccounts()
-                    console.log(addressArray)
 
                     return {
                         address: addressArray[0],
