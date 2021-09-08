@@ -224,7 +224,9 @@ function App() {
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
-                                    <p className="text-white text-lg font-andes">The Mustachios are created by our local artist, <a href="https://twitter.com/BoiiMustache">Dan Barotilla</a>. The MustachioVerse are so glad to have the Ownly Team for this project. You can check them out below.</p>
+                                    <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Mustache Boii</a>. He adopted the character Mustache Boii as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
+                                    <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived and welcomed the Ownly Team.</p>
+                                    <p className="text-white text-lg font-andes">You can check them out below.</p>
                                     <div className="app-team-link-wrap">
                                         <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
                                     </div>
