@@ -32,16 +32,16 @@ function Footer() {
                     </div>
                     <div className="text-center col-lg-4 col-sm-12 col-12">
                         <div className="d-flex justify-content-around">
-                            <a href={socMedHandles.fb} target="_blank">
+                            <a href={socMedHandles.fb} target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faFacebook} />
                             </a>
-                            <a href={socMedHandles.ig} target="_blank">
+                            <a href={socMedHandles.ig} target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faInstagram} />
                             </a>
-                            <a href={socMedHandles.discord} target="_blank">
+                            <a href={socMedHandles.discord} target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faDiscord} />
                             </a>
-                            <a href={socMedHandles.twitter} target="_blank">
+                            <a href={socMedHandles.twitter} target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faTwitter} />
                             </a>
                         </div>

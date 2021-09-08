@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
@@ -66,7 +66,7 @@ function App() {
                                     <p className="text-white text-lg font-andes">The Prospector.</p>
                                     <p className="text-white text-lg font-andes">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
                                     <div className="app-tales-link-wrap">
-                                        <a href="#" target="_blank" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
+                                        <a href="#" target="_blank" rel="noreferrer" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
                                     </div>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
@@ -226,7 +226,7 @@ function App() {
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
                                     <p className="text-white text-lg font-andes">The Mustachios are created by our local artist, <a href="https://twitter.com/BoiiMustache">Dan Barotilla</a>. The MustachioVerse are so glad to have the Ownly Team for this project. You can check them out below.</p>
                                     <div className="app-team-link-wrap">
-                                        <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
+                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
                                     </div>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
