@@ -209,7 +209,7 @@ function App() {
                                 <div className="col-lg-6 col-12">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Welcome to The Mustachios!</h1>
                                     <p className="text-white text-lg font-andes">With his mighty pen and a slight quiver on his shoulders, Boii Mustache have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
-                                    <p className="text-white text-lg font-andes">Together, let's open The Sages Rant and read our story  of how we triumphed over the 99 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
+                                    <p className="text-white text-lg font-andes">Together, let's open The Sages Rant and read our story of how we triumphed over the 998 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
                                 </div>
                                 <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
                                     <img className="w-100" src={mustachioBanner} alt="Mustachio Banner" />
@@ -223,7 +223,7 @@ function App() {
                                     <h3 className="font-w-hermann w-hermann-semibold text-white text-center">MINT YOUR MUSTACHIO</h3>
                                 </div>
                                 <div className="m-auto col-lg-4 col-12 offset-lg-1">
-                                    <p className="text-justify text-lg font-andes text-white mb-lg-0">You can mint your OWN mustachio, and let's unfold the story behind each mustache</p>
+                                    <p className="text-justify text-lg font-andes text-white mb-lg-0">Get ready to discover the secrets and adventures that lie within MustachioVerse. Mint your OWN Mustachio today.</p>
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
@@ -269,7 +269,7 @@ function App() {
                                             <img className="img-fluid m-auto" src={mustachioLogo} alt="Access to upcoming events" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Access to upcoming Mustachio Events - Mustachio serves as a ticket voucher for future events</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Avenue to upcoming Mustachios-only events</p>
                                         </div>
                                     </div>
                                 </div>
@@ -279,7 +279,7 @@ function App() {
                                             <img className="img-fluid m-auto" src={mustachioGold} alt="The Grooming Kit" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest to find the 9 artifacts from The Grooming Kit</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest on finding the 9 artifacts from The Grooming Kit</p>
                                         </div>
                                     </div>
                                 </div>
@@ -289,7 +289,7 @@ function App() {
                                             <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">10% Cryptoback in $OWN Tokens</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Get 10% CRYPTOBACK in OWN Tokens</p>
                                         </div>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@ function App() {
                                             <img className="img-fluid m-auto" src={story} alt="Unravel tales" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Unravel the unique tales behind each Mustachio</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Discover the unique NFT tales behind each Mustachio</p>
                                         </div>
                                     </div>
                                 </div>
@@ -309,7 +309,7 @@ function App() {
                                             <img className="img-fluid m-auto" src={mustachios} alt="Max supply 999" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Max supply of 999 Mustachios</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">999 supply of Mustachios</p>
                                         </div>
                                     </div>
                                 </div>
@@ -403,10 +403,10 @@ function App() {
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
                                     <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Boii Mustache</a>. He adopted the character Boii Mustache as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
-                                    <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived and welcomed the Ownly Team.</p>
+                                    <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived.</p>
                                     <p className="text-white text-lg font-andes">You can check them out below.</p>
                                     <div className="app-team-link-wrap">
-                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
+                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE GANG!</a>
                                     </div>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
@@ -437,41 +437,43 @@ function App() {
                         <Modal.Title>How To Mint My Mustachio?</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p className="app-how-to-mint-modal-content font-andes-med text-lg">The following items are the steps on how you can successfully mint your very own Mustachio:</p>
+                        <p className="app-how-to-mint-modal-content font-andes-med text-lg">The following are the steps on how you can successfully mint your own Mustachios:</p>
                         
                         <hr />
                         <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Connecting Metamask</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Minting Mustachios require you to have a Metamask account connected to the website. Here are the steps to connect your wallet:</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Install Metamask if you don't have one yet. You can go to this <a href="https://metamask.io/download" target="_blank" rel="noreferrer" className="app-how-to-mint-link">link</a> to download it on your browser.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Create an account on MetaMask if you don't have one yet.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. Click on the "MINT YOURS NOW" button on the website.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Minting Mustachios requires you to have a Metamask account connected to the website.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Here are the steps to connect your wallet:</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Install Metamask, if you don’t have one yet. You can access this <a href="https://metamask.io/download" target="_blank" rel="noreferrer" className="app-how-to-mint-link">Link</a> to download it to your browser.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Create an account on MetaMask, and Login to your MetaMask extension.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. Click the “MINT YOURS NOW” button on the website.</p>
                         <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Now, a window will pop out on your screen from MetaMask. Choose the account that you want to connect with our website, then click "Next" button.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Now, a window will pop out on your screen from MetaMask. Choose the account that you want to connect with our website, then click the “Next” button.</p>
                         <div className="w-2/4 mx-auto vertical-img">
                             <img className="img-fluid mb-3 w-100" src={Step2} alt="Connecting Metamask #1" />
                         </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. Click "Connect" to connect your account.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. Click “Connect” to connect your account.</p>
                         <div className="w-2/4 mx-auto vertical-img">
                             <img className="img-fluid mb-3 w-100" src={Step3} alt="Connecting Metamask #2" />
                         </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just connected your account to our website. You can now mint your mustachio.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just connected your account to our website.</p>
                         
                         <hr />
                         <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Minting Process</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Now that you connected your Metamask account, you can now mint your own Mustachio.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Make sure that you are on "Ethereum Mainnet" Network in your MetamMask.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Now, click on the "MINT YOURS NOW" button on the website.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Now that you have connected your MetaMask Account, you can now mint your own Mustachio.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Here are the steps to mint your own Mustachios:</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Make sure that you are on the “Ethereum Mainnet” Network in your MetaMask.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Click on the “MINT YOURS NOW” button on the website.</p>
                         <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. A popup window will appear on Metamask. You can check the Gas Price and set the Gas limit there (it is up to you if you will make this higher for priority, but we recommend to stick with the default Gas Limit).</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. A Pop-up window will appear on MetaMask. You can check the Gas Price and set the Gas limit there (It is up to you, if you will make it higher for priority. But we recommend sticking with the default Gas Limit).</p>
                         <div className="w-2/4 mx-auto vertical-img">
                             <img className="img-fluid mb-3 w-100" src={Step4} alt="Minting Mustachio" />
                         </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Click "Confirm" to submit the transaction.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. You will now see the popup (see below) that says your transaction is pending and waiting to be approved.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Click “Confirm” to submit the transaction.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. You will now see a pop-up window (see below) that says your transaction is pending and waiting to be approved.</p>
                         <img className="img-fluid mb-3 w-100" src={Step5} alt="Pending Transaction" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">6. When the transaction is successful, you will see the popup (see below) that says your Mustachio is minted.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">6. When the transaction is successful, you will see a pop-up window (see below) that says your Mustachio is minted.</p>
                         <img className="img-fluid mb-3 w-100" src={Step6} alt="Successfully Minted" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just minted your own Mustachio! You can check it out also on OpenSea by clicking the button "View on OpenSea", and view the transaction on EtherScan by clicking the button "View on EtherScan".</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just minted your own Mustachio! You can check it out also on OpenSea by clicking the button “View on OpenSea”, view the transaction on EtherScan by clicking the “View on EtherScan” button, and/or check it out on our Ownly Marketplace by clicking the “View on Marketplace” button.</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
                         <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseHowToMint}>
