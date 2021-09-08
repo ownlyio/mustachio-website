@@ -1,7 +1,9 @@
 import web3 from "./web3"
 
-// mainnet
-const address = '0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5' 
+// bsctestnet
+// const address = '0x9359dd95E2B229B5bAaE702e31e75ebbEd5DB9e0'
+// rinkeby
+const address = '0x421dC2b62713223491Daf075C23B39EF0E340E94'
 
 const mustachioAbi = [
     {
