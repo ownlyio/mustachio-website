@@ -13,6 +13,7 @@ import story from './images/story.jpg'
 import mustachioGold from './images/mustachio_gold.png'
 import mustachioLogo from './images/mustachio_logo_no_text.png'
 import mustachios from './images/3_mustachios.png'
+import mustacheBoii from './images/mustache_boii.jpg'
  
 function App() {
     return (
@@ -227,6 +228,9 @@ function App() {
                                     <div className="app-team-link-wrap">
                                         <a href="https://ownly.io/#team" target="_blank" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK IT OUT HERE!</a>
                                     </div>
+                                </div>
+                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
+                                    <img className="w-100" src={mustacheBoii} alt="Mustache Boii" />
                                 </div>
                             </div>
                         </section>
