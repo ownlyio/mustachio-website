@@ -29,6 +29,13 @@ import mustachios from './images/3_mustachios.png'
 import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
+
+import Step1 from './images/how_to/1.PNG'
+import Step2 from './images/how_to/2.PNG'
+import Step3 from './images/how_to/3.PNG'
+import Step4 from './images/how_to/4.PNG'
+import Step5 from './images/how_to/5.PNG'
+import Step6 from './images/how_to/6.PNG'
  
 function App() {
     // State variables for initialization
@@ -70,6 +77,9 @@ function App() {
     const [showSoldOut, setShowSoldOut] = useState(false);
     const handleCloseSoldOut = () => setShowSoldOut(false);
     const handleShowSoldOut = () => setShowSoldOut(true);
+    const [showHowToMint, setShowHowToMint] = useState(false);
+    const handleCloseHowToMint = () => setShowHowToMint(false);
+    const handleShowHowToMint = () => setShowHowToMint(true);
 
     // Initialize wallet address and network upon button click
     // Then mint afterwards
@@ -217,7 +227,7 @@ function App() {
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                    <button className="btn text-center mt-2 w-100 text-lg font-andes-xlight text-sm text-white how">How to mint?</button>
+                                    <button className="btn text-center mt-2 w-100 text-lg font-andes-xlight text-sm text-white how" onClick={handleShowHowToMint}>How to mint?</button>
                                 </div>
                             </div>
                         </section>
@@ -421,16 +431,65 @@ function App() {
                 </div>
                 <Footer />
 
+                {/* Modal for how to mint */}
+                <Modal show={showHowToMint} onHide={handleCloseHowToMint} backdrop="static" keyboard={false} size="lg" centered>
+                    <Modal.Header>
+                        <Modal.Title>How To Mint My Mustachio?</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                        <p className="app-how-to-mint-modal-content font-andes-med text-lg">The following items are the steps on how you can successfully mint your very own Mustachio:</p>
+                        
+                        <hr />
+                        <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Connecting Metamask</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Minting Mustachios require you to have a Metamask account connected to the website. Here are the steps to connect your wallet:</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Install Metamask if you don't have one yet. You can go to this <a href="https://metamask.io/download" target="_blank" rel="noreferrer" className="app-how-to-mint-link">link</a> to download it on your browser.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Create an account on MetaMask if you don't have one yet.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. Click on the "MINT YOURS NOW" button on the website.</p>
+                        <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Now, a window will pop out on your screen from MetaMask. Choose the account that you want to connect with our website, then click "Next" button.</p>
+                        <div className="w-2/4 mx-auto vertical-img">
+                            <img className="img-fluid mb-3 w-100" src={Step2} alt="Connecting Metamask #1" />
+                        </div>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. Click "Connect" to connect your account.</p>
+                        <div className="w-2/4 mx-auto vertical-img">
+                            <img className="img-fluid mb-3 w-100" src={Step3} alt="Connecting Metamask #2" />
+                        </div>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just connected your account to our website. You can now mint your mustachio.</p>
+                        
+                        <hr />
+                        <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Minting Process</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Now that you connected your Metamask account, you can now mint your own Mustachio.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Make sure that you are on "Ethereum Mainnet" Network in your MetamMask.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Now, click on the "MINT YOURS NOW" button on the website.</p>
+                        <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. A popup window will appear on Metamask. You can check the Gas Price and set the Gas limit there (it is up to you if you will make this higher for priority, but we recommend to stick with the default Gas Limit).</p>
+                        <div className="w-2/4 mx-auto vertical-img">
+                            <img className="img-fluid mb-3 w-100" src={Step4} alt="Minting Mustachio" />
+                        </div>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Click "Confirm" to submit the transaction.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. You will now see the popup (see below) that says your transaction is pending and waiting to be approved.</p>
+                        <img className="img-fluid mb-3 w-100" src={Step5} alt="Pending Transaction" />
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">6. When the transaction is successful, you will see the popup (see below) that says your Mustachio is minted.</p>
+                        <img className="img-fluid mb-3 w-100" src={Step6} alt="Successfully Minted" />
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just minted your own Mustachio! You can check it out also on OpenSea by clicking the button "View on OpenSea", and view the transaction on EtherScan by clicking the button "View on EtherScan".</p>
+                    </Modal.Body>
+                    <Modal.Footer className="justify-content-center">
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseHowToMint}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal>
+
                 {/* Modal for soldout */}
                 <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>
                     <Modal.Body>
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="yellow" size="6x" icon={faExclamationCircle} />
                         </div>
-                        <p className="app-soldout-modal-content text-center"><b style={{fontSize: "1.5rem"}}>SOLD OUT!</b><br />All 100 Mustachios have gone through The Portal. Watch out for the next generation of mustached beings.</p>
+                        <p className="app-soldout-modal-content text-center font-andes text-lg"><b style={{fontSize: "1.5rem"}}>SOLD OUT!</b><br />All 100 Mustachios have gone through The Portal. Watch out for the next generation of mustached beings.</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button variant="secondary" onClick={handleCloseSoldOut}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseSoldOut}>
                             Close
                         </Button>
                     </Modal.Footer>
@@ -442,13 +501,13 @@ function App() {
                         <div className="app-metamask-modal-img">
                             <img src={metamask} alt="Metamask logo" />
                         </div>
-                        <p className="app-metamask-modal-content text-center">Metamask is currently not installed</p>
+                        <p className="app-metamask-modal-content text-center font-andes text-lg">Metamask is currently not installed</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button variant="secondary" onClick={handleCloseMetamaskInstall}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseMetamaskInstall}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={() => window.open("https://metamask.io/download", '_blank').focus()}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="primary" onClick={() => window.open("https://metamask.io/download", '_blank').focus()}>
                             Install Metamask
                         </Button>
                     </Modal.Footer>
@@ -460,11 +519,11 @@ function App() {
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
                         </div>
-                        <p className="app-network-modal-content text-center">Please connect to Rinkeby network</p>
+                        <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p>
                         {/* <p className="app-network-modal-content text-center">Please connect to Ethereum Mainnet</p> */}
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button variant="secondary" onClick={handleCloseWrongNetwork}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseWrongNetwork}>
                             Close
                         </Button>
                     </Modal.Footer>
@@ -476,7 +535,7 @@ function App() {
                         <div className="text-center mb-3">
                             <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
                         </div>
-                        <p className="app-pending-modal-content text-center"><span className="app-loading-big-letter">O</span>, what great honour. Put on your armor and hold your fire, dear friend, for we are minting your Mustachio.</p>
+                        <p className="app-pending-modal-content text-center font-andes text-lg"><span className="app-loading-big-letter">O</span>, what great honour. Put on your armor and hold your fire, dear friend, for we are minting your Mustachio.</p>
                     </Modal.Body>
                 </Modal>    
 
@@ -486,10 +545,10 @@ function App() {
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="red" size="6x" icon={faExclamationCircle} />
                         </div>
-                        <p className="app-error-modal-content text-center">Error: {txError}</p>
+                        <p className="app-error-modal-content text-center font-andes text-lg">Error: {txError}</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button variant="secondary" onClick={handleCloseOnError}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseOnError}>
                             Close
                         </Button>
                     </Modal.Footer>
@@ -501,16 +560,16 @@ function App() {
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="green" size="6x" icon={faCheckCircle} />
                         </div>
-                        <p className="app-success-modal-content text-center">Your Mustachio has been successfully minted! You're ready to join the quest to find the Golden Mustache.</p>
+                        <p className="app-success-modal-content text-center font-andes text-lg">Your Mustachio has been successfully minted! You're ready to join the quest to find the Golden Mustache.</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
-                        <Button variant="secondary" onClick={handleCloseOnSuccess}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseOnSuccess}>
                             Close
                         </Button>
-                        <Button variant="primary" onClick={() => window.open(explorerUrl + txHash, '_blank').focus()}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="primary" onClick={() => window.open(explorerUrl + txHash, '_blank').focus()}>
                             View on EtherScan
                         </Button>
-                        <Button variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
+                        <Button className="font-w-hermann w-hermann-reg" variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
                             View on OpenSea
                         </Button>
                     </Modal.Footer>

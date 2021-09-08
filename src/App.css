@@ -90,6 +90,11 @@
     text-decoration: none;
 }
 
+.app-how-to-mint-link:hover,
+.app-how-to-mint-link:focus {
+    color: #333 !important;
+}
+
 @media (max-width: 992px) {
     #app-mint h3 {
         margin-bottom: 1.5rem;
@@ -124,5 +129,9 @@
 
     #mustachio-brand img {
         height: 40px;
+    }
+
+    .vertical-img {
+        width: 90% !important
     }
 }
