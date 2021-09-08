@@ -57,6 +57,7 @@ function App() {
     // const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
     const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
     // const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
+    const marketplaceUrl = "https://ownly.io/marketplace/?contract=" + contractAddress + "&token=" // (Production only)
 
     // Modals
     const [showMetamaskInstall, setShowMetamaskInstall] = useState(false);
@@ -197,7 +198,7 @@ function App() {
     return (
         <Router>
             <div className="app">
-                <Navbar />
+                <Navbar mintBtn={initUtilsAndMint} />
                 <div className="app-content">
                     <div className="container">
                         <section className="app-banner" id="app-banner">
@@ -417,7 +418,7 @@ function App() {
 
                         <hr className="gray-line my-5" />
 
-                        <FAQs />
+                        <FAQs howToMint={handleShowHowToMint} />
 
                         <section id="app-contract" className="py-4">
                             <div className="text-center">
@@ -432,7 +433,7 @@ function App() {
                 <Footer />
 
                 {/* Modal for how to mint */}
-                <Modal show={showHowToMint} onHide={handleCloseHowToMint} backdrop="static" keyboard={false} size="lg" centered>
+                <Modal show={showHowToMint} onHide={handleCloseHowToMint} size="lg" centered>
                     <Modal.Header>
                         <Modal.Title>How To Mint My Mustachio?</Modal.Title>
                     </Modal.Header>
@@ -445,7 +446,7 @@ function App() {
                         <p className="app-how-to-mint-modal-content font-andes text-lg">Here are the steps to connect your wallet:</p>
                         <p className="app-how-to-mint-modal-content font-andes text-lg">1. Install Metamask, if you don’t have one yet. You can access this <a href="https://metamask.io/download" target="_blank" rel="noreferrer" className="app-how-to-mint-link">Link</a> to download it to your browser.</p>
                         <p className="app-how-to-mint-modal-content font-andes text-lg">2. Create an account on MetaMask, and Login to your MetaMask extension.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. Click the “MINT YOURS NOW” button on the website.</p>
+                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. When the website loads, the MetaMask popup will appear. If it doesn't appear, click the “MINT YOURS NOW” button on the website.</p>
                         <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
                         <p className="app-how-to-mint-modal-content font-andes text-lg">4. Now, a window will pop out on your screen from MetaMask. Choose the account that you want to connect with our website, then click the “Next” button.</p>
                         <div className="w-2/4 mx-auto vertical-img">
@@ -573,6 +574,9 @@ function App() {
                         </Button>
                         <Button className="font-w-hermann w-hermann-reg" variant="primary" onClick={() => window.open(openSeaUrl + tokenId, '_blank').focus()}>
                             View on OpenSea
+                        </Button>
+                        <Button className="font-w-hermann w-hermann-reg" variant="primary" onClick={() => window.open(marketplaceUrl + tokenId, '_blank').focus()}>
+                            View on Marketplace
                         </Button>
                     </Modal.Footer>
                 </Modal>    
