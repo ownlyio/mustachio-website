@@ -69,9 +69,9 @@ function Navbar() {
     } 
 
     return (
-        <nav id="nav" class="navbar navbar-expand-md bg-color-1 navbar-light sticky-top">
-            <div class="container">
-                <Link exact to="/" id="mustachio-brand" className="navbar-brand">
+        <nav id="nav" className="navbar navbar-expand-md bg-color-1 navbar-light sticky-top">
+            <div className="container">
+                <Link exact="true" to="/" id="mustachio-brand" className="navbar-brand">
                     <img src={mustachioLogo} className="d-inline-block align-top" alt="Mustachio Logo" height="65px" width="auto" />
                 </Link>
                 <div className="navbar-links d-none d-md-block">
