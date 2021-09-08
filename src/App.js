@@ -143,24 +143,74 @@ function App() {
                             <div className="row mb-4">
                                 <div className="col-lg-7 col-12">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Roadmap</h1>
-                                    <ul className="app-roadmap-timeline">
+                                    {/* 2021 */}
+                                    <p className="text-white text-2xl font-andes-med">2021</p>
+                                    
+                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
+                                    <ul className="app-roadmap-timeline mb-3">
                                         <li className="done">
-                                            <span className="text-white text-lg font-andes"><b>August 2021:</b> Presale of 100 Genesis Set</span>
+                                            <span className="text-white text-lg font-andes">Creation of Mustachios</span>
+                                        </li>
+                                        <li className="done">
+                                            <span className="text-white text-lg font-andes">Mustachio Presale (Genesis Set - 100 Mustachios)</span>
                                         </li>
                                         <li className="now">
-                                            <span className="text-white text-lg font-andes"><b>September 2021:</b> Official Launch</span>
-                                        </li>
-                                        <li className="now">
-                                            <span className="text-white text-lg font-andes"><b>September 2021:</b> OWN Airdrop to Mustachio Holders</span>
+                                            <span className="text-white text-lg font-andes">Mustachio Official Launch</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes"><b>October 2021:</b> Launch of Next Batch of Mustachios</span>
+                                            <span className="text-white text-lg font-andes">Beginning of NFT Tales (Gen. 1)</span>
+                                        </li>
+                                    </ul>
+
+                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q4</p>
+                                    <ul className="app-roadmap-timeline mb-3">
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">OWN Token Airdrop to Mustachio Holders</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes"><b>November 2021:</b> OWN Airdrop to Mustachio Holders</span>
+                                            <span className="text-white text-lg font-andes">Mustachio Rewards</span>
                                         </li>
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes"><b>December 2021:</b> OWN Airdrop to Mustachio Holders</span>
+                                            <span className="text-white text-lg font-andes">2nd Generation Mustachios Launching (250 Mustachios)</span>
+                                        </li>
+                                    </ul>
+
+                                    {/* 2022 */}
+                                    <p className="text-white text-2xl font-andes-med">2022</p>
+                                
+                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q1</p>
+                                    <ul className="app-roadmap-timeline mb-3">
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 2)</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio Events</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio 3rd Generation Launching (250 Mustachios)</span>
+                                        </li>
+                                    </ul>
+
+                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q2</p>
+                                    <ul className="app-roadmap-timeline mb-3">
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 3)</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio 4th Generation Launching (399 Mustachios)</span>
+                                        </li>
+                                    </ul>
+
+                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
+                                    <ul className="app-roadmap-timeline mb-3">
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 4)</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">MustaSHOW (NFT Show)</span>
                                         </li>
                                     </ul>
                                 </div>
