@@ -109,6 +109,11 @@
         margin-bottom: 1.5rem;
         text-align: center;
     }
+
+    .prospector,
+    .boii-mustache {
+        margin-bottom: 1.25rem;
+    }
 }
 
 @media (max-width: 768px) {

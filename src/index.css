@@ -1166,6 +1166,10 @@ body {
     text-align: center;
 }
 
+.text-gen-color {
+    color: var(--gen-color);
+}
+
 hr.gray-line {
     border-bottom: 1px solid #eee;
 }

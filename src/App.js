@@ -228,7 +228,7 @@ function App() {
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                    <button className="btn text-center mt-2 w-100 text-lg font-andes-xlight text-sm text-white how" onClick={handleShowHowToMint}>How to mint?</button>
+                                    <button className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" onClick={handleShowHowToMint}>How to mint?</button>
                                 </div>
                             </div>
                         </section>
@@ -237,7 +237,7 @@ function App() {
 
                         <section id="tales" className="mb-4">
                             <div className="row mb-4">
-                                <div className="col-lg-7 col-12">
+                                <div className="col-lg-7 col-12 order-2 order-lg-1">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Tale of the Prospector</h1>
                                     <p className="text-white text-lg font-andes">O, when the Mustachios dwell in the MustachioVerse, there is but one Mustachio who stood out among the rest.</p>
                                     <p className="text-white text-lg font-andes">The Prospector, supreme beyond all MustachioKind, who bore in his mighty hands all 9 artifacts from the fabled Grooming Kit.</p>
@@ -248,7 +248,7 @@ function App() {
                                         <a href="#" target="_blank" rel="noreferrer" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
                                     </div>
                                 </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
+                                <div className="col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 prospector">
                                     <img className="w-100" src={prospector} alt="Prospector" />
                                 </div>
                             </div>
@@ -401,7 +401,7 @@ function App() {
 
                         <section id="team" className="mb-4">
                             <div className="row mb-4">
-                                <div className="col-lg-7 col-12">
+                                <div className="col-lg-7 col-12 order-2 order-lg-1">
                                     <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
                                     <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Boii Mustache</a>. He adopted the character Boii Mustache as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
                                     <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived.</p>
@@ -410,7 +410,7 @@ function App() {
                                         <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE GANG!</a>
                                     </div>
                                 </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1">
+                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 boii-mustache">
                                     <img className="w-100" src={mustacheBoii} alt="Mustache Boii" />
                                 </div>
                             </div>
