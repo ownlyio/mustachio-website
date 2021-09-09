@@ -245,7 +245,7 @@ function App() {
                                     <p className="text-white text-lg font-andes">The Prospector.</p>
                                     <p className="text-white text-lg font-andes">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
                                     <div className="app-tales-link-wrap">
-                                        <a href="#" target="_blank" rel="noreferrer" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
+                                        <a href="https://tales.mustachioverse.com" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 prospector">
