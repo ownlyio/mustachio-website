@@ -95,6 +95,10 @@
     color: #333 !important;
 }
 
+#app-specs img {
+    border-radius: 25px;
+}
+
 @media (max-width: 992px) {
     #app-mint h3 {
         margin-bottom: 1.5rem;
@@ -133,7 +137,7 @@
     }
 
     #mustachio-brand img {
-        height: 40px;
+        height: 45px;
     }
 
     .vertical-img {

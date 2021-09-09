@@ -2,7 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import { HashLink } from "react-router-hash-link"
 import { bubble as Menu } from "react-burger-menu"
-import mustachioLogo from '../../images/mustachio_logo.png'
+import mustachioLogo from '../../images/mustachio_logo_no_text.png'
 import './Navbar.css'
 
 function Navbar(props) {

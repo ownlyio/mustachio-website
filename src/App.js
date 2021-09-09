@@ -21,11 +21,11 @@ import grid from './images/grid.jpg'
 import grid2 from './images/grid2.jpg'
 import mustachioBanner from './images/mustachio_banner.jpeg'
 import prospector from './images/prospector.jpg'
-import cryptoback from './images/10_cryptoback.jpg'
-import story from './images/story.jpg'
+import mustachioLogo from './images/mustachio_logo.png'
+import tale from './images/tale.jpg'
 import mustachioGold from './images/mustachio_gold.png'
-import mustachioLogo from './images/mustachio_logo_no_text.png'
-import mustachios from './images/3_mustachios.png'
+import ticket from './images/ticket.png'
+import chest from './images/chest.png'
 import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
@@ -267,7 +267,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachioLogo} alt="Access to upcoming events" />
+                                            <img className="img-fluid m-auto" src={ticket} alt="Access to upcoming events" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Avenue to upcoming Mustachios-only events</p>
@@ -277,7 +277,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachioGold} alt="The Grooming Kit" />
+                                            <img className="img-fluid m-auto" src={chest} alt="The Grooming Kit" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest on finding the 9 artifacts from The Grooming Kit</p>
@@ -287,7 +287,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={cryptoback} alt="10% Cryptoback" />
+                                            <img className="img-fluid m-auto" src={mustachioLogo} alt="10% Cryptoback" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Get 10% CRYPTOBACK in OWN Tokens</p>
@@ -297,7 +297,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={story} alt="Unravel tales" />
+                                            <img className="img-fluid m-auto" src={tale} alt="Unravel tales" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Discover the unique NFT tales behind each Mustachio</p>
@@ -307,7 +307,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachios} alt="Max supply 999" />
+                                            <img className="img-fluid m-auto" src={mustachioGold} alt="Max supply 999" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">999 supply of Mustachios</p>
