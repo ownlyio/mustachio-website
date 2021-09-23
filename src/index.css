@@ -1166,6 +1166,19 @@ body {
     text-align: center;
 }
 
+.btn-custom-3 {
+    background-color: var(--gen-color);
+    color: #fff;
+    text-align: center;
+    border:2px solid var(--yellow);
+}
+
+.btn-custom-3:hover {
+    background-color: var(--yellow);
+    color: #fff!important;
+    text-align:center;
+}
+
 .text-gen-color {
     color: var(--gen-color);
 }

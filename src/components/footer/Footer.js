@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faDiscord, faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
+import { faDiscord, faFacebook, faInstagram, faTiktok, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import { Button, Modal } from 'react-bootstrap'
 import { useState } from 'react'
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +13,7 @@ const socMedHandles = {
     ig: "https://instagram.com/mustachioverse",
     discord: "https://discord.gg/rfypRx4cjh",
     twitter: "https://twitter.com/mustachioverse",
+    tiktok: "https://www.tiktok.com/@mustachioverse",
 }
 
 function Footer() {
@@ -74,6 +75,9 @@ function Footer() {
                             </a>
                             <a href={socMedHandles.twitter} target="_blank" rel="noreferrer">
                                 <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faTwitter} />
+                            </a>
+                            <a href={socMedHandles.tiktok} target="_blank" rel="noreferrer">
+                                <FontAwesomeIcon className="text-white footer-icons" color="white" size="2x" icon={faTiktok} />
                             </a>
                         </div>
                     </div>

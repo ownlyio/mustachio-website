@@ -32,10 +32,9 @@ function FAQs(props) {
                                         <li className="text-lg font-andes">Visit <a href="/">mustachioverse.com</a>.</li>
                                         <li className="text-lg font-andes">Click MINT YOUR MUSTACHIO at the upper right corner.</li>
                                         <li className="text-lg font-andes">Connect your MetaMask wallet (Ethereum Network).</li>
-                                        <li className="text-lg font-andes">Mint your Mustachio for only 0.3 ETH* + gas fee.</li>
+                                        <li className="text-lg font-andes">Mint your Mustachio for only 0.4 ETH + gas fee.</li>
                                         <li className="text-lg font-andes">Check your OpenSea account, and there you go! You now OWN a Mustachio.</li>
                                     </ol>
-                                    <p className="font-andes-italic">*0.3 ETH for the first 100 Mustachios from the Genesis set.</p>
                                     <a className="text-lg font-andes" onClick={props.howToMint} style={{cursor: "pointer"}}>Click here for a more detailed instruction.</a>
                                 </div>
                             </div>

@@ -232,7 +232,11 @@ function App() {
                                 </div>
                             </div>
                         </section>
-                        
+
+                        <div className="text-center">
+                            <a href="https://opensea.io/collection/mustachioverse" target="_blank" className="btn w-100 py-3 btn-custom-3 text-2xl font-w-hermann w-hermann-semibold">VIEW MUSTACHIOS ON OPENSEA</a>
+                        </div>
+
                         <hr className="gray-line my-5" />
 
                         <section id="tales" className="mb-4">
@@ -334,10 +338,10 @@ function App() {
                                         <li className="done">
                                             <span className="text-white text-lg font-andes">Mustachio Presale (Genesis Set - 100 Mustachios)</span>
                                         </li>
-                                        <li className="now">
+                                        <li className="done">
                                             <span className="text-white text-lg font-andes">Mustachio Official Launch</span>
                                         </li>
-                                        <li className="soon">
+                                        <li className="now">
                                             <span className="text-white text-lg font-andes">Beginning of NFT Tales (Gen. 1)</span>
                                         </li>
                                     </ul>
@@ -523,7 +527,7 @@ function App() {
                             <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
                         </div>
                         <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p>
-                        {/* <p className="app-network-modal-content text-center">Please connect to Ethereum Mainnet</p> */}
+                        {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p> */}
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
                         <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseWrongNetwork}>
