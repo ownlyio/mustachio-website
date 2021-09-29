@@ -16,6 +16,10 @@
     text-decoration: underline;
 }
 
+.mustachio-links a {
+    margin-bottom: 1rem;
+}
+
 .app-roadmap-timeline {
     list-style-type: none;
 }

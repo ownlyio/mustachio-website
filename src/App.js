@@ -233,10 +233,6 @@ function App() {
                             </div>
                         </section>
 
-                        <div className="text-center">
-                            <a href="https://opensea.io/collection/mustachioverse" target="_blank" className="btn w-100 py-3 btn-custom-3 text-2xl font-w-hermann w-hermann-semibold">VIEW MUSTACHIOS ON OPENSEA</a>
-                        </div>
-
                         <hr className="gray-line my-5" />
 
                         <section id="tales" className="mb-4">
@@ -314,9 +310,18 @@ function App() {
                                             <img className="img-fluid m-auto" src={mustachiosGroup} alt="Max supply 999" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">999 supply of Mustachios</p>
+                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Only 999 Mustachios will ever exist</p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+
+                            <div className="row mb-4 mustachio-links">
+                                <div className="col-12 col-md-6">
+                                    <a href="https://opensea.io/collection/mustachioverse" target="_blank" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
+                                </div>
+                                <div className="col-12 col-md-6">
+                                    <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
                                 </div>
                             </div>
                         </section>

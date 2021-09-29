@@ -71,7 +71,7 @@ function Navbar(props) {
     return (
         <nav id="nav" className="navbar navbar-expand-md bg-color-1 navbar-light sticky-top">
             <div className="container">
-                <Link exact="true" to="/" id="mustachio-brand" className="navbar-brand">
+                {/* <Link exact="true" to="/" id="mustachio-brand" className="navbar-brand">
                     <img src={mustachioLogo} className="d-inline-block align-top" alt="Mustachio Logo" height="65px" width="auto" />
                 </Link>
                 <div className="d-flex align-items-center">
@@ -79,7 +79,6 @@ function Navbar(props) {
                         <div className="navbar-nav" id="nav-bar">
                             <HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} title="NFT Tales" className="text-white nav-link font-andes">NFT TALES</HashLink>
                             <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} title="Roadmap" className="text-white nav-link font-andes">ROADMAP</HashLink>
-                            {/* <HashLink smooth to="#" scroll={el => scrollWithOffset(el)} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</HashLink> */}
                             <a href="https://ownly.io/marketplace/?collection=the-mustachios" title="Gallery" className="text-white nav-link font-andes">GALLERY</a>
                             <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} title="Team" className="text-white nav-link font-andes">TEAM</HashLink>
                             <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} title="FAQs" className="text-white nav-link font-andes">FAQS</HashLink>
@@ -88,7 +87,27 @@ function Navbar(props) {
                     <div style={{marginLeft: "1.5rem"}}>
                         <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-none d-lg-block" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
                     </div>
-                </div>
+                </div> */}
+                <div class="d-flex align-items-center justify-content-between w-100">
+					<div class="d-flex align-items-center w-100">
+                        <Link exact="true" to="/" id="mustachio-brand" className="navbar-brand">
+                            <img src={mustachioLogo} className="d-inline-block align-top" alt="Mustachio Logo" height="65px" width="auto" />
+                        </Link>
+					</div>
+					
+                    <ul class="nav col-12 col-lg-auto me-lg-auto justify-content-center mb-0">
+                        <li><HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} title="NFT Tales" className="text-white nav-link font-andes">NFT TALES</HashLink></li>
+                        <li><HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} title="Roadmap" className="text-white nav-link font-andes">ROADMAP</HashLink></li>
+                        {/* <li><a href="https://ownly.io/marketplace/?collection=the-mustachios" title="Gallery" className="text-white nav-link font-andes">GALLERY</a></li> */}
+                        <li><HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} title="Team" className="text-white nav-link font-andes">TEAM</HashLink></li>
+                        <li><HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} title="FAQs" className="text-white nav-link font-andes">FAQS</HashLink></li>
+                        <li>
+                            <div style={{marginLeft: "1rem"}}>
+                                <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-none d-md-block" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
+                            </div>
+                        </li>
+                    </ul>
+				</div>
                 <div id="outer-container" className="d-md-none align-self-end">
                     <Menu right styles={styles}
                         isOpen={menuOpenState}
@@ -96,8 +115,7 @@ function Navbar(props) {
                     >
                         <HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="NFT Tales" className="text-white d-block py-3 w-100 text-decoration-none font-andes">NFT TALES</HashLink>
                         <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Roadmap" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ROADMAP</HashLink>
-                        {/* <HashLink smooth to="#" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</HashLink> */}
-                        <a href="https://ownly.io/marketplace/?collection=the-mustachios" onClick={() => closeMenu()} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</a>
+                        {/* <a href="https://ownly.io/marketplace/?collection=the-mustachios" onClick={() => closeMenu()} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</a> */}
                         <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Team" className="text-white d-block py-3 w-100 text-decoration-none font-andes">TEAM</HashLink>
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="FAQs" className="text-white d-block py-3 w-100 text-decoration-none font-andes">FAQS</HashLink>
                         <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-block mt-3" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
