@@ -531,8 +531,8 @@ function App() {
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
                         </div>
-                        {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p> */}
-                        <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p>
+                        <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p>
+                        {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p> */}
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
                         <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseWrongNetwork}>
