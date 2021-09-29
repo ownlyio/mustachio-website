@@ -11,8 +11,8 @@ import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
 
 // Utils
-import contract from './utils/contract'
-// import contract from './utils/contractDev'
+// import contract from './utils/contract'
+import contract from './utils/contractDev'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 
@@ -51,12 +51,12 @@ function App() {
     const [txData, setTxData] = useState([])
 
     // Other Variables (Change upon deployment)
-    // const explorerUrl = "https://rinkeby.etherscan.io/tx/"
-    const explorerUrl = "https://etherscan.io/tx/"
-    // const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
-    const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
-    // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
-    const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
+    const explorerUrl = "https://rinkeby.etherscan.io/tx/"
+    // const explorerUrl = "https://etherscan.io/tx/"
+    const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
+    // const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
+    const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
+    // const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
     const marketplaceUrl = "https://ownly.io/marketplace/?contract=" + contractAddress + "&token=" // (Production only)
 
     // Modals
@@ -93,8 +93,8 @@ function App() {
         setNetStatus(networkResponse.netStatus)
 
         if (status === 1) {
-            // if (network === "rinkeby") {
-            if (network === "main") {
+            if (network === "rinkeby") {
+            // if (network === "main") {
                 mintMustachio()
             } else {
                 handleShowWrongNetwork()
