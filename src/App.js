@@ -11,8 +11,8 @@ import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
 
 // Utils
-// import contract from './utils/contract'
-import contract from './utils/contractDev'
+import contract from './utils/contract'
+// import contract from './utils/contractDev'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 
@@ -21,11 +21,11 @@ import grid from './images/grid.jpg'
 import grid2 from './images/grid2.jpg'
 import mustachioBanner from './images/mustachio_banner.jpeg'
 import prospector from './images/prospector.jpg'
-import mustachioLogo from './images/ownly_mustache.png'
-import tale from './images/tale.jpg'
-import mustachioGold from './images/mustachio_gold.png'
 import ticket from './images/ticket.png'
-import chest from './images/chest.png'
+import quest from './images/quest.png'
+import mustachioToken from './images/mustachio.png'
+import book from './images/book.png'
+import mustachiosGroup from './images/mustachios_group.png'
 import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
@@ -51,12 +51,12 @@ function App() {
     const [txData, setTxData] = useState([])
 
     // Other Variables (Change upon deployment)
-    const explorerUrl = "https://rinkeby.etherscan.io/tx/"
-    // const explorerUrl = "https://etherscan.io/tx/"
-    const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
-    // const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
-    const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
-    // const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
+    // const explorerUrl = "https://rinkeby.etherscan.io/tx/"
+    const explorerUrl = "https://etherscan.io/tx/"
+    // const contractAddress = "0x421dC2b62713223491Daf075C23B39EF0E340E94" // Rinkeby
+    const contractAddress = "0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" // MainNet
+    // const openSeaUrl = "https://testnets.opensea.io/assets/" + contractAddress + "/"
+    const openSeaUrl = "https://opensea.io/assets/" + contractAddress + "/"
     const marketplaceUrl = "https://ownly.io/marketplace/?contract=" + contractAddress + "&token=" // (Production only)
 
     // Modals
@@ -93,8 +93,8 @@ function App() {
         setNetStatus(networkResponse.netStatus)
 
         if (status === 1) {
-            if (network === "rinkeby") {
-            // if (network === "main") {
+            // if (network === "rinkeby") {
+            if (network === "main") {
                 mintMustachio()
             } else {
                 handleShowWrongNetwork()
@@ -281,7 +281,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={chest} alt="The Grooming Kit" />
+                                            <img className="img-fluid m-auto" src={quest} alt="The Grooming Kit" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest on finding the 9 artifacts from The Grooming Kit</p>
@@ -291,7 +291,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachioLogo} alt="10% Cryptoback" />
+                                            <img className="img-fluid m-auto" src={mustachioToken} alt="10% Cryptoback" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Get 10% CRYPTOBACK in OWN Tokens</p>
@@ -301,7 +301,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={tale} alt="Unravel tales" />
+                                            <img className="img-fluid m-auto" src={book} alt="Unravel tales" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Discover the unique NFT tales behind each Mustachio</p>
@@ -311,7 +311,7 @@ function App() {
                                 <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
                                     <div className="d-flex flex-row flex-md-column">
                                         <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachioGold} alt="Max supply 999" />
+                                            <img className="img-fluid m-auto" src={mustachiosGroup} alt="Max supply 999" />
                                         </div>
                                         <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
                                             <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">999 supply of Mustachios</p>
@@ -526,8 +526,8 @@ function App() {
                         <div className="text-center mb-3">
                             <FontAwesomeIcon color="green" size="6x" icon={faExclamationCircle} />
                         </div>
-                        <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p>
-                        {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p> */}
+                        {/* <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Rinkeby network</p> */}
+                        <p className="app-network-modal-content text-center font-andes text-lg">Please connect to Ethereum Mainnet</p>
                     </Modal.Body>
                     <Modal.Footer className="justify-content-center">
                         <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseWrongNetwork}>
