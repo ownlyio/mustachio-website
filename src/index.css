@@ -1150,10 +1150,6 @@ body {
 }
 
 /* Custom CSS */
-.text-right {
-    float: right;
-}
-
 .bg-color-1 {
     background-color: var(--gen-color);
 }
