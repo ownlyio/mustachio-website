@@ -1,9 +1,9 @@
 import web3 from "./web3"
 
 // rinkeby
-const address = '0x421dC2b62713223491Daf075C23B39EF0E340E94'
+const address = '0xF5546AdCD67Ea3e7F86Dc79a392cC9e9a5376A4e'
 
-const mustachioAbi = [
+const mustachioBgAbi = [
     {
         "inputs":[
             
@@ -17,32 +17,7 @@ const mustachioAbi = [
             {
                 "indexed":true,
                 "internalType":"address",
-                "name":"owner",
-                "type":"address"
-            },
-            {
-                "indexed":true,
-                "internalType":"address",
-                "name":"approved",
-                "type":"address"
-            },
-            {
-                "indexed":true,
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
-            }
-        ],
-        "name":"Approval",
-        "type":"event"
-    },
-    {
-        "anonymous":false,
-        "inputs":[
-            {
-                "indexed":true,
-                "internalType":"address",
-                "name":"owner",
+                "name":"account",
                 "type":"address"
             },
             {
@@ -86,6 +61,12 @@ const mustachioAbi = [
             {
                 "indexed":true,
                 "internalType":"address",
+                "name":"operator",
+                "type":"address"
+            },
+            {
+                "indexed":true,
+                "internalType":"address",
                 "name":"from",
                 "type":"address"
             },
@@ -96,56 +77,88 @@ const mustachioAbi = [
                 "type":"address"
             },
             {
-                "indexed":true,
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
+                "indexed":false,
+                "internalType":"uint256[]",
+                "name":"ids",
+                "type":"uint256[]"
+            },
+            {
+                "indexed":false,
+                "internalType":"uint256[]",
+                "name":"values",
+                "type":"uint256[]"
             }
         ],
-        "name":"Transfer",
+        "name":"TransferBatch",
         "type":"event"
     },
     {
-        "inputs":[
-            
-        ],
-        "name":"PROVENANCE_HASH",
-        "outputs":[
-            {
-                "internalType":"string",
-                "name":"",
-                "type":"string"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
+        "anonymous":false,
         "inputs":[
             {
+                "indexed":true,
+                "internalType":"address",
+                "name":"operator",
+                "type":"address"
+            },
+            {
+                "indexed":true,
+                "internalType":"address",
+                "name":"from",
+                "type":"address"
+            },
+            {
+                "indexed":true,
                 "internalType":"address",
                 "name":"to",
                 "type":"address"
             },
             {
+                "indexed":false,
                 "internalType":"uint256",
-                "name":"tokenId",
+                "name":"id",
+                "type":"uint256"
+            },
+            {
+                "indexed":false,
+                "internalType":"uint256",
+                "name":"value",
                 "type":"uint256"
             }
         ],
-        "name":"approve",
-        "outputs":[
-            
+        "name":"TransferSingle",
+        "type":"event"
+    },
+    {
+        "anonymous":false,
+        "inputs":[
+            {
+                "indexed":false,
+                "internalType":"string",
+                "name":"value",
+                "type":"string"
+            },
+            {
+                "indexed":true,
+                "internalType":"uint256",
+                "name":"id",
+                "type":"uint256"
+            }
         ],
-        "stateMutability":"nonpayable",
-        "type":"function"
+        "name":"URI",
+        "type":"event"
     },
     {
         "inputs":[
             {
                 "internalType":"address",
-                "name":"owner",
+                "name":"account",
                 "type":"address"
+            },
+            {
+                "internalType":"uint256",
+                "name":"id",
+                "type":"uint256"
             }
         ],
         "name":"balanceOf",
@@ -161,29 +174,23 @@ const mustachioAbi = [
     },
     {
         "inputs":[
-            
-        ],
-        "name":"flipSaleState",
-        "outputs":[
-            
-        ],
-        "stateMutability":"nonpayable",
-        "type":"function"
-    },
-    {
-        "inputs":[
             {
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
+                "internalType":"address[]",
+                "name":"accounts",
+                "type":"address[]"
+            },
+            {
+                "internalType":"uint256[]",
+                "name":"ids",
+                "type":"uint256[]"
             }
         ],
-        "name":"getApproved",
+        "name":"balanceOfBatch",
         "outputs":[
             {
-                "internalType":"address",
+                "internalType":"uint256[]",
                 "name":"",
-                "type":"address"
+                "type":"uint256[]"
             }
         ],
         "stateMutability":"view",
@@ -193,7 +200,7 @@ const mustachioAbi = [
         "inputs":[
             
         ],
-        "name":"getLastMintedTokenId",
+        "name":"getEdition",
         "outputs":[
             {
                 "internalType":"uint256",
@@ -222,8 +229,27 @@ const mustachioAbi = [
     {
         "inputs":[
             {
+                "internalType":"uint256",
+                "name":"_tokenId",
+                "type":"uint256"
+            }
+        ],
+        "name":"getMintedTokenCount",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
                 "internalType":"address",
-                "name":"owner",
+                "name":"account",
                 "type":"address"
             },
             {
@@ -245,28 +271,42 @@ const mustachioAbi = [
     },
     {
         "inputs":[
-            
-        ],
-        "name":"max_mustachios",
-        "outputs":[
             {
                 "internalType":"uint256",
-                "name":"",
+                "name":"_tokenId",
                 "type":"uint256"
             }
         ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            
-        ],
-        "name":"mintMustachio",
+        "name":"mintBackground",
         "outputs":[
             
         ],
         "stateMutability":"payable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"address",
+                "name":"_address",
+                "type":"address"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_tokenId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_quantity",
+                "type":"uint256"
+            }
+        ],
+        "name":"mintBackgroundRewards",
+        "outputs":[
+            
+        ],
+        "stateMutability":"nonpayable",
         "type":"function"
     },
     {
@@ -301,25 +341,6 @@ const mustachioAbi = [
     },
     {
         "inputs":[
-            {
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
-            }
-        ],
-        "name":"ownerOf",
-        "outputs":[
-            {
-                "internalType":"address",
-                "name":"",
-                "type":"address"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
             
         ],
         "name":"renounceOwnership",
@@ -331,17 +352,6 @@ const mustachioAbi = [
     },
     {
         "inputs":[
-            
-        ],
-        "name":"reserveMustachios",
-        "outputs":[
-            
-        ],
-        "stateMutability":"nonpayable",
-        "type":"function"
-    },
-    {
-        "inputs":[
             {
                 "internalType":"address",
                 "name":"from",
@@ -353,12 +363,22 @@ const mustachioAbi = [
                 "type":"address"
             },
             {
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
+                "internalType":"uint256[]",
+                "name":"ids",
+                "type":"uint256[]"
+            },
+            {
+                "internalType":"uint256[]",
+                "name":"amounts",
+                "type":"uint256[]"
+            },
+            {
+                "internalType":"bytes",
+                "name":"data",
+                "type":"bytes"
             }
         ],
-        "name":"safeTransferFrom",
+        "name":"safeBatchTransferFrom",
         "outputs":[
             
         ],
@@ -379,12 +399,17 @@ const mustachioAbi = [
             },
             {
                 "internalType":"uint256",
-                "name":"tokenId",
+                "name":"id",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"amount",
                 "type":"uint256"
             },
             {
                 "internalType":"bytes",
-                "name":"_data",
+                "name":"data",
                 "type":"bytes"
             }
         ],
@@ -393,21 +418,6 @@ const mustachioAbi = [
             
         ],
         "stateMutability":"nonpayable",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            
-        ],
-        "name":"saleIsActive",
-        "outputs":[
-            {
-                "internalType":"bool",
-                "name":"",
-                "type":"bool"
-            }
-        ],
-        "stateMutability":"view",
         "type":"function"
     },
     {
@@ -433,12 +443,12 @@ const mustachioAbi = [
     {
         "inputs":[
             {
-                "internalType":"string",
-                "name":"_baseUri",
-                "type":"string"
+                "internalType":"uint256",
+                "name":"_edition",
+                "type":"uint256"
             }
         ],
-        "name":"setBaseUri",
+        "name":"setEdition",
         "outputs":[
             
         ],
@@ -464,11 +474,11 @@ const mustachioAbi = [
         "inputs":[
             {
                 "internalType":"string",
-                "name":"_provenanceHash",
+                "name":"_newUri",
                 "type":"string"
             }
         ],
-        "name":"setProvenanceHash",
+        "name":"setURI",
         "outputs":[
             
         ],
@@ -513,50 +523,7 @@ const mustachioAbi = [
         "inputs":[
             {
                 "internalType":"uint256",
-                "name":"index",
-                "type":"uint256"
-            }
-        ],
-        "name":"tokenByIndex",
-        "outputs":[
-            {
-                "internalType":"uint256",
-                "name":"",
-                "type":"uint256"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            {
-                "internalType":"address",
-                "name":"owner",
-                "type":"address"
-            },
-            {
-                "internalType":"uint256",
-                "name":"index",
-                "type":"uint256"
-            }
-        ],
-        "name":"tokenOfOwnerByIndex",
-        "outputs":[
-            {
-                "internalType":"uint256",
-                "name":"",
-                "type":"uint256"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            {
-                "internalType":"uint256",
-                "name":"tokenId",
+                "name":"_tokenId",
                 "type":"uint256"
             }
         ],
@@ -573,46 +540,6 @@ const mustachioAbi = [
     },
     {
         "inputs":[
-            
-        ],
-        "name":"totalSupply",
-        "outputs":[
-            {
-                "internalType":"uint256",
-                "name":"",
-                "type":"uint256"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            {
-                "internalType":"address",
-                "name":"from",
-                "type":"address"
-            },
-            {
-                "internalType":"address",
-                "name":"to",
-                "type":"address"
-            },
-            {
-                "internalType":"uint256",
-                "name":"tokenId",
-                "type":"uint256"
-            }
-        ],
-        "name":"transferFrom",
-        "outputs":[
-            
-        ],
-        "stateMutability":"nonpayable",
-        "type":"function"
-    },
-    {
-        "inputs":[
             {
                 "internalType":"address",
                 "name":"newOwner",
@@ -625,7 +552,26 @@ const mustachioAbi = [
         ],
         "stateMutability":"nonpayable",
         "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "name":"uri",
+        "outputs":[
+            {
+                "internalType":"string",
+                "name":"",
+                "type":"string"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
     }
 ]
 
-export default new web3.eth.Contract(mustachioAbi, address);
+export default new web3.eth.Contract(mustachioBgAbi, address);
