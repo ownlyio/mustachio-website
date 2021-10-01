@@ -20,6 +20,11 @@
     margin-bottom: 1rem;
 }
 
+.app-backgrounds img {
+    border: 5px ridge white;
+    border-radius: 10px;
+}
+
 .app-roadmap-timeline {
     list-style-type: none;
 }

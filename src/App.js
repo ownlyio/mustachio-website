@@ -30,6 +30,7 @@ import mustachiosGroup from './images/mustachios_group.png'
 import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
+import sampleBG from './images/sampleBG.png'
 
 import Step1 from './images/how_to/1.PNG'
 import Step2 from './images/how_to/2.PNG'
@@ -323,6 +324,25 @@ function App() {
                                 </div>
                                 <div className="col-12 col-md-6">
                                     <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr className="gray-line my-5" />
+
+                        <section id="backgrounds" className="mb-4">
+                            <div className="row mb-4">
+                                <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Mustachio Backgrounds</h1>
+                                    <p className="text-white text-lg font-andes">Make your Mustachios travel all across the MustachioVerse with these amazing Mustachio NFT Backgrounds.</p>
+                                    <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
+                                    <p className="text-white text-lg font-andes">You can check them all out below.</p>
+                                    <div className="app-team-link-wrap">
+                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE BACKGROUNDS!</a>
+                                    </div>
+                                </div>
+                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds">
+                                    <img className="w-100" src={sampleBG} alt="Mustachio Backgrounds" />
                                 </div>
                             </div>
                         </section>
