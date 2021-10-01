@@ -13,6 +13,7 @@ import FAQs from './components/faqs/FAQs'
 // Utils
 // import contract from './utils/contract'
 import contract from './utils/contractDev'
+import contractBg from './utils/contractBackgroundsDev'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 
