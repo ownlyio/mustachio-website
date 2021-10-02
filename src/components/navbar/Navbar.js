@@ -99,7 +99,7 @@ function Navbar(props) {
                     >
                         <HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="NFT Tales" className="text-white d-block py-3 w-100 text-decoration-none font-andes">NFT TALES</HashLink>
                         <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Roadmap" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ROADMAP</HashLink>
-                        {/* <a href="https://ownly.io/marketplace/?collection=the-mustachios" onClick={() => closeMenu()} title="Gallery" className="text-white d-block py-3 w-100 text-decoration-none font-andes">GALLERY</a> */}
+                        <HashLink smooth to="#backgrounds" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Backgrounds" className="text-white d-block py-3 w-100 text-decoration-none font-andes">BACKGROUNDS</HashLink>
                         <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Team" className="text-white d-block py-3 w-100 text-decoration-none font-andes">TEAM</HashLink>
                         <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="FAQs" className="text-white d-block py-3 w-100 text-decoration-none font-andes">FAQS</HashLink>
                         <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-block mt-3" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
