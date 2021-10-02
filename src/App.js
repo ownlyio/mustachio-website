@@ -30,7 +30,7 @@ import mustachiosGroup from './images/mustachios_group.png'
 import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
-import sampleBG from './images/sampleBG.png'
+import bgGIF from './images/mustachio_bg_gif.gif'
 
 import Step1 from './images/how_to/1.PNG'
 import Step2 from './images/how_to/2.PNG'
@@ -342,7 +342,7 @@ function App() {
                                     </div>
                                 </div>
                                 <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds">
-                                    <img className="w-100" src={sampleBG} alt="Mustachio Backgrounds" />
+                                    <img className="w-100" src={bgGIF} alt="Mustachio Backgrounds" />
                                 </div>
                             </div>
                         </section>
@@ -367,15 +367,21 @@ function App() {
                                         <li className="done">
                                             <span className="text-white text-lg font-andes">Mustachio Official Launch</span>
                                         </li>
-                                        <li className="now">
+                                        <li className="done">
                                             <span className="text-white text-lg font-andes">Beginning of NFT Tales (Gen. 1)</span>
                                         </li>
                                     </ul>
 
                                     <p className="text-white text-lg font-andes-med-italic mb-0">Q4</p>
                                     <ul className="app-roadmap-timeline mb-3">
-                                        <li className="soon">
+                                        <li className="now">
                                             <span className="text-white text-lg font-andes">OWN Token Airdrop to Mustachio Holders</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio Backgrounds and Locations</span>
+                                        </li>
+                                        <li className="soon">
+                                            <span className="text-white text-lg font-andes">Mustachio Artifacts of the Fabled Grooming Kit</span>
                                         </li>
                                         <li className="soon">
                                             <span className="text-white text-lg font-andes">Mustachio Rewards</span>
@@ -391,7 +397,7 @@ function App() {
                                     <p className="text-white text-lg font-andes-med-italic mb-0">Q1</p>
                                     <ul className="app-roadmap-timeline mb-3">
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 2)</span>
+                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 2)</span>
                                         </li>
                                         <li className="soon">
                                             <span className="text-white text-lg font-andes">Mustachio Events</span>
@@ -404,7 +410,7 @@ function App() {
                                     <p className="text-white text-lg font-andes-med-italic mb-0">Q2</p>
                                     <ul className="app-roadmap-timeline mb-3">
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 3)</span>
+                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 3)</span>
                                         </li>
                                         <li className="soon">
                                             <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
@@ -417,7 +423,7 @@ function App() {
                                     <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
                                     <ul className="app-roadmap-timeline mb-3">
                                         <li className="soon">
-                                            <span className="text-white text-lg font-andes">Beginning of the NFT Tales (Gen. 4)</span>
+                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 4)</span>
                                         </li>
                                         <li className="soon">
                                             <span className="text-white text-lg font-andes">MustaSHOW (NFT Show)</span>
