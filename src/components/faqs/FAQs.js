@@ -1,6 +1,6 @@
 import './Faq.css'
 
-function FAQs(props) {
+function FAQs() {
     return (
         <section id="faqs" className="mb-4">
             <div className="row mb-4">
@@ -35,7 +35,7 @@ function FAQs(props) {
                                         <li className="text-lg font-andes">Mint your Mustachio for only 0.4 ETH + gas fee.</li>
                                         <li className="text-lg font-andes">Check your OpenSea account, and there you go! You now OWN a Mustachio.</li>
                                     </ol>
-                                    <a className="text-lg font-andes" onClick={props.howToMint} style={{cursor: "pointer"}}>Click here for a more detailed instruction.</a>
+                                    <a className="text-lg font-andes" href="https://ownly.io/htmym" target="_blank" noreferrer>Click here for a more detailed instruction.</a>
                                 </div>
                             </div>
                         </div>

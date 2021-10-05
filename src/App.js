@@ -80,9 +80,6 @@ function App() {
     const [showSoldOut, setShowSoldOut] = useState(false);
     const handleCloseSoldOut = () => setShowSoldOut(false);
     const handleShowSoldOut = () => setShowSoldOut(true);
-    const [showHowToMint, setShowHowToMint] = useState(false);
-    const handleCloseHowToMint = () => setShowHowToMint(false);
-    const handleShowHowToMint = () => setShowHowToMint(true);
 
     // Initialize wallet address and network upon button click
     // Then mint afterwards
@@ -230,7 +227,7 @@ function App() {
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                    <button className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" onClick={handleShowHowToMint}>How to mint?</button>
+                                    <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" noreferrer>How to mint?</a>
                                 </div>
                             </div>
                         </section>
@@ -454,7 +451,7 @@ function App() {
 
                         <hr className="gray-line my-5" />
 
-                        <FAQs howToMint={handleShowHowToMint} />
+                        <FAQs />
 
                         <section id="app-contract" className="py-4">
                             <div className="text-center">
@@ -467,57 +464,6 @@ function App() {
                     </div>
                 </div>
                 <Footer />
-
-                {/* Modal for how to mint */}
-                <Modal show={showHowToMint} onHide={handleCloseHowToMint} size="lg" centered>
-                    <Modal.Header>
-                        <Modal.Title>How To Mint My Mustachio?</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <p className="app-how-to-mint-modal-content font-andes-med text-lg">The following are the steps on how you can successfully mint your own Mustachios:</p>
-                        
-                        <hr />
-                        <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Connecting Metamask</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Minting Mustachios requires you to have a Metamask account connected to the website.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Here are the steps to connect your wallet:</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Install Metamask, if you don’t have one yet. You can access this <a href="https://metamask.io/download" target="_blank" rel="noreferrer" className="app-how-to-mint-link">Link</a> to download it to your browser.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Create an account on MetaMask, and Login to your MetaMask extension.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. When the website loads, the MetaMask popup will appear. If it doesn't appear, click the “MINT YOURS NOW” button on the website.</p>
-                        <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Now, a window will pop out on your screen from MetaMask. Choose the account that you want to connect with our website, then click the “Next” button.</p>
-                        <div className="w-2/4 mx-auto vertical-img">
-                            <img className="img-fluid mb-3 w-100" src={Step2} alt="Connecting Metamask #1" />
-                        </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. Click “Connect” to connect your account.</p>
-                        <div className="w-2/4 mx-auto vertical-img">
-                            <img className="img-fluid mb-3 w-100" src={Step3} alt="Connecting Metamask #2" />
-                        </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just connected your account to our website.</p>
-                        
-                        <hr />
-                        <p className="app-how-to-mint-modal-content font-andes-med-italic text-lg">Minting Process</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Now that you have connected your MetaMask Account, you can now mint your own Mustachio.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Here are the steps to mint your own Mustachios:</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">1. Make sure that you are on the “Ethereum Mainnet” Network in your MetaMask.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">2. Click on the “MINT YOURS NOW” button on the website.</p>
-                        <img className="img-fluid mb-3 w-100" src={Step1} alt="Mint Yours Now Button" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">3. A Pop-up window will appear on MetaMask. You can check the Gas Price and set the Gas limit there (It is up to you, if you will make it higher for priority. But we recommend sticking with the default Gas Limit).</p>
-                        <div className="w-2/4 mx-auto vertical-img">
-                            <img className="img-fluid mb-3 w-100" src={Step4} alt="Minting Mustachio" />
-                        </div>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">4. Click “Confirm” to submit the transaction.</p>
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">5. You will now see a pop-up window (see below) that says your transaction is pending and waiting to be approved.</p>
-                        <img className="img-fluid mb-3 w-100" src={Step5} alt="Pending Transaction" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">6. When the transaction is successful, you will see a pop-up window (see below) that says your Mustachio is minted.</p>
-                        <img className="img-fluid mb-3 w-100" src={Step6} alt="Successfully Minted" />
-                        <p className="app-how-to-mint-modal-content font-andes text-lg">Congratulations! You just minted your own Mustachio! You can check it out also on OpenSea by clicking the button “View on OpenSea”, view the transaction on EtherScan by clicking the “View on EtherScan” button, and/or check it out on our Ownly Marketplace by clicking the “View on Marketplace” button.</p>
-                    </Modal.Body>
-                    <Modal.Footer className="justify-content-center">
-                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseHowToMint}>
-                            Close
-                        </Button>
-                    </Modal.Footer>
-                </Modal>
 
                 {/* Modal for soldout */}
                 <Modal show={showSoldOut} onHide={handleCloseSoldOut} backdrop="static" keyboard={false} size="sm" centered>
