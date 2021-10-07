@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Button, Modal } from 'react-bootstrap'
 import { faCheckCircle, faExclamationCircle } from '@fortawesome/free-solid-svg-icons'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 // Components
 import Navbar from './components/navbar/Navbar'
@@ -13,7 +13,6 @@ import FAQs from './components/faqs/FAQs'
 // Utils
 // import contract from './utils/contract'
 import contract from './utils/contractDev'
-import contractBg from './utils/contractBackgroundsDev'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
 
@@ -31,6 +30,7 @@ import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
+import Backgrounds from './components/backgrounds/Backgrounds'
  
 function App() {
     // State variables for initialization
@@ -191,271 +191,279 @@ function App() {
         <Router>
             <div className="app">
                 <Navbar mintBtn={initUtilsAndMint} />
-                <div className="app-content">
-                    <div className="container">
-                        <section className="app-banner" id="app-banner">
-                            <img className="w-100 lg-banner" src={grid} alt="Mustachio Banner" />
-                            <img className="w-100 xs-banner d-none" src={grid2} alt="Mustachio Banner" />
-                        </section>
-                        <section id="app-welcome" className="py-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-6 col-12">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Welcome to The Mustachios!</h1>
-                                    <p className="text-white text-lg font-andes">With his mighty pen and a slight quiver on his shoulders, Boii Mustache have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
-                                    <p className="text-white text-lg font-andes">Together, let's open The Sages Rant and read our story of how we triumphed over the 998 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
-                                </div>
-                                <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
-                                    <img className="w-100" src={mustachioBanner} alt="Mustachio Banner" />
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="app-mint" className="mb-4">
-                            <div className="row p-4 m-auto">
-                                <div className="m-auto col-lg-3 col-12">
-                                    <h3 className="font-w-hermann w-hermann-semibold text-white text-center">MINT YOUR MUSTACHIO</h3>
-                                </div>
-                                <div className="m-auto col-lg-4 col-12 offset-lg-1">
-                                    <p className="text-justify text-lg font-andes text-white mb-lg-0">Get ready to discover the secrets and adventures that lie within MustachioVerse. Mint your OWN Mustachio today.</p>
-                                </div>
-                                <div className="m-auto col-lg-3 col-12 offset-lg-1">
-                                    <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                    <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">How to mint?</a>
-                                </div>
-                            </div>
-                        </section>
-
-                        <hr className="gray-line my-5" />
-
-                        <section id="tales" className="mb-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-7 col-12 order-2 order-lg-1">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Tale of the Prospector</h1>
-                                    <p className="text-white text-lg font-andes">O, when the Mustachios dwell in the MustachioVerse, there is but one Mustachio who stood out among the rest.</p>
-                                    <p className="text-white text-lg font-andes">The Prospector, supreme beyond all MustachioKind, who bore in his mighty hands all 9 artifacts from the fabled Grooming Kit.</p>
-                                    <p className="text-white text-lg font-andes">He who dared seek success and happiness through audacious exploits that moved mountains and changed the courses of the rivers.</p>
-                                    <p className="text-white text-lg font-andes">The Prospector.</p>
-                                    <p className="text-white text-lg font-andes">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
-                                    <div className="app-tales-link-wrap">
-                                        <a href="https://tales.mustachioverse.com" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
-                                    </div>
-                                </div>
-                                <div className="col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 prospector">
-                                    <img className="w-100" src={prospector} alt="Prospector" />
-                                </div>
-                            </div>
-                        </section>
-
-                        <hr className="gray-line my-5" />
-
-                        <section id="app-specs" className="mb-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-7 col-12">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Why Mint our Mustachios?</h1>
-                                    <p className="text-white text-lg font-andes">When you mint a Mustachio, you’re not simply buying an avatar. The Mustachio will be your key to enter the journey in collecting artifacts that will increase your rarity and scout level in the MustachioVerse.</p>
-                                </div>
-                            </div>
-                            <div className="row mb-4">
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex flex-row flex-md-column">
-                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={ticket} alt="Access to upcoming events" />
+                <Switch>
+                    <Route exact path="/">
+                        <div className="app-content">
+                            <div className="container">
+                                <section className="app-banner" id="app-banner">
+                                    <img className="w-100 lg-banner" src={grid} alt="Mustachio Banner" />
+                                    <img className="w-100 xs-banner d-none" src={grid2} alt="Mustachio Banner" />
+                                </section>
+                                <section id="app-welcome" className="py-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-6 col-12">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Welcome to The Mustachios!</h1>
+                                            <p className="text-white text-lg font-andes">With his mighty pen and a slight quiver on his shoulders, Boii Mustache have yet created another masterpiece... in the form of The Mustachios, the first-ever NFT Tales before our eyes, so we can transport as Mustachios to this mysterious island concealed on earth - the MustachioVerse.</p>
+                                            <p className="text-white text-lg font-andes">Together, let's open The Sages Rant and read our story of how we triumphed over the 998 other Mustachios in our quest to find The Golden Mustache, and how we became the mustached hero.</p>
                                         </div>
-                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Avenue to upcoming Mustachios-only events</p>
+                                        <div className="my-lg-auto col-lg-5 col-12 offset-lg-1">
+                                            <img className="w-100" src={mustachioBanner} alt="Mustachio Banner" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex flex-row flex-md-column">
-                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={quest} alt="The Grooming Kit" />
+                                </section>
+
+                                <section id="app-mint" className="mb-4">
+                                    <div className="row p-4 m-auto">
+                                        <div className="m-auto col-lg-3 col-12">
+                                            <h3 className="font-w-hermann w-hermann-semibold text-white text-center">MINT YOUR MUSTACHIO</h3>
                                         </div>
-                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest on finding the 9 artifacts from The Grooming Kit</p>
+                                        <div className="m-auto col-lg-4 col-12 offset-lg-1">
+                                            <p className="text-justify text-lg font-andes text-white mb-lg-0">Get ready to discover the secrets and adventures that lie within MustachioVerse. Mint your OWN Mustachio today.</p>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex flex-row flex-md-column">
-                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachioToken} alt="10% Cryptoback" />
-                                        </div>
-                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Get 10% CRYPTOBACK in OWN Tokens</p>
+                                        <div className="m-auto col-lg-3 col-12 offset-lg-1">
+                                            <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
+                                            <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">How to mint?</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex flex-row flex-md-column">
-                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={book} alt="Unravel tales" />
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="tales" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Tale of the Prospector</h1>
+                                            <p className="text-white text-lg font-andes">O, when the Mustachios dwell in the MustachioVerse, there is but one Mustachio who stood out among the rest.</p>
+                                            <p className="text-white text-lg font-andes">The Prospector, supreme beyond all MustachioKind, who bore in his mighty hands all 9 artifacts from the fabled Grooming Kit.</p>
+                                            <p className="text-white text-lg font-andes">He who dared seek success and happiness through audacious exploits that moved mountains and changed the courses of the rivers.</p>
+                                            <p className="text-white text-lg font-andes">The Prospector.</p>
+                                            <p className="text-white text-lg font-andes">You'll hear more about this noble legend who brought honour to the land of mustached beings and born explorers in two ticks.</p>
+                                            <div className="app-tales-link-wrap">
+                                                <a href="https://tales.mustachioverse.com" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">ENTER THE MUSTACHIOVERSE</a>
+                                            </div>
                                         </div>
-                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Discover the unique NFT tales behind each Mustachio</p>
+                                        <div className="col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 prospector">
+                                            <img className="w-100" src={prospector} alt="Prospector" />
                                         </div>
                                     </div>
-                                </div>
-                                <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
-                                    <div className="d-flex flex-row flex-md-column">
-                                        <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
-                                            <img className="img-fluid m-auto" src={mustachiosGroup} alt="Max supply 999" />
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="app-specs" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Why Mint our Mustachios?</h1>
+                                            <p className="text-white text-lg font-andes">When you mint a Mustachio, you’re not simply buying an avatar. The Mustachio will be your key to enter the journey in collecting artifacts that will increase your rarity and scout level in the MustachioVerse.</p>
                                         </div>
-                                        <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
-                                            <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Only 999 Mustachios will ever exist</p>
+                                    </div>
+                                    <div className="row mb-4">
+                                        <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                            <div className="d-flex flex-row flex-md-column">
+                                                <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                                    <img className="img-fluid m-auto" src={ticket} alt="Access to upcoming events" />
+                                                </div>
+                                                <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                                    <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Avenue to upcoming Mustachios-only events</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                            <div className="d-flex flex-row flex-md-column">
+                                                <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                                    <img className="img-fluid m-auto" src={quest} alt="The Grooming Kit" />
+                                                </div>
+                                                <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                                    <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Join the quest on finding the 9 artifacts from The Grooming Kit</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                            <div className="d-flex flex-row flex-md-column">
+                                                <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                                    <img className="img-fluid m-auto" src={mustachioToken} alt="10% Cryptoback" />
+                                                </div>
+                                                <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                                    <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Get 10% CRYPTOBACK in OWN Tokens</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                            <div className="d-flex flex-row flex-md-column">
+                                                <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                                    <img className="img-fluid m-auto" src={book} alt="Unravel tales" />
+                                                </div>
+                                                <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                                    <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Discover the unique NFT tales behind each Mustachio</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="mx-auto mb-4 col-md-4 col-lg-2 col-12">
+                                            <div className="d-flex flex-row flex-md-column">
+                                                <div className="d-flex m-auto align-items-md-center col-md-12 col-5">
+                                                    <img className="img-fluid m-auto" src={mustachiosGroup} alt="Max supply 999" />
+                                                </div>
+                                                <div className="m-auto col-md-12 col-sm-6 col-7 offset-md-0 offset-sm-1 offset-1 ps-4 ps-md-0">
+                                                    <p className="text-white mt-md-3 mb-0 text-center text-lg font-andes">Only 999 Mustachios will ever exist</p>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <div className="row mb-4 mustachio-links">
-                                <div className="col-12 col-md-6">
-                                    <a href="https://opensea.io/collection/mustachioverse" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
-                                </div>
-                                <div className="col-12 col-md-6">
-                                    <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
-                                </div>
-                            </div>
-                        </section>
-
-                        <hr className="gray-line my-5" />
-
-                        <section id="backgrounds" className="mb-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-7 col-12 order-2 order-lg-1">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Mustachio Backgrounds</h1>
-                                    <p className="text-white text-lg font-andes">Make your Mustachios travel all across the MustachioVerse with these amazing Mustachio NFT Backgrounds.</p>
-                                    <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
-                                    <p className="text-white text-lg font-andes">You can check them all out below.</p>
-                                    <div className="app-team-link-wrap">
-                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE BACKGROUNDS!</a>
+                                    <div className="row mb-4 mustachio-links">
+                                        <div className="col-12 col-md-6">
+                                            <a href="https://opensea.io/collection/mustachioverse" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
+                                        </div>
+                                        <div className="col-12 col-md-6">
+                                            <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds">
-                                    <img className="w-100" src={bgGIF} alt="Mustachio Backgrounds" />
-                                </div>
-                            </div>
-                        </section>
+                                </section>
 
-                        <hr className="gray-line my-5" />
+                                <hr className="gray-line my-5" />
 
-                        <section id="roadmap" className="mb-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-7 col-12">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Roadmap</h1>
-                                    {/* 2021 */}
-                                    <p className="text-white text-2xl font-andes-med">2021</p>
-                                    
-                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
-                                    <ul className="app-roadmap-timeline mb-3">
-                                        <li className="done">
-                                            <span className="text-white text-lg font-andes">Creation of Mustachios</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white text-lg font-andes">Mustachio Presale (Genesis Set - 100 Mustachios)</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white text-lg font-andes">Mustachio Official Launch</span>
-                                        </li>
-                                        <li className="done">
-                                            <span className="text-white text-lg font-andes">Beginning of NFT Tales (Gen. 1)</span>
-                                        </li>
-                                    </ul>
-
-                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q4</p>
-                                    <ul className="app-roadmap-timeline mb-3">
-                                        <li className="now">
-                                            <span className="text-white text-lg font-andes">OWN Token Airdrop to Mustachio Holders</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio Backgrounds and Locations</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio Artifacts of the Fabled Grooming Kit</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio Rewards</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">2nd Generation Mustachios Launching (250 Mustachios)</span>
-                                        </li>
-                                    </ul>
-
-                                    {/* 2022 */}
-                                    <p className="text-white text-2xl font-andes-med">2022</p>
-                                
-                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q1</p>
-                                    <ul className="app-roadmap-timeline mb-3">
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 2)</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio Events</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio 3rd Generation Launching (250 Mustachios)</span>
-                                        </li>
-                                    </ul>
-
-                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q2</p>
-                                    <ul className="app-roadmap-timeline mb-3">
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 3)</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Mustachio 4th Generation Launching (399 Mustachios)</span>
-                                        </li>
-                                    </ul>
-
-                                    <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
-                                    <ul className="app-roadmap-timeline mb-3">
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 4)</span>
-                                        </li>
-                                        <li className="soon">
-                                            <span className="text-white text-lg font-andes">MustaSHOW (NFT Show)</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-
-                        <hr className="gray-line my-5" />
-
-                        <section id="team" className="mb-4">
-                            <div className="row mb-4">
-                                <div className="col-lg-7 col-12 order-2 order-lg-1">
-                                    <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
-                                    <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Boii Mustache</a>. He adopted the character Boii Mustache as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
-                                    <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived.</p>
-                                    <p className="text-white text-lg font-andes">You can check them out below.</p>
-                                    <div className="app-team-link-wrap">
-                                        <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE GANG!</a>
+                                <section id="backgrounds" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Mustachio Backgrounds</h1>
+                                            <p className="text-white text-lg font-andes">Make your Mustachios travel all across the MustachioVerse with these amazing Mustachio NFT Backgrounds.</p>
+                                            <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
+                                            <p className="text-white text-lg font-andes">You can check them all out below.</p>
+                                            <div className="app-team-link-wrap">
+                                                <Link exact="true" to="/backgrounds" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE BACKGROUNDS!</Link>
+                                            </div>
+                                        </div>
+                                        <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds">
+                                            <img className="w-100" src={bgGIF} alt="Mustachio Backgrounds" />
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 boii-mustache">
-                                    <img className="w-100" src={mustacheBoii} alt="Mustache Boii" />
-                                </div>
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="roadmap" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Roadmap</h1>
+                                            {/* 2021 */}
+                                            <p className="text-white text-2xl font-andes-med">2021</p>
+                                            
+                                            <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
+                                            <ul className="app-roadmap-timeline mb-3">
+                                                <li className="done">
+                                                    <span className="text-white text-lg font-andes">Creation of Mustachios</span>
+                                                </li>
+                                                <li className="done">
+                                                    <span className="text-white text-lg font-andes">Mustachio Presale (Genesis Set - 100 Mustachios)</span>
+                                                </li>
+                                                <li className="done">
+                                                    <span className="text-white text-lg font-andes">Mustachio Official Launch</span>
+                                                </li>
+                                                <li className="done">
+                                                    <span className="text-white text-lg font-andes">Beginning of NFT Tales (Gen. 1)</span>
+                                                </li>
+                                            </ul>
+
+                                            <p className="text-white text-lg font-andes-med-italic mb-0">Q4</p>
+                                            <ul className="app-roadmap-timeline mb-3">
+                                                <li className="now">
+                                                    <span className="text-white text-lg font-andes">OWN Token Airdrop to Mustachio Holders</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio Backgrounds and Locations</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio Artifacts of the Fabled Grooming Kit</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio Rewards</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">2nd Generation Mustachios Launching (250 Mustachios)</span>
+                                                </li>
+                                            </ul>
+
+                                            {/* 2022 */}
+                                            <p className="text-white text-2xl font-andes-med">2022</p>
+                                        
+                                            <p className="text-white text-lg font-andes-med-italic mb-0">Q1</p>
+                                            <ul className="app-roadmap-timeline mb-3">
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 2)</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio Events</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio 3rd Generation Launching (250 Mustachios)</span>
+                                                </li>
+                                            </ul>
+
+                                            <p className="text-white text-lg font-andes-med-italic mb-0">Q2</p>
+                                            <ul className="app-roadmap-timeline mb-3">
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 3)</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Mustachio 4th Generation Launching (399 Mustachios)</span>
+                                                </li>
+                                            </ul>
+
+                                            <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
+                                            <ul className="app-roadmap-timeline mb-3">
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 4)</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">MustaSHOW (NFT Show)</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="team" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
+                                            <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Boii Mustache</a>. He adopted the character Boii Mustache as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
+                                            <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived.</p>
+                                            <p className="text-white text-lg font-andes">You can check them out below.</p>
+                                            <div className="app-team-link-wrap">
+                                                <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE GANG!</a>
+                                            </div>
+                                        </div>
+                                        <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 boii-mustache">
+                                            <img className="w-100" src={mustacheBoii} alt="Mustache Boii" />
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <FAQs />
+
+                                <section id="app-contract" className="py-4">
+                                    <div className="text-center">
+                                        <p className="text-lg font-andes-med text-white">VERIFIED SMART CONTRACT ADDRESS:&nbsp;&nbsp;
+                                            <br className="d-lg-none" />
+                                            <a href="https://etherscan.io/address/0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" className="text-break text-lg font-andes">0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5</a>
+                                        </p>
+                                    </div>
+                                </section>
                             </div>
-                        </section>
+                        </div>
+                    </Route>
+                    <Route path="/backgrounds">
+                        <Backgrounds />
+                    </Route>
+                </Switch>
 
-                        <hr className="gray-line my-5" />
-
-                        <FAQs />
-
-                        <section id="app-contract" className="py-4">
-                            <div className="text-center">
-                                <p className="text-lg font-andes-med text-white">VERIFIED SMART CONTRACT ADDRESS:&nbsp;&nbsp;
-                                    <br className="d-lg-none" />
-                                    <a href="https://etherscan.io/address/0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5" className="text-break text-lg font-andes">0x9e7a3A2e0c60c70eFc115BF03e6c544Ef07620E5</a>
-                                </p>
-                            </div>
-                        </section>
-                    </div>
-                </div>
                 <Footer />
 
                 {/* Modal for soldout */}
