@@ -18,8 +18,6 @@ const socMedHandles = {
 
 function Footer() {
     const [emailAdd, setEmailAdd] = useState("")
-    const [emailAddErr, setEmailAddErr] = useState("")
-
     const [showSubscribed, setShowSubscribed] = useState(false);
     const handleCloseSubscribed = () => setShowSubscribed(false);
     const handleShowSubscribed = () => setShowSubscribed(true);
