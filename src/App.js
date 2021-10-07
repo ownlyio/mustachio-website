@@ -31,13 +31,6 @@ import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
-
-import Step1 from './images/how_to/1.PNG'
-import Step2 from './images/how_to/2.PNG'
-import Step3 from './images/how_to/3.PNG'
-import Step4 from './images/how_to/4.PNG'
-import Step5 from './images/how_to/5.PNG'
-import Step6 from './images/how_to/6.PNG'
  
 function App() {
     // State variables for initialization
@@ -227,7 +220,7 @@ function App() {
                                 </div>
                                 <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                     <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                    <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" noreferrer>How to mint?</a>
+                                    <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">How to mint?</a>
                                 </div>
                             </div>
                         </section>
@@ -317,10 +310,10 @@ function App() {
 
                             <div className="row mb-4 mustachio-links">
                                 <div className="col-12 col-md-6">
-                                    <a href="https://opensea.io/collection/mustachioverse" target="_blank" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
+                                    <a href="https://opensea.io/collection/mustachioverse" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
                                 </div>
                                 <div className="col-12 col-md-6">
-                                    <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
+                                    <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
                                 </div>
                             </div>
                         </section>
