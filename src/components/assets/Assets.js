@@ -8,7 +8,6 @@ import contractBg from '../../utils/contractBackgroundsDev'
 import grid from '../../images/grid.jpg'
 import grid2 from '../../images/grid2.jpg'
 import mustachioBanner from '../../images/mustachio_banner.jpeg'
-import { faUsers } from '@fortawesome/free-solid-svg-icons'
 
 function Assets() {
     return (
@@ -55,7 +54,7 @@ function Assets() {
                                     <div className="assets-bg-full-desc">
                                         <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
                                     </div>
-                                    
+
                                     <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
                                 </div>
                             </div>                            
