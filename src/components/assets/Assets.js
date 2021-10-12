@@ -1,5 +1,4 @@
 import './Assets.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 // Utils
 import contractBg from '../../utils/contractBackgroundsDev'
