@@ -9,12 +9,14 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
+import Assets from './components/assets/Assets'
 
 // Utils
 // import contract from './utils/contract'
 import contract from './utils/contractDev'
 import getCurrentNetwork from './utils/getCurrentNetwork'
 import getCurrentWalletConnected  from './utils/getCurrentWalletConnected'
+import ScrollToTop from './utils/scrolltoTop'
 
 // Images
 import grid from './images/grid.jpg'
@@ -30,7 +32,6 @@ import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
-import Backgrounds from './components/backgrounds/Backgrounds'
  
 function App() {
     // State variables for initialization
@@ -189,6 +190,7 @@ function App() {
 
     return (
         <Router>
+            <ScrollToTop />
             <div className="app">
                 <Navbar mintBtn={initUtilsAndMint} />
                 <Switch>
@@ -322,15 +324,15 @@ function App() {
 
                                 <hr className="gray-line my-5" />
 
-                                <section id="backgrounds" className="mb-4">
+                                <section id="assets" className="mb-4">
                                     <div className="row mb-4">
                                         <div className="col-lg-7 col-12 order-2 order-lg-1">
-                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Mustachio Backgrounds</h1>
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">MustachioVerse Assets</h1>
                                             <p className="text-white text-lg font-andes">Make your Mustachios travel all across the MustachioVerse with these amazing Mustachio NFT Backgrounds.</p>
                                             <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
                                             <p className="text-white text-lg font-andes">You can check them all out below.</p>
                                             <div className="app-team-link-wrap">
-                                                <Link exact="true" to="/backgrounds" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE BACKGROUNDS!</Link>
+                                                <Link exact="true" to="/assets" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE BACKGROUNDS!</Link>
                                             </div>
                                         </div>
                                         <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds">
@@ -462,9 +464,7 @@ function App() {
                             </div>
                         </div>
                     </Route>
-                    <Route path="/backgrounds">
-                        <Backgrounds />
-                    </Route>
+                    <Route path="/assets" exact component={Assets} />
                 </Switch>
 
                 <Footer />
