@@ -1,4 +1,4 @@
-import './Backgrounds.css'
+import './Assets.css'
 
 // Utils
 import contractBg from '../../utils/contractBackgroundsDev'
