@@ -79,11 +79,11 @@ function Navbar(props) {
 					</div>
 					<div className="d-none d-md-block">
                         <ul class="nav justify-content-center mb-0">
-                            <li><HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} title="NFT Tales" className="text-white nav-link font-andes">NFT TALES</HashLink></li>
-                            <li><HashLink smooth to="#assets" scroll={el => scrollWithOffset(el)} title="Assets" className="text-white nav-link font-andes">ASSETS</HashLink></li>
-                            <li><HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} title="Roadmap" className="text-white nav-link font-andes">ROADMAP</HashLink></li>
-                            <li><HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} title="Team" className="text-white nav-link font-andes">TEAM</HashLink></li>
-                            <li><HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} title="FAQs" className="text-white nav-link font-andes">FAQS</HashLink></li>
+                            <li><HashLink smooth to="/#tales" scroll={el => scrollWithOffset(el)} title="NFT Tales" className="text-white nav-link font-andes">NFT TALES</HashLink></li>
+                            <li><HashLink smooth to="/#assets" scroll={el => scrollWithOffset(el)} title="Assets" className="text-white nav-link font-andes">ASSETS</HashLink></li>
+                            <li><HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} title="Roadmap" className="text-white nav-link font-andes">ROADMAP</HashLink></li>
+                            <li><HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} title="Team" className="text-white nav-link font-andes">TEAM</HashLink></li>
+                            <li><HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)} title="FAQs" className="text-white nav-link font-andes">FAQS</HashLink></li>
                             <li>
                                 <div style={{marginLeft: "1rem"}}>
                                     <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-none d-md-block" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
@@ -97,11 +97,11 @@ function Navbar(props) {
                         isOpen={menuOpenState}
                         onStateChange={(state) => handleStateChange(state)}
                     >
-                        <HashLink smooth to="#tales" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="NFT Tales" className="text-white d-block py-3 w-100 text-decoration-none font-andes">NFT TALES</HashLink>
-                        <HashLink smooth to="#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Roadmap" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ROADMAP</HashLink>
-                        <HashLink smooth to="#assets" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Assets" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ASSETS</HashLink>
-                        <HashLink smooth to="#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Team" className="text-white d-block py-3 w-100 text-decoration-none font-andes">TEAM</HashLink>
-                        <HashLink smooth to="#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="FAQs" className="text-white d-block py-3 w-100 text-decoration-none font-andes">FAQS</HashLink>
+                        <HashLink smooth to="/#tales" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="NFT Tales" className="text-white d-block py-3 w-100 text-decoration-none font-andes">NFT TALES</HashLink>
+                        <HashLink smooth to="/#roadmap" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Roadmap" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ROADMAP</HashLink>
+                        <HashLink smooth to="/#assets" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Assets" className="text-white d-block py-3 w-100 text-decoration-none font-andes">ASSETS</HashLink>
+                        <HashLink smooth to="/#team" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="Team" className="text-white d-block py-3 w-100 text-decoration-none font-andes">TEAM</HashLink>
+                        <HashLink smooth to="/#faqs" scroll={el => scrollWithOffset(el)} onClick={() => closeMenu()} title="FAQs" className="text-white d-block py-3 w-100 text-decoration-none font-andes">FAQS</HashLink>
                         <button id="app-mint-button" className="btn btn-custom-2 font-w-hermann w-hermann-semibold d-block mt-3" type="button" onClick={props.mintBtn}>MINT YOUR MUSTACHIO!</button>
                     </Menu>
                 </div>
