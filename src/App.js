@@ -366,20 +366,20 @@ function App() {
 
                                             <p className="text-white text-lg font-andes-med-italic mb-0">Q4</p>
                                             <ul className="app-roadmap-timeline mb-3">
-                                                <li className="now">
+                                                <li className="done">
                                                     <span className="text-white text-lg font-andes">OWN Token Airdrop to Mustachio Holders</span>
                                                 </li>
-                                                <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio Backgrounds and Locations</span>
+                                                <li className="now">
+                                                    <span className="text-white text-lg font-andes">Launch of The Sages Rant Collectibles</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio Artifacts of the Fabled Grooming Kit</span>
+                                                    <span className="text-white text-lg font-andes">Launch of MustachioVerse Assets</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio Rewards</span>
+                                                    <span className="text-white text-lg font-andes">Mustachio Presale (2nd Generation - 250 Mustachios)</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">2nd Generation Mustachios Launching (250 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of 2nd Generation Mustachios (250 Mustachios)</span>
                                                 </li>
                                             </ul>
 
@@ -392,10 +392,13 @@ function App() {
                                                     <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 2)</span>
                                                 </li>
                                                 <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Make Your Own Assets</span>
+                                                </li>
+                                                <li className="soon">
                                                     <span className="text-white text-lg font-andes">Mustachio Events</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio 3rd Generation Launching (250 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of 3rd Generation Mustachios (250 Mustachios)</span>
                                                 </li>
                                             </ul>
 
@@ -408,7 +411,7 @@ function App() {
                                                     <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio 4th Generation Launching (399 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of 4th Generation Mustachios (399 Mustachios)</span>
                                                 </li>
                                             </ul>
 
