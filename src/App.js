@@ -10,6 +10,7 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
 import Assets from './components/assets/Assets'
+import { Discord } from './components/ShortLinks'
 
 // Utils
 // import contract from './utils/contract'
@@ -189,7 +190,7 @@ function App() {
     }, []);
 
     return (
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
             <ScrollToTop />
             <div className="app">
                 <Navbar mintBtn={initUtilsAndMint} />
@@ -465,6 +466,7 @@ function App() {
                         </div>
                     </Route>
                     <Route path="/assets" exact component={Assets} />
+                    <Route path="/discord" exact component={Discord} />
                 </Switch>
 
                 <Footer />
