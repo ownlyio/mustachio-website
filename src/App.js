@@ -33,6 +33,7 @@ import mustacheBoii from './images/mustache_boii.jpg'
 import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
+import collectibles from './images/collectible.png'
  
 function App() {
     // State variables for initialization
@@ -333,11 +334,30 @@ function App() {
                                             <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
                                             <p className="text-white text-lg font-andes">You can check them all out below.</p>
                                             <div className="app-team-link-wrap">
-                                                <Link exact="true" to="/assets" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE ASSETS!</Link>
+                                                <Link exact="true" to="/assets" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO OWNLY MARKETPLACE</Link>
                                             </div>
                                         </div>
-                                        <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-backgrounds mb-3">
+                                        <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-assets mb-3">
                                             <img className="w-100" src={bgGIF} alt="Mustachio Backgrounds" />
+                                        </div>
+                                    </div>
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="collectibles" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Sages Rant Collectibles</h1>
+                                            <p className="text-white text-lg font-andes">Power-up your Mustachios by this amazing items - The Sages Rant Collectibles</p>
+                                            <p className="text-white text-lg font-andes">Explore artifacts and locations found in our NFT Tales.</p>
+                                            <p className="text-white text-lg font-andes">You can check them out at the Ownly Marketplace.</p>
+                                            <div className="app-team-link-wrap">
+                                                <a href="https://ownly.io/marketplace/?collection=the-sages-rant-collectibles" target="_blank" rel="noreferrer" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO MARKETPLACE</a>
+                                            </div>
+                                        </div>
+                                        <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-collectibles mb-3">
+                                            <img className="w-100" src={collectibles} alt="The Sages Rant Collectibles" />
                                         </div>
                                     </div>
                                 </section>
