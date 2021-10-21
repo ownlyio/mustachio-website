@@ -350,8 +350,8 @@ function App() {
                                         <div className="col-lg-7 col-12 order-2 order-lg-1">
                                             <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Sages Rant Collectibles</h1>
                                             <p className="text-white text-lg font-andes">Power-up your Mustachios by this amazing items - The Sages Rant Collectibles</p>
-                                            <p className="text-white text-lg font-andes">Explore artifacts and locations found in our NFT Tales.</p>
-                                            <p className="text-white text-lg font-andes">You can check them out at the Ownly Marketplace.</p>
+                                            <p className="text-white text-lg font-andes">The Sages Rant Collectibles is a collection of items that can be acquired by participating in the auction from October 26 to November 8, 2021.</p>
+                                            <p className="text-white text-lg font-andes">Holders of these Artifacts receive distinct strengths and can boost the rarity of their Mustachios – granting magical abilities and unlimited potentials.</p>
                                             <div className="app-team-link-wrap">
                                                 <a href="https://ownly.io/marketplace/?collection=the-sages-rant-collectibles" target="_blank" rel="noreferrer" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO MARKETPLACE</a>
                                             </div>
