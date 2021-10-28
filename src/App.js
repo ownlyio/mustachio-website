@@ -34,6 +34,17 @@ import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
 import collectibles from './images/collectibles.png'
+
+// Team
+import abracadoobie from './images/team/abracadoobie.png'
+import grim from './images/team/grim.png'
+import kingstellar from './images/team/kingstellar.png'
+import mexico from './images/team/mexico.png'
+import mountainwarrior from './images/team/mountainwarrior.png'
+import ninja from './images/team/ninja.png'
+import slendie from './images/team/slendie.png'
+import sludgie from './images/team/sludgie.png'
+import squarehead from './images/team/squarehead.png'
  
 function App() {
     // State variables for initialization
@@ -454,19 +465,110 @@ function App() {
                                 <hr className="gray-line my-5" />
 
                                 <section id="team" className="mb-4">
-                                    <div className="row mb-4">
+                                    <div className="row" style={{"marginBottom": "3rem"}}>
                                         <div className="col-lg-7 col-12 order-2 order-lg-1">
                                             <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">The Mustachio Team</h1>
                                             <p className="text-white text-lg font-andes">The Mustachios are created by a secretive-taciturn local artist hiding under the character <a href="https://twitter.com/BoiiMustache">Boii Mustache</a>. He adopted the character Boii Mustache as his personality. The character resembles the artist himself, a long-haired guy with a nevus in his lower left eye and, of course, the legendary mustache.</p>
                                             <p className="text-white text-lg font-andes">With the idea of becoming whoever we want to be, he started creating different mustached beings, and The MustachioVerse was conceived.</p>
                                             <p className="text-white text-lg font-andes">You can check them out below.</p>
-                                            <div className="app-team-link-wrap">
-                                                <a href="https://ownly.io/#team" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">CHECK OUT THE GANG!</a>
-                                            </div>
                                         </div>
                                         <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 boii-mustache">
-                                            <img className="w-100" src={mustacheBoii} alt="Mustache Boii" />
+                                            <img className="w-100" src={mustacheBoii} alt="Mustache Boii" style={{"borderRadius": "10px"}} />
                                         </div>
+                                    </div>
+
+                                    {/* Team of Mustachios */}
+                                    <div className="row align-items-center justify-content-evenly">
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={mexico} alt="Mexico" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Mexico</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Ismael Jerusalem</p>
+                                                <p className="text-white font-andes-italic mb-1">CEO</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={slendie} alt="SlenDie" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">SlenDie</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Bernard Historillo</p>
+                                                <p className="text-white font-andes-italic mb-1">CTO</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={abracadoobie} alt="AbracaDoobie" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">AbracaDoobie</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Mark Jerly Bundalian</p>
+                                                <p className="text-white font-andes-italic mb-1">Full Stack Developer</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={squarehead} alt="Squarehead" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Squarehead</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Shiekina Añasco</p>
+                                                <p className="text-white font-andes-italic mb-1">Senior Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={ninja} alt="Ninja" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Ninja</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Ain Art Atos</p>
+                                                <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={kingstellar} alt="King Stellar" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">King Stellar</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Patricia Javier</p>
+                                                <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={sludgie} alt="Sludgie" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Sludgie</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Kyle Jay Naron</p>
+                                                <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={grim} alt="Grim" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Grim</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Rico Zuñiga</p>
+                                                <p className="text-white font-andes-italic mb-1">Technical Advisor</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={mountainwarrior} alt="Mountain Warrior" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Mountain Warrior</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Karl Vasquez</p>
+                                                <p className="text-white font-andes-italic mb-1">Marketing Advisor</p>
+                                            </div>
+                                        </div> 
                                     </div>
                                 </section>
 
