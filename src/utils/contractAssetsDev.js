@@ -1,9 +1,9 @@
 import web3 from "./web3"
 
 // rinkeby
-const address = '0xF5546AdCD67Ea3e7F86Dc79a392cC9e9a5376A4e'
+const address = '0x87d503DA875B39B835a9128BE5e3920E5f07bdF9'
 
-const mustachioBgAbi = [
+const mustachioAssetsAbi = [
     {
         "inputs":[
             
@@ -198,48 +198,149 @@ const mustachioBgAbi = [
     },
     {
         "inputs":[
-            
-        ],
-        "name":"getEdition",
-        "outputs":[
             {
                 "internalType":"uint256",
-                "name":"",
+                "name":"_groupId",
                 "type":"uint256"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
-            
-        ],
-        "name":"getMintPrice",
-        "outputs":[
-            {
-                "internalType":"uint256",
-                "name":"",
-                "type":"uint256"
-            }
-        ],
-        "stateMutability":"view",
-        "type":"function"
-    },
-    {
-        "inputs":[
+            },
             {
                 "internalType":"uint256",
                 "name":"_tokenId",
                 "type":"uint256"
             }
         ],
-        "name":"getMintedTokenCount",
+        "name":"checkTokenIdIfInRange",
+        "outputs":[
+            {
+                "internalType":"bool",
+                "name":"",
+                "type":"bool"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_fromId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_to",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_price",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_edition",
+                "type":"uint256"
+            }
+        ],
+        "name":"createNewGroup",
+        "outputs":[
+            
+        ],
+        "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_tokenId",
+                "type":"uint256"
+            }
+        ],
+        "name":"getCurrentTokenEdition",
         "outputs":[
             {
                 "internalType":"uint256",
                 "name":"",
                 "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_tokenId",
+                "type":"uint256"
+            }
+        ],
+        "name":"getGroupEdition",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_tokenId",
+                "type":"uint256"
+            }
+        ],
+        "name":"getGroupPrice",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            }
+        ],
+        "name":"getGroupRange",
+        "outputs":[
+            {
+                "internalType":"string",
+                "name":"",
+                "type":"string"
             }
         ],
         "stateMutability":"view",
@@ -273,11 +374,16 @@ const mustachioBgAbi = [
         "inputs":[
             {
                 "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
                 "name":"_tokenId",
                 "type":"uint256"
             }
         ],
-        "name":"mintBackground",
+        "name":"mintAsset",
         "outputs":[
             
         ],
@@ -293,6 +399,11 @@ const mustachioBgAbi = [
             },
             {
                 "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
                 "name":"_tokenId",
                 "type":"uint256"
             },
@@ -302,11 +413,69 @@ const mustachioBgAbi = [
                 "type":"uint256"
             }
         ],
-        "name":"mintBackgroundRewards",
+        "name":"mintAssetRewards",
         "outputs":[
             
         ],
         "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "name":"mintTokenDetails",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"fromId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"to",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"price",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"edition",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "name":"mintedPerToken",
+        "outputs":[
+            {
+                "internalType":"uint256",
+                "name":"",
+                "type":"uint256"
+            }
+        ],
+        "stateMutability":"view",
         "type":"function"
     },
     {
@@ -444,11 +613,16 @@ const mustachioBgAbi = [
         "inputs":[
             {
                 "internalType":"uint256",
-                "name":"_edition",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_price",
                 "type":"uint256"
             }
         ],
-        "name":"setEdition",
+        "name":"setGroupMintPrice",
         "outputs":[
             
         ],
@@ -459,11 +633,41 @@ const mustachioBgAbi = [
         "inputs":[
             {
                 "internalType":"uint256",
-                "name":"_mintPrice",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_edition",
                 "type":"uint256"
             }
         ],
-        "name":"setMintPrice",
+        "name":"setGroupTokenEdition",
+        "outputs":[
+            
+        ],
+        "stateMutability":"nonpayable",
+        "type":"function"
+    },
+    {
+        "inputs":[
+            {
+                "internalType":"uint256",
+                "name":"_groupId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_fromId",
+                "type":"uint256"
+            },
+            {
+                "internalType":"uint256",
+                "name":"_to",
+                "type":"uint256"
+            }
+        ],
+        "name":"setGroupTokenRange",
         "outputs":[
             
         ],
@@ -574,4 +778,4 @@ const mustachioBgAbi = [
     }
 ]
 
-export default new web3.eth.Contract(mustachioBgAbi, address);
+export default new web3.eth.Contract(mustachioAssetsAbi, address);
