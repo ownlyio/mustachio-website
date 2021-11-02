@@ -1,7 +1,9 @@
 import './Assets.css'
+import axios from 'axios'
+import { useEffect, useState } from 'react';
 
 // Utils
-import contractBg from '../../utils/contractBackgroundsDev'
+import contractAssets from '../../utils/contractAssetsDev'
 
 // Images
 import grid from '../../images/grid.jpg'
@@ -9,6 +11,18 @@ import grid2 from '../../images/grid2.jpg'
 import mustachioBanner from '../../images/mustachio_banner.jpeg'
 
 function Assets() {
+    const [assets, setAssets] = useState([])
+
+    useEffect(() => {
+        async function fetchAllBackgrounds() {
+            axios.get('https://ownly.tk/api/mustachioverse_assets').then(res => {
+                setAssets(res.data)
+            })
+        }
+
+        fetchAllBackgrounds()
+    }, [])
+
     return (
         <div className="assets">
             <div className="container">
@@ -40,60 +54,25 @@ function Assets() {
                     </div>
 
                     <div className="row mb-4">
-                        <div className="col-12 col-md-4 mb-5">
-                            <div className="assets-bg-wrap">
-                                <div className="assets-bg-img mb-3">
-                                    <img src="https://gateway.pinata.cloud/ipfs/QmZGT33XvkXhwY5guEwNXWWxrPS9peKHC29XY13waTAJRD" alt="BG" />
-                                    {/* <img src="https://picsum.photos/490/711" alt="BG" /> */}
-                                </div>
-                                <div className="assets-bg-desc">
-                                    <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Abracadoobie Magic Land</h3>
-                                    <p className="text-white font-andes-italic">0 out of 3 minted - Multiple Edition</p>
-
-                                    <div className="assets-bg-full-desc">
-                                        <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
+                        {assets.map((data, index) => ( 
+                            <div className="col-12 col-md-3 mb-5" key={data.id}>
+                                <div className="assets-bg-wrap">
+                                    <div className="assets-bg-img mb-3">
+                                        <img src={data.image} alt={data.name} />
                                     </div>
+                                    <div className="assets-bg-desc">
+                                        <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">{data.name}</h3>
+                                        <p className="text-white font-andes-italic">{data.supply} out of 3 minted - Multiple Edition</p>
 
-                                    <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
-                                </div>
-                            </div>                            
-                        </div>
-                        <div className="col-12 col-md-4 mb-5">
-                            <div className="assets-bg-wrap">
-                                <div className="assets-bg-img mb-3">
-                                    <img src="https://gateway.pinata.cloud/ipfs/QmQLeTb4kYZLcnWPJyoEZN1WuDfVJxEJG7jkDCQTZ9itXx" alt="BG" />
-                                    {/* <img src="https://picsum.photos/490/711" alt="BG" /> */}
-                                </div>
-                                <div className="assets-bg-desc">
-                                    <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Aster Comets</h3>
-                                    <p className="text-white font-andes-italic">0 out of 3 minted - Multiple Edition</p>
+                                        {/* <div className="assets-bg-full-desc">
+                                            <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
+                                        </div> */}
 
-                                    <div className="assets-bg-full-desc">
-                                        <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
+                                        <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
                                     </div>
-
-                                    <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
-                                </div>
-                            </div>                            
-                        </div>
-                        <div className="col-12 col-md-4 mb-5">
-                            <div className="assets-bg-wrap">
-                                <div className="assets-bg-img mb-3">
-                                    <img src="https://gateway.pinata.cloud/ipfs/QmV8anSyYK42mZEwYEnMYPbBD4bu5XPpUVJRAD3wMwd361" alt="BG" />
-                                    {/* <img src="https://picsum.photos/490/711" alt="BG" /> */}
-                                </div>
-                                <div className="assets-bg-desc">
-                                    <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Breakfast Kingdom</h3>
-                                    <p className="text-white font-andes-italic">0 out of 3 minted - Multiple Edition</p>
-
-                                    <div className="assets-bg-full-desc">
-                                        <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
-                                    </div>
-
-                                    <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
-                                </div>
-                            </div>                            
-                        </div>
+                                </div>                            
+                            </div>
+                        ))}
                     </div>
                 </section>
             </div>
