@@ -411,10 +411,10 @@ function App() {
                                                     <span className="text-white text-lg font-andes">Launch of MustachioVerse Assets</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Mustachio Presale (2nd Generation - 250 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Mustachio Presale (OG Mustachios Troop 2 - 250 Mustachios)</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Launch of 2nd Generation Mustachios (250 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of OG Mustachios Troop 2 (250 Mustachios)</span>
                                                 </li>
                                             </ul>
 
@@ -424,7 +424,10 @@ function App() {
                                             <p className="text-white text-lg font-andes-med-italic mb-0">Q1</p>
                                             <ul className="app-roadmap-timeline mb-3">
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 2)</span>
+                                                    <span className="text-white text-lg font-andes">Mustachio Quest Play-to-Earn Early Preview</span>
+                                                </li>
+                                                <li className="soon">
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Troop 2)</span>
                                                 </li>
                                                 <li className="soon">
                                                     <span className="text-white text-lg font-andes">Make Your Own Assets</span>
@@ -433,27 +436,27 @@ function App() {
                                                     <span className="text-white text-lg font-andes">Mustachio Events</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Launch of 3rd Generation Mustachios (250 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of OG Mustachios Troop 3 (250 Mustachios)</span>
                                                 </li>
                                             </ul>
 
                                             <p className="text-white text-lg font-andes-med-italic mb-0">Q2</p>
                                             <ul className="app-roadmap-timeline mb-3">
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 3)</span>
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Troop 3)</span>
                                                 </li>
                                                 <li className="soon">
                                                     <span className="text-white text-lg font-andes">Mustachio Merchandise</span>
                                                 </li>
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Launch of 4th Generation Mustachios (399 Mustachios)</span>
+                                                    <span className="text-white text-lg font-andes">Launch of OG Mustachios Troop 4 (399 Mustachios)</span>
                                                 </li>
                                             </ul>
 
                                             <p className="text-white text-lg font-andes-med-italic mb-0">Q3</p>
                                             <ul className="app-roadmap-timeline mb-3">
                                                 <li className="soon">
-                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Gen. 4)</span>
+                                                    <span className="text-white text-lg font-andes">Continuation of NFT Tales (Troop 4)</span>
                                                 </li>
                                                 <li className="soon">
                                                     <span className="text-white text-lg font-andes">MustaSHOW (NFT Show)</span>
