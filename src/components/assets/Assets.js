@@ -58,7 +58,7 @@ function Assets() {
                             <div className="col-12 col-md-3 mb-5" key={data.id}>
                                 <div className="assets-bg-wrap">
                                     <div className="assets-bg-img mb-3">
-                                        <img src={data.image} alt={data.name} />
+                                        <img src={data.thumbnail} alt={data.name} />
                                     </div>
                                     <div className="assets-bg-desc">
                                         <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">{data.name}</h3>
