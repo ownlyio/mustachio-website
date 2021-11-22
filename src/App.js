@@ -39,6 +39,7 @@ import collectibles from './images/collectibles.png'
 import abracadoobie from './images/team/abracadoobie.png'
 import candyfloss from './images/team/candyfloss.png'
 import grim from './images/team/grim.png'
+import hotdogprince from './images/team/hotdogprince.png'
 import kingstellar from './images/team/kingstellar.png'
 import mexico from './images/team/mexico.png'
 import mountainwarrior from './images/team/mountainwarrior.png'
@@ -561,6 +562,16 @@ function App() {
                                                 <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Candy Floss</h3>
                                                 <p className="text-white text-lg font-andes mb-1">Kendra Lopera</p>
                                                 <p className="text-white font-andes-italic mb-1">Content Creator</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={hotdogprince} alt="HotDog Prince" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">HotDog Prince</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Yasha-Chan</p>
+                                                <p className="text-white font-andes-italic mb-1">Community Manager</p>
                                             </div>
                                         </div>
                                         <div className="app-team-bg-wrap mb-4">
