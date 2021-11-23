@@ -34,6 +34,7 @@ import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
 import collectibles from './images/collectibles.png'
+import discord from './images/discord.png'
 
 // Team
 import abracadoobie from './images/team/abracadoobie.png'
@@ -594,6 +595,25 @@ function App() {
                                                 <p className="text-white font-andes-italic mb-1">Marketing Advisor</p>
                                             </div>
                                         </div> 
+                                    </div>
+                                </section>
+
+                                <hr className="gray-line my-5" />
+
+                                <section id="tales" className="mb-4">
+                                    <div className="row mb-4">
+                                        <div className="col-lg-7 col-12 order-2 order-lg-1">
+                                            <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold">Join Our Discord Community</h1>
+                                            <p className="text-white text-lg font-andes">All hail to the Tale of the Prospector!</p>
+                                            <p className="text-white text-lg font-andes">We are building our community on Discord and we are so excited to utilize its features and a lot of interesting channels - like giveaway and airdrops.</p>
+                                            <p className="text-white text-lg font-andes">Rewards, events, and perks awaits!</p>
+                                            <div className="app-tales-link-wrap">
+                                                <a href="https://mustachioverse.com/discord" className="btn app-tales-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">JOIN MUSTACHIOVERSE DISCORD NOW!</a>
+                                            </div>
+                                        </div>
+                                        <div className="col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 prospector">
+                                            <img className="w-100" src={discord} alt="Discord" />
+                                        </div>
                                     </div>
                                 </section>
 
