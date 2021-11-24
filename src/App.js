@@ -34,7 +34,7 @@ import metamask from './images/metamask.png'
 import loading from './images/loading-mustachio.gif'
 import bgGIF from './images/mustachio_bg_gif.gif'
 import collectibles from './images/collectibles.png'
-import discord from './images/discord.png'
+import discord from './images/discord.gif'
 
 // Team
 import abracadoobie from './images/team/abracadoobie.png'
