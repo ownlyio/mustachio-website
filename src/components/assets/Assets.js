@@ -1,6 +1,7 @@
 import './Assets.css'
 import axios from 'axios'
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
+import { Button, Modal } from 'react-bootstrap'
 
 // Utils
 import contractAssets from '../../utils/contractAssetsDev'
@@ -9,18 +10,30 @@ import contractAssets from '../../utils/contractAssetsDev'
 import grid from '../../images/grid.jpg'
 import grid2 from '../../images/grid2.jpg'
 import mustachioBanner from '../../images/mustachio_banner.jpeg'
+import loading from '../../images/loading-mustachio.gif'
+
 
 function Assets() {
     const [assets, setAssets] = useState([])
 
-    useEffect(() => {
-        async function fetchAllBackgrounds() {
-            axios.get('https://ownly.tk/api/mustachioverse_assets').then(res => {
-                setAssets(res.data)
-            })
-        }
+    const [showLoading, setShowLoading] = useState(false);
+    const handleShowLoading = () => setShowLoading(true);
+    const handleCloseLoading = () => setShowLoading(false);
 
-        fetchAllBackgrounds()
+    const fetchBackgrounds = async () => {
+        try {
+            handleShowLoading()
+            var res = await axios.get(`https://ownly.tk/api/mustachioverse_assets/`)
+            setAssets(res.data)
+            handleCloseLoading()
+        } catch (err) {
+            handleCloseLoading()
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        fetchBackgrounds()
     }, [])
 
     return (
@@ -53,29 +66,41 @@ function Assets() {
                         <p className="text-white text-lg font-andes">Each background can be minted up to three times.</p>
                     </div>
 
-                    <div className="row mb-4">
-                        {assets.map((data, index) => ( 
-                            <div className="col-12 col-md-3 mb-5" key={data.id}>
-                                <div className="assets-bg-wrap">
-                                    <div className="assets-bg-img mb-3">
-                                        <img src={data.thumbnail} alt={data.name} />
-                                    </div>
-                                    <div className="assets-bg-desc">
-                                        <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">{data.name}</h3>
-                                        <p className="text-white font-andes-italic">{data.supply} out of 3 minted - Multiple Edition</p>
+                    {!showLoading && (
+                        <div className="row mb-4">
+                            {assets.map((data, index) => ( 
+                                <div className="col-12 col-md-3 mb-5" key={data.id}>
+                                    <div className="assets-bg-wrap">
+                                        <div className="assets-bg-img mb-3">
+                                            <img src={data.thumbnail} alt={data.name} />
+                                        </div>
+                                        <div className="assets-bg-desc">
+                                            <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">{data.name}</h3>
+                                            <p className="text-white font-andes-italic">{data.supply} out of 3 minted - Multiple Edition</p>
 
-                                        {/* <div className="assets-bg-full-desc">
-                                            <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
-                                        </div> */}
+                                            {/* <div className="assets-bg-full-desc">
+                                                <p className="text-white text-lg font-andes">This is a sample content for the description. We can put at most 2 sentences.</p>
+                                            </div> */}
 
-                                        <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
-                                    </div>
-                                </div>                            
-                            </div>
-                        ))}
-                    </div>
+                                            <button className="btn assets-bg-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">MINT NOW!</button>
+                                        </div>
+                                    </div>                            
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </section>
             </div>
+
+            {/* Modal for pending transaction */}
+            <Modal show={showLoading} onHide={handleCloseLoading} backdrop="static" keyboard={false} size="sm" centered>
+                <Modal.Body>
+                    <div className="text-center mb-3">
+                        <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
+                    </div>
+                    <p className="app-pending-modal-content text-center font-andes text-lg"><span className="app-loading-big-letter">L</span>oading data. Please wait...</p>
+                </Modal.Body>
+            </Modal> 
         </div>
     )
 }

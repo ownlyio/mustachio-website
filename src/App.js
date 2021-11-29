@@ -348,7 +348,7 @@ function App() {
                                             <p className="text-white text-lg font-andes">Just choose the NFT background that you like and mint it now for 0.1ETH!</p>
                                             <p className="text-white text-lg font-andes">You can check them all out below.</p>
                                             <div className="app-team-link-wrap">
-                                                <Link exact="true" to="/assets" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO OWNLY MARKETPLACE</Link>
+                                                <Link exact="true" to="/assets" className="btn app-team-btn px-4 py-2 btn-custom-2 font-w-hermann w-hermann-semibold text-lg">GO TO ASSETS</Link>
                                             </div>
                                         </div>
                                         <div className="my-lg-auto col-lg-4 col-12 offset-lg-1 order-1 order-lg-2 app-assets mb-3">
