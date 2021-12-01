@@ -12,22 +12,42 @@ import grid2 from '../../images/grid2.jpg'
 import mustachioBanner from '../../images/mustachio_banner.jpeg'
 import loading from '../../images/loading-mustachio.gif'
 
-
 function Assets() {
-    const [assets, setAssets] = useState([])
+    const [state, setState] = useState({
+        assets: [],
+        lengthAssets: 0,
+        showLoading: false,
+        handleShowLoading: () => {
+            _setState('showLoading', true)
+        },
+        handleCloseLoading: () => {
+            _setState('showLoading', false)
+        },
+    })
 
-    const [showLoading, setShowLoading] = useState(false);
-    const handleShowLoading = () => setShowLoading(true);
-    const handleCloseLoading = () => setShowLoading(false);
+    const _setState = (name, value) => {
+        setState(prevState => ({...prevState, [name]: value}));
+    }
+
+    const paginationOptions = () => {
+        let arr = []
+
+        for (var i = 1; i <= state.lengthAssets; i++) {
+            arr.push(i)
+        }
+
+        return arr
+    }
 
     const fetchBackgrounds = async () => {
         try {
-            handleShowLoading()
+            state.handleShowLoading()
             var res = await axios.get(`https://ownly.tk/api/mustachioverse_assets/`)
-            setAssets(res.data)
-            handleCloseLoading()
+            _setState('assets', res.data)
+            _setState('lengthAssets', res.data.length)
+            state.handleCloseLoading()
         } catch (err) {
-            handleCloseLoading()
+            state.handleCloseLoading()
             console.log(err)
         }
     }
@@ -66,9 +86,9 @@ function Assets() {
                         <p className="text-white text-lg font-andes">Each background can be minted up to three times.</p>
                     </div>
 
-                    {!showLoading && (
+                    {!state.showLoading && (
                         <div className="row mb-4">
-                            {assets.map((data, index) => ( 
+                            {state.assets.map((data, index) => ( 
                                 <div className="col-12 col-md-3 mb-5" key={data.id}>
                                     <div className="assets-bg-wrap">
                                         <div className="assets-bg-img mb-3">
@@ -89,11 +109,21 @@ function Assets() {
                             ))}
                         </div>
                     )}
+
+                    <nav aria-label="Page navigation example">
+                        <ul className="pagination justify-content-center">
+                            <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                            <li className="page-item"><a className="page-link" href="#">1</a></li>
+                            <li className="page-item"><a className="page-link" href="#">2</a></li>
+                            <li className="page-item"><a className="page-link" href="#">3</a></li>
+                            <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                        </ul>
+                    </nav>
                 </section>
             </div>
 
             {/* Modal for pending transaction */}
-            <Modal show={showLoading} onHide={handleCloseLoading} backdrop="static" keyboard={false} size="sm" centered>
+            <Modal show={state.showLoading} onHide={state.handleCloseLoading} backdrop="static" keyboard={false} size="sm" centered>
                 <Modal.Body>
                     <div className="text-center mb-3">
                         <img src={loading} alt="Loading..." style={{width: "150px", margin: "0 auto"}} />
