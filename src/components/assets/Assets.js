@@ -1,7 +1,8 @@
 import './Assets.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Modal, NavItem, Pagination } from 'react-bootstrap'
+import PaginationItems from '../PaginationItems'
 
 // Utils
 import contractAssets from '../../utils/contractAssetsDev'
@@ -16,6 +17,8 @@ function Assets() {
     const [state, setState] = useState({
         assets: [],
         lengthAssets: 0,
+        itemsPerPage: 12,
+        currentItems: [],
         showLoading: false,
         handleShowLoading: () => {
             _setState('showLoading', true)
@@ -32,11 +35,17 @@ function Assets() {
     const paginationOptions = () => {
         let arr = []
 
-        for (var i = 1; i <= state.lengthAssets; i++) {
+        for (let i = 1; i <= ((state.lengthAssets / state.itemsPerPage) + 1); i++) {
             arr.push(i)
         }
 
         return arr
+    }
+
+    const filterPaginationItems = (value) => {
+        let itemStart = (value - 1) * state.itemsPerPage + 1
+        let itemEnd = value * state.itemsPerPage
+        _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
     }
 
     const fetchBackgrounds = async () => {
@@ -45,6 +54,7 @@ function Assets() {
             var res = await axios.get(`https://ownly.tk/api/mustachioverse_assets/`)
             _setState('assets', res.data)
             _setState('lengthAssets', res.data.length)
+            _setState('currentItems', res.data.filter(x => x.id <= state.itemsPerPage))
             state.handleCloseLoading()
         } catch (err) {
             state.handleCloseLoading()
@@ -88,7 +98,7 @@ function Assets() {
 
                     {!state.showLoading && (
                         <div className="row mb-4">
-                            {state.assets.map((data, index) => ( 
+                            {state.currentItems.map((data, index) => ( 
                                 <div className="col-12 col-md-3 mb-5" key={data.id}>
                                     <div className="assets-bg-wrap">
                                         <div className="assets-bg-img mb-3">
@@ -113,9 +123,9 @@ function Assets() {
                     <nav aria-label="Page navigation example">
                         <ul className="pagination justify-content-center">
                             <li className="page-item"><a className="page-link" href="#">Previous</a></li>
-                            <li className="page-item"><a className="page-link" href="#">1</a></li>
-                            <li className="page-item"><a className="page-link" href="#">2</a></li>
-                            <li className="page-item"><a className="page-link" href="#">3</a></li>
+                            {paginationOptions().map((item, i) => (
+                                <PaginationItems key={i} value={item} func={filterPaginationItems} />
+                            ))}
                             <li className="page-item"><a className="page-link" href="#">Next</a></li>
                         </ul>
                     </nav>
