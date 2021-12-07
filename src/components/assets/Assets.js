@@ -1,7 +1,7 @@
 import './Assets.css'
 import axios from 'axios'
 import { useEffect, useState } from 'react'
-import { Button, Modal, NavItem, Pagination } from 'react-bootstrap'
+import { Modal} from 'react-bootstrap'
 import PaginationItems from '../PaginationItems'
 import cx from 'classnames'
 
