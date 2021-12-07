@@ -19,7 +19,7 @@ function Assets() {
         assets: [],
         lengthAssets: 0,
         itemsPerPage: 12,
-        currentPage: 1,
+        activePage: 1,
         currentItems: [],
         showLoading: false,
         prevBtnDisabled: true,
@@ -46,7 +46,7 @@ function Assets() {
         return arr
     }
 
-    const togglePrevNextBtns = (value) => {
+    const togglePrevNextBtns = value => {
         let lenPagination = Math.floor((state.lengthAssets / state.itemsPerPage) + 1)
         if (value == lenPagination) _setState('nextBtnDisabled', true)
         else if (value == 1) _setState('prevBtnDisabled', true)
@@ -56,29 +56,30 @@ function Assets() {
         }
     }
 
-    const filterPaginationItems = (value) => {
+    const filterPaginationItems = value => {
         let itemStart = (value - 1) * state.itemsPerPage + 1
         let itemEnd = value * state.itemsPerPage
         _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
         _setState('currentPage', value)
+        _setState('activePage', value)
         togglePrevNextBtns(value)
     }
 
     const prevPage = () => {
-        let value = state.currentPage - 1
+        let value = state.activePage - 1
         let itemStart = (value - 1) * state.itemsPerPage + 1
         let itemEnd = value * state.itemsPerPage
         _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
-        _setState('currentPage', value)
+        _setState('activePage', value)
         togglePrevNextBtns(value)
     }
 
     const nextPage = () => {
-        let value = state.currentPage + 1
+        let value = state.activePage + 1
         let itemStart = (value - 1) * state.itemsPerPage + 1
         let itemEnd = value * state.itemsPerPage
         _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
-        _setState('currentPage', value)
+        _setState('activePage', value)
         togglePrevNextBtns(value)
     }
 
@@ -131,7 +132,7 @@ function Assets() {
                     </div>
 
                     {!state.showLoading && (
-                        <div className="row mb-4">
+                        <div className="row">
                             {state.currentItems.map((data, index) => ( 
                                 <div className="col-12 col-md-3 mb-5" key={data.id}>
                                     <div className="assets-bg-wrap">
@@ -160,7 +161,7 @@ function Assets() {
                                 disabled: state.prevBtnDisabled
                             })}><a className="page-link" onClick={prevPage}>Previous</a></li>
                             {paginationOptions().map((item, i) => (
-                                <PaginationItems key={i} value={item} func={filterPaginationItems} />
+                                <PaginationItems key={i} value={item} func={filterPaginationItems} active={state.activePage} />
                             ))}
                             <li className={cx("page-item", "assets-page-item", {
                                 disabled: state.nextBtnDisabled

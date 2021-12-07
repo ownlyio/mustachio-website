@@ -1,6 +1,10 @@
-function PaginationItems({value, func}) {
+import cx from 'classnames'
+
+function PaginationItems({value, func, active}) {
     return (
-        <li className="page-item assets-page-item">
+        <li className={cx("page-item", "assets-page-item", {
+            active: active == value
+        })}>
             <a className="page-link" onClick={() => func(value)}>{value}</a>
         </li>
     )
