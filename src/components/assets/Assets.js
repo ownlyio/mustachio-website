@@ -18,6 +18,7 @@ function Assets() {
         assets: [],
         lengthAssets: 0,
         itemsPerPage: 12,
+        currentPage: 1,
         currentItems: [],
         showLoading: false,
         handleShowLoading: () => {
@@ -46,6 +47,7 @@ function Assets() {
         let itemStart = (value - 1) * state.itemsPerPage + 1
         let itemEnd = value * state.itemsPerPage
         _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
+        _setState('currentPage', value)
     }
 
     const fetchBackgrounds = async () => {
@@ -121,12 +123,12 @@ function Assets() {
                     )}
 
                     <nav aria-label="Page navigation example">
-                        <ul className="pagination justify-content-center">
-                            <li className="page-item"><a className="page-link" href="#">Previous</a></li>
+                        <ul className="pagination assets-pagination justify-content-center">
+                            <li className="page-item assets-page-item "><a className="page-link" href="#">Previous</a></li>
                             {paginationOptions().map((item, i) => (
                                 <PaginationItems key={i} value={item} func={filterPaginationItems} />
                             ))}
-                            <li className="page-item"><a className="page-link" href="#">Next</a></li>
+                            <li className="page-item assets-page-item"><a className="page-link" href="#">Next</a></li>
                         </ul>
                     </nav>
                 </section>
