@@ -48,9 +48,13 @@ function Assets() {
 
     const togglePrevNextBtns = value => {
         let lenPagination = Math.floor((state.lengthAssets / state.itemsPerPage) + 1)
-        if (value == lenPagination) _setState('nextBtnDisabled', true)
-        else if (value == 1) _setState('prevBtnDisabled', true)
-        else {
+        if (value == lenPagination) {
+            _setState('prevBtnDisabled', false)
+            _setState('nextBtnDisabled', true)
+        } else if (value == 1) {
+            _setState('prevBtnDisabled', true)
+            _setState('nextBtnDisabled', false)
+        } else {
             _setState('prevBtnDisabled', false)
             _setState('nextBtnDisabled', false)
         }
@@ -155,17 +159,17 @@ function Assets() {
                         </div>
                     )}
 
-                    <nav aria-label="Page navigation example">
-                        <ul className="pagination assets-pagination justify-content-center">
-                            <li className={cx("page-item", "assets-page-item", {
+                    <nav id="assets-pagination" aria-label="Page navigation example">
+                        <ul className="pagination justify-content-center">
+                            <li className={cx("page-item", "assets-page-item", "text-lg", "font-andes", {
                                 disabled: state.prevBtnDisabled
-                            })}><a className="page-link" onClick={prevPage}>Previous</a></li>
+                            })}><a className="page-link assets-page-link" onClick={prevPage}>Previous</a></li>
                             {paginationOptions().map((item, i) => (
                                 <PaginationItems key={i} value={item} func={filterPaginationItems} active={state.activePage} />
                             ))}
-                            <li className={cx("page-item", "assets-page-item", {
+                            <li className={cx("page-item", "assets-page-item", "text-lg", "font-andes", {
                                 disabled: state.nextBtnDisabled
-                            })}><a className="page-link" onClick={nextPage}>Next</a></li>
+                            })}><a className="page-link assets-page-link" onClick={nextPage}>Next</a></li>
                         </ul>
                     </nav>
                 </section>

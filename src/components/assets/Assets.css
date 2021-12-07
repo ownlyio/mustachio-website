@@ -21,3 +21,25 @@
 .assets-page-item {
   cursor: pointer;
 }
+
+.assets-page-link {
+  background-color: var(--yellow);
+  color: white;
+  border: 1px solid var(--yellow);
+}
+
+.assets-page-link:hover,
+.assets-page-link:focus {
+  color: var(--yellow);
+}
+
+.assets-page-item.active > .assets-page-link {
+  background-color: var(--gen-color);
+  border: 1px solid var(--yellow);
+  color: white;
+}
+
+.assets-page-item.disabled > .assets-page-link {
+  background-color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
