@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { Button, Modal, NavItem, Pagination } from 'react-bootstrap'
 import PaginationItems from '../PaginationItems'
+import cx from 'classnames'
 
 // Utils
 import contractAssets from '../../utils/contractAssetsDev'
@@ -21,6 +22,8 @@ function Assets() {
         currentPage: 1,
         currentItems: [],
         showLoading: false,
+        prevBtnDisabled: true,
+        nextBtnDisabled: false,
         handleShowLoading: () => {
             _setState('showLoading', true)
         },
@@ -43,11 +46,40 @@ function Assets() {
         return arr
     }
 
+    const togglePrevNextBtns = (value) => {
+        let lenPagination = Math.floor((state.lengthAssets / state.itemsPerPage) + 1)
+        if (value == lenPagination) _setState('nextBtnDisabled', true)
+        else if (value == 1) _setState('prevBtnDisabled', true)
+        else {
+            _setState('prevBtnDisabled', false)
+            _setState('nextBtnDisabled', false)
+        }
+    }
+
     const filterPaginationItems = (value) => {
         let itemStart = (value - 1) * state.itemsPerPage + 1
         let itemEnd = value * state.itemsPerPage
         _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
         _setState('currentPage', value)
+        togglePrevNextBtns(value)
+    }
+
+    const prevPage = () => {
+        let value = state.currentPage - 1
+        let itemStart = (value - 1) * state.itemsPerPage + 1
+        let itemEnd = value * state.itemsPerPage
+        _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
+        _setState('currentPage', value)
+        togglePrevNextBtns(value)
+    }
+
+    const nextPage = () => {
+        let value = state.currentPage + 1
+        let itemStart = (value - 1) * state.itemsPerPage + 1
+        let itemEnd = value * state.itemsPerPage
+        _setState('currentItems', state.assets.filter(x => x.id >= itemStart && x.id <= itemEnd))
+        _setState('currentPage', value)
+        togglePrevNextBtns(value)
     }
 
     const fetchBackgrounds = async () => {
@@ -124,11 +156,15 @@ function Assets() {
 
                     <nav aria-label="Page navigation example">
                         <ul className="pagination assets-pagination justify-content-center">
-                            <li className="page-item assets-page-item "><a className="page-link" href="#">Previous</a></li>
+                            <li className={cx("page-item", "assets-page-item", {
+                                disabled: state.prevBtnDisabled
+                            })}><a className="page-link" onClick={prevPage}>Previous</a></li>
                             {paginationOptions().map((item, i) => (
                                 <PaginationItems key={i} value={item} func={filterPaginationItems} />
                             ))}
-                            <li className="page-item assets-page-item"><a className="page-link" href="#">Next</a></li>
+                            <li className={cx("page-item", "assets-page-item", {
+                                disabled: state.nextBtnDisabled
+                            })}><a className="page-link" onClick={nextPage}>Next</a></li>
                         </ul>
                     </nav>
                 </section>
