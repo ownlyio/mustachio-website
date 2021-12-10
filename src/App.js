@@ -90,6 +90,9 @@ function App() {
     const [showSoldOut, setShowSoldOut] = useState(false);
     const handleCloseSoldOut = () => setShowSoldOut(false);
     const handleShowSoldOut = () => setShowSoldOut(true);
+    const [showHowToMint, setShowHowToMint] = useState(false);
+    const handleCloseHowToMint = () => setShowHowToMint(false);
+    const handleShowHowToMint = () => setShowHowToMint(true);
 
     // Initialize wallet address and network upon button click
     // Then mint afterwards
@@ -240,7 +243,7 @@ function App() {
                                         </div>
                                         <div className="m-auto col-lg-3 col-12 offset-lg-1">
                                             <button id="app-mint-button" className="btn w-100 py-3 btn-custom-1 text-2xl font-w-hermann w-hermann-semibold" type="button" onClick={initUtilsAndMint}>MINT YOURS NOW!</button>
-                                            <a className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">How to mint?</a>
+                                            <button className="btn text-center mt-2 w-100 text-lg font-andes-med text-sm text-gen-color how" onClick={handleShowHowToMint}>How to mint?</button>
                                         </div>
                                     </div>
                                 </section>
@@ -735,6 +738,19 @@ function App() {
                         </Button>
                     </Modal.Footer>
                 </Modal>    
+
+                {/* Modal for soldout */}
+                <Modal show={showHowToMint} onHide={handleCloseHowToMint} backdrop="static" keyboard={false} size="lg" centered>
+                    <Modal.Body>
+                        <iframe className="w-100" height="450" src="https://www.youtube.com/embed/J80u0w5YnDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </Modal.Body>
+                    <Modal.Footer className="justify-content-center">
+                        <a className="btn btn-custom-2 font-w-hermann w-hermann-semibold" href="https://ownly.io/htmym" target="_blank" rel="noreferrer">Read the Article</a>
+                        <Button className="font-w-hermann w-hermann-reg" variant="secondary" onClick={handleCloseHowToMint}>
+                            Close
+                        </Button>
+                    </Modal.Footer>
+                </Modal> 
             </div>
         </Router>
     )
