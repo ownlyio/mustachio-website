@@ -51,8 +51,8 @@ function MQ() {
         <>
             <section id="mq" style={getBG(width)}>
                 <div className="container">
-                    <div className="row mq-row">
-                        <div className="col-lg-5 col-12">
+                    <div className="row">
+                        <div className="col-lg-5 col-12 mq-row">
                             <h1 className="mb-4 text-white font-w-hermann w-hermann-semibold text-6xl">Mustachio Quest</h1>
                             <p className="text-white text-2xl font-andes mb-5">Upcoming <a href="https://ownly.io/bbb-p2e" target="_blank" rel="noreferrer">Play-to-Earn Game</a>. Stashing Soon...</p>
                             <p className="text-white text-3xl font-andes">BE THE FIRST TO KNOW</p>
@@ -63,7 +63,9 @@ function MQ() {
                                 </div>
                             </form>
                         </div>
-                        <div className="col-lg-7 col-12"></div>
+                        <div className="col-lg-7 col-12">
+                            <a href="https://ownly.io/bbb-p2e" className="d-block h-100" target="_blank" rel="noreferrer"></a>
+                        </div>
                     </div>
                 </div>
             </section>
