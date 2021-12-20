@@ -10,6 +10,7 @@ import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
 import FAQs from './components/faqs/FAQs'
 import Assets from './components/assets/Assets'
+import MQ from './components/mq/MQ'
 import { Discord } from './components/ShortLinks'
 
 // Utils
@@ -336,7 +337,7 @@ function App() {
                                             <a href="https://opensea.io/collection/mustachioverse" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON OPENSEA</a>
                                         </div>
                                         <div className="col-12 col-md-6">
-                                            <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" rel="noreferrer" className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
+                                            <a href="https://ownly.io/marketplace/?collection=the-mustachios" target="_blank" rel="noreferrer"className="btn w-100 py-3 btn-custom-2 text-2xl font-w-hermann w-hermann-semibold">VIEW ON MARKETPLACE</a>
                                         </div>
                                     </div>
                                 </section>
@@ -600,8 +601,14 @@ function App() {
                                         </div> 
                                     </div>
                                 </section>
+                                
+                                <hr className="gray-line mq-line-bottom mt-5" />
+                            </div>
+                            
+                            <MQ />
 
-                                <hr className="gray-line my-5" />
+                            <div className="container">
+                                <hr className="gray-line mq-line-top mb-5" />
 
                                 <section id="tales" className="mb-4">
                                     <div className="row mb-4">

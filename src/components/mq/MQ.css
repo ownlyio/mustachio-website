@@ -1,0 +1,17 @@
+.mq-line-top {
+  margin-top: 0 !important;
+}
+
+.mq-line-bottom {
+  margin-bottom: 0 !important;
+}
+
+.mq-row {
+  padding: 8em 0;
+}
+
+@media (max-width: 1200px) {
+  #mq h1 {
+    font-size: 3rem;
+  }
+}
