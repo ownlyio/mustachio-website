@@ -43,6 +43,7 @@ import candyfloss from './images/team/candyfloss.png'
 import grim from './images/team/grim.png'
 import hotdogprince from './images/team/hotdogprince.png'
 import kingstellar from './images/team/kingstellar.png'
+import loonywise from './images/team/loonywise.png'
 import mexico from './images/team/mexico.png'
 import mountainwarrior from './images/team/mountainwarrior.png'
 import ninja from './images/team/ninja.png'
@@ -559,6 +560,16 @@ function App() {
                                                 <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Sludgie</h3>
                                                 <p className="text-white text-lg font-andes mb-1">Kyle Jay Naron</p>
                                                 <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
+                                                <img src={loonywise} alt="Loonywise" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Loonywise</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Kristoffer Ray Corral</p>
+                                                <p className="text-white font-andes-italic mb-1">Lead Game Developer</p>
                                             </div>
                                         </div>
                                         <div className="app-team-bg-wrap mb-4">
