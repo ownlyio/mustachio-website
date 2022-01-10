@@ -514,6 +514,16 @@ function App() {
                                         </div>
                                         <div className="app-team-bg-wrap mb-4">
                                             <div className="app-team-bg-img mb-3">
+                                                <img src={squarehead} alt="Squarehead" />
+                                            </div>
+                                            <div className="app-team-bg-desc text-center">
+                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Squarehead</h3>
+                                                <p className="text-white text-lg font-andes mb-1">Shiekina Añasco</p>
+                                                <p className="text-white font-andes-italic mb-1">CMO</p>
+                                            </div>
+                                        </div>
+                                        <div className="app-team-bg-wrap mb-4">
+                                            <div className="app-team-bg-img mb-3">
                                                 <img src={abracadoobie} alt="AbracaDoobie" />
                                             </div>
                                             <div className="app-team-bg-desc text-center">
@@ -524,31 +534,11 @@ function App() {
                                         </div>
                                         <div className="app-team-bg-wrap mb-4">
                                             <div className="app-team-bg-img mb-3">
-                                                <img src={squarehead} alt="Squarehead" />
-                                            </div>
-                                            <div className="app-team-bg-desc text-center">
-                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Squarehead</h3>
-                                                <p className="text-white text-lg font-andes mb-1">Shiekina Añasco</p>
-                                                <p className="text-white font-andes-italic mb-1">Senior Marketing Specialist</p>
-                                            </div>
-                                        </div>
-                                        <div className="app-team-bg-wrap mb-4">
-                                            <div className="app-team-bg-img mb-3">
                                                 <img src={ninja} alt="Ninja" />
                                             </div>
                                             <div className="app-team-bg-desc text-center">
                                                 <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">Ninja</h3>
                                                 <p className="text-white text-lg font-andes mb-1">Ain Art Atos</p>
-                                                <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
-                                            </div>
-                                        </div>
-                                        <div className="app-team-bg-wrap mb-4">
-                                            <div className="app-team-bg-img mb-3">
-                                                <img src={kingstellar} alt="King Stellar" />
-                                            </div>
-                                            <div className="app-team-bg-desc text-center">
-                                                <h3 className="text-white font-w-hermann w-hermann-semibold mb-1">King Stellar</h3>
-                                                <p className="text-white text-lg font-andes mb-1">Patricia Javier</p>
                                                 <p className="text-white font-andes-italic mb-1">Marketing Specialist</p>
                                             </div>
                                         </div>
